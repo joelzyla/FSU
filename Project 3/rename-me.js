@@ -16,6 +16,20 @@ var dogTreats = 15;
 var dogTricks = ["sit", "lay down", "speak", "shake hands", "roll over"]
 var myTrue = true
 
+
+//************************
+//***JSON*****************
+//************************
+
+var json = {
+	"myObject": myObject = {
+		mykey: "Have a nice evening!"
+	},
+	"myBoolean": true
+	
+}
+
+
 //************************
 //***Method: Procedure****
 //************************
@@ -122,7 +136,19 @@ console.log(hisFavoriteTreats);
 
 
 
+//************************
+//***Last Function********
+//************************
 
+
+
+var myLastFunction = function (myArgument) {
+    myGoodbye = myArgument.mykey
+	console.log(myGoodbye);
+	
+	
+}
+var goodNight = myLastFunction(json.myObject);
 
 
 
