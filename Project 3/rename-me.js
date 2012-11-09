@@ -144,13 +144,27 @@ console.log(hisFavoriteTreats);
 
 var myLastFunction = function (myArgument) {
     myGoodbye = myArgument.mykey
-	console.log(myGoodbye);
-	
-	
+	return myGoodbye
 }
+
 var goodNight = myLastFunction(json.myObject);
+console.log(goodNight);
 
 
 
+
+
+
+//************************
+//***Extra Boolean********
+//************************
+
+
+var myBoolean = function () {
+    myTrue = true;
+	return myTrue;
+}
+var itsTrue = myBoolean();
+console.log("It's " + itsTrue + " that I am finally going to bed :) !!!");
 
 
