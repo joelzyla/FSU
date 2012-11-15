@@ -5,7 +5,7 @@ alert("JavaScript works!");
 
 //VARIABLES
 var myNumber = 15.5
-
+var myString = "25"
 
 
 //LIBRARY
@@ -33,34 +33,29 @@ var myLibrary = function() {
 	}
 
 	//FUNCTION 2 - Given a string version of a number such as "42", return the value as an actual Number, such as 42.
-	var stringToNumber = function() {
-		
+	var stringToNumber = function(string) {
+		var convertNumber = Number(string);
+		return convertNumber;
 	}
     
 //FUNCTION 3 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
 //FUNCTION 4 - Does a string follow a 123-456-7890 pattern like a phone number?
 //FUNCTION 5 - Is the string a URL? (Does it start with http: or https:?)
-
-
-
-
 //Return object to capture what is being returned by the internal function.
 //This function will return a value to myLibrary which then returns it to the code when called upon.
 	return {
 
-		"formatMoney": formatMoney
+		"formatMoney": formatMoney,
+		"stringToNumber": stringToNumber
 	}
 	
 //END OF LIBRARY
 }
 
-
-
 //FUNCTION CALLS. can be in the same or separate file. must call it ABOVE the assingment js in the html file
 var myLibrary = new myLibrary();
 
-console.log("The converted number is " + myLibrary.formatMoney(myNumber) + ".");
-// we send myLibrary the number to be formatted for currencly
+console.log("The number converted to currency is " + myLibrary.formatMoney(myNumber) + ".");
 
-//console.log(myLibrary.checkName("Ralph"));
+console.log("The string converts to number " + myLibrary.stringToNumber(myString) + ".");
 
