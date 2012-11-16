@@ -4,9 +4,11 @@
 alert("JavaScript works!");
 
 //VARIABLES
-var myNumber = 15.5
-var myString = "25"
-
+var myNumber = 15.5;
+var myString = "25";
+var myArray = ["sit", 4, "speak", 6, 9];
+var myRegexObj = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+var myPhoneNumber = "304-254-1212"
 
 //LIBRARY
 var myLibrary = function() {
@@ -37,16 +39,39 @@ var myLibrary = function() {
 		var convertNumber = Number(string);
 		return convertNumber;
 	}
-    
-//FUNCTION 3 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
-//FUNCTION 4 - Does a string follow a 123-456-7890 pattern like a phone number?
-//FUNCTION 5 - Is the string a URL? (Does it start with http: or https:?)
-//Return object to capture what is being returned by the internal function.
-//This function will return a value to myLibrary which then returns it to the code when called upon.
+
+	//FUNCTION 3 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
+	var totalValue = function(myArray) {
+		var myValue = 0;
+		for (y=0;y<=myArray.length;y++){
+			var myNumber = myArray[y];
+			if (isNaN(myNumber) == false) {
+				myValue = myValue +	myNumber;
+			}
+		}
+	return myValue;
+	}	
+
+	//FUNCTION 4 - Does a string follow a 123-456-7890 pattern like a phone number?
+	var ifPhoneNumber = function(myNumber) {
+			if(myRegexObj.test(myNumber)) {
+				return true;
+			} else {
+				return false;
+			}
+	}
+			
+			
+	//FUNCTION 5 - Is the string a URL? (Does it start with http: or https:?)
+	
+	//Return object to capture what is being returned by the internal function.
+	//This function will return a value to myLibrary which then returns it to the code when called upon.
 	return {
 
 		"formatMoney": formatMoney,
-		"stringToNumber": stringToNumber
+		"stringToNumber": stringToNumber,
+		"totalValue": totalValue,
+		"ifPhoneNumber": ifPhoneNumber
 	}
 	
 //END OF LIBRARY
@@ -59,3 +84,6 @@ console.log("The number converted to currency is " + myLibrary.formatMoney(myNum
 
 console.log("The string converts to number " + myLibrary.stringToNumber(myString) + ".");
 
+console.log("The total value of the numbers in the array is " + myLibrary.totalValue(myArray) + ".");
+
+console.log("It is " + myLibrary.ifPhoneNumber(myPhoneNumber) + " that " + myPhoneNumber + " is in the correct phone number format (XXX-XXX-XXXX).");
