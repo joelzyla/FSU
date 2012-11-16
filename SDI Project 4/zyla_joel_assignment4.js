@@ -17,28 +17,10 @@ var myLibrary = function() {
 
 	//FUNCTION 1 - Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10.
 	var formatMoney = function(number) {
-		//remove special characters from number
-		number = number.toString().replace(/\$|\,/g,'');
-		//If is a real number, lets convert it.
-		if(isNaN(number)) {
-			num = "0";
-			//absolute value
-			sign = (number == (number = Math.abs(number)));
-			number = Math.floor(number*100+0.50000000001);
-			cents = number%100;
-			number = Math.floor(number/100).toString();
-				//preceding 0 to cents
-				if(cents<10) {
-					cents = "0" + cents;
-						for (var i = 0; i < Math.floor((number.length-(1+i))/3); i++) {
-							number = number.substring(0,number.length-(4*i+3))+','+
-							number.substring(number.length-(4*i+3));
-							return (((sign)?'':'-') + '$' + number + '.' + cents);
-						}
-				}			
-		}
+		var myFix = number.toFixed(2)
+	return myFix;	
 	}
-
+	
 	//FUNCTION 2 - Given a string version of a number such as "42", return the value as an actual Number, such as 42.
 	var stringToNumber = function(string) {
 		//convert string to number
