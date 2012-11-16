@@ -9,17 +9,18 @@ var myString = "25";
 var myArray = ["sit", 4, "speak", 6, 9];
 var myRegexPhone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 var myRegexURL = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
-var myPhoneNumber = "304-254-1212"
-var myURL = "http://www.pilotincontrol.com"
+var myPhoneNumber = "304-254-1212";
+var myURL = "http://www.pilotincontrol.com";
 
 //LIBRARY
 var myLibrary = function() {
+
 	//FUNCTION 1 - Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10.
 	var formatMoney = function(number) {
 		//remove special characters from number
 		number = number.toString().replace(/\$|\,/g,'');
 		//If is a real number, lets convert it.
-		if(isNaN(number))
+		if(isNaN(number)) {
 			num = "0";
 			//absolute value
 			sign = (number == (number = Math.abs(number)));
@@ -27,16 +28,20 @@ var myLibrary = function() {
 			cents = number%100;
 			number = Math.floor(number/100).toString();
 				//preceding 0 to cents
-				if(cents<10)
+				if(cents<10) {
 					cents = "0" + cents;
-						for (var i = 0; i < Math.floor((number.length-(1+i))/3); i++)
-						number = number.substring(0,number.length-(4*i+3))+','+
-						number.substring(number.length-(4*i+3));
-						return (((sign)?'':'-') + '$' + number + '.' + cents);
+						for (var i = 0; i < Math.floor((number.length-(1+i))/3); i++) {
+							number = number.substring(0,number.length-(4*i+3))+','+
+							number.substring(number.length-(4*i+3));
+							return (((sign)?'':'-') + '$' + number + '.' + cents);
+						}
+				}			
+		}
 	}
 
 	//FUNCTION 2 - Given a string version of a number such as "42", return the value as an actual Number, such as 42.
 	var stringToNumber = function(string) {
+		//convert string to number
 		var convertNumber = Number(string);
 		return convertNumber;
 	}
@@ -64,6 +69,7 @@ var myLibrary = function() {
 			
 	//FUNCTION 5 - Is the string a URL? (Does it start with http: or https:?)
 	var checkURL = function(URL) {
+		//if the string matches the URL regex
 		if(myRegexURL.test(URL)) {
 			return "is";
 		} else {
@@ -71,16 +77,12 @@ var myLibrary = function() {
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//FUNCTION 6 - Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
+	var removeDashes = function(dashes) {
+		//replace the dash with a space globally
+		dashes = dashes.replace(/-/g,"");
+		return dashes;
+	}
 	
 	//Return object to capture what is being returned by the internal function.
 	//This function will return a value to myLibrary which then returns it to the code when called upon.
@@ -90,7 +92,8 @@ var myLibrary = function() {
 		"stringToNumber": stringToNumber,
 		"totalValue": totalValue,
 		"ifPhoneNumber": ifPhoneNumber,
-		"checkURL": checkURL
+		"checkURL": checkURL,
+		"removeDashes": removeDashes
 	}
 	
 //END OF LIBRARY
@@ -107,7 +110,10 @@ console.log("The total value of the numbers in the array is " + myLibrary.totalV
 
 console.log("It is " + myLibrary.ifPhoneNumber(myPhoneNumber) + " that " + myPhoneNumber + " is in the correct phone number format (XXX-XXX-XXXX).");
 
+console.log("Here is the phone number with the dashes removed: " + myLibrary.removeDashes(myPhoneNumber));
+
 console.log("The string " + myLibrary.checkURL(myURL) + " a URL.");
+
 
 
 
