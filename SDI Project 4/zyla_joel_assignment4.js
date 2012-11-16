@@ -1,9 +1,9 @@
 // Joel M. Zyla
 // SDI 1211
-// Project 3
+// Project 4
 
 
-// MAKEUP: flow charts
+// MAKEUP: My flow charts have significantly improved this time. I think I've fixed the things you commented about on project 3.
 alert("JavaScript works!");
 
 //VARIABLES
