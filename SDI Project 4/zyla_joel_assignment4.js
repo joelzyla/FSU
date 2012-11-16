@@ -1,6 +1,9 @@
 // Joel M. Zyla
 // SDI 1211
 // Project 3
+
+
+// MAKEUP: flow charts
 alert("JavaScript works!");
 
 //VARIABLES
