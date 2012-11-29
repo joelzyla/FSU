@@ -1,12 +1,16 @@
 <DOCTYPE html>
 	<!--**Any first comments ALWAYS GO BELOW the DOCTYPE so we don't break older browsers -->
 
-<!-- **Add HTML comments. At minium include the project name, your name, & your term number at the top of your document (after the doctype!). -->
+<!-- 
+		Project 1: myOptions
+		By Joel Zyla
+		FSU Visual Frameworks 1212
+-->
 
 <html>
 	<!--HTML DOCUMENT HEADER -->
 	<head>
-<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
+		<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
 		<meta charset="utf-8" />
 		<meta name="keywords" content="options app, options appliction, Full Sail University, portfolio" />
 		<meta name="description" content="Options trading application for mobile devices." />
@@ -15,13 +19,11 @@
 		<title>Add a position | myOptions</title>
 	</head>
 	<body>
-
-
-<!-- **h1 tag -->
+		<!-- **h1 tag -->
 		<header><h1>Add a position</h1></header>
-
-<!-- **Form tag -->
+		<!-- **Form tag -->
 		<form action="#" method="post">
+			<!-- **Fieldset and legend -->
 			<fieldset>
 					<legend>Required Information</legend>
 						<ul>
@@ -41,21 +43,22 @@
 							<!--date input(expiration)-->
 							<li><label for="edate">Date:</label><input type="date" id="edate"/>
 						</ul>
+						<!-- **Text area -->
+						<label for="notes">Notes:</label></br><textarea id="notes"></textarea>
+						</br>
 						<!--hidden input-->
-							<input type="hidden" value="true" />
+						<input type="hidden" value="true" />
 						<!--submit input-->
-							<input type="submit" value="Save position" />
+						</br>
+						<input type="submit" value="Save position" />
+			</fieldset>
+			<!-- **a (clear stored data link AND display data link with href attribute set to #, which for now will just reload the page) -->
+			</br>
+			<a href="#">Display my positions</a>
+			</br>
+			</br>
+			<a href="#">Clear all positions</a>
 		</form>
-
-<!-- **Text area -->
-
-<!-- **Fieldset and legend -->
-
-<!-- **Label (with for attribute and matching input id on form elements) -->
-
-<!-- **a (clear stored data link AND display data link with href attribute set to #, which for now will just reload the page) -->
-
-
 	</body>
 </html>
 <!-- **Using the Project 1 Screen Example (add item page) as your visual guide and outline, use the HTML tags you have learned so far to apply semantic and meaninful markup to the add item page of our app. Remember you can't use the same content used in the example. Our example is for a grociery list so your's must be different. Yes you can still have a name field. Some of your form fields will be the same or similar but you should have some variations based on the topic you chose. That means you might have more form fields than what is shown in the example. Create a form that collects data which would make sense for the topic you selected.
