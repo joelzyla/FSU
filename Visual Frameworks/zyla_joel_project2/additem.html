@@ -1,0 +1,66 @@
+<DOCTYPE html>
+	<!--**Any first comments ALWAYS GO BELOW the DOCTYPE so we don't break older browsers -->
+
+<!-- 
+		Project 2: myOptions
+		By Joel Zyla
+		FSU Visual Frameworks 1212
+-->
+
+<html>
+	<!--HTML DOCUMENT HEADER -->
+	<head>
+		<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
+		<meta charset="utf-8" />
+		<meta name="keywords" content="options app, options appliction, Full Sail University, portfolio" />
+		<meta name="description" content="Options trading application for mobile devices." />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<title>Add a position | myOptions</title>
+	</head>
+	<body>
+		<!-- **h1 tag -->
+		<header><h1>Add a position</h1></header>
+		<!-- **Form tag -->
+		<form action="#" method="post">
+			<!-- **Fieldset and legend -->
+			<fieldset>
+					<legend>Required Information</legend>
+						<ul>
+							<!-- **Input fields (include at least one of each type of: text, range, checkbox or radio, date, submit, hidden) -->
+							<li><label for="callorput">Contract Type:</label>
+								<select id="callorput">
+									<option value="Call">Call</option>
+									<option value="Put">Put</option>
+								</select>
+							</li>
+							<!--text input-->
+							<li><label for="ssymbol">Stock Symbol:</label><input type="text" id="fname" /></li>
+							<!--range input-->
+							<li><label for="sprice">Strike Price:</label><input type="range" min="1" max="5000" id="sprice" /></li>
+							<!--checkbox or radio(allornone)-->
+							<li><input type="checkbox" checked value="allornone" id="allornone" /><label for="allornone"> All or none?</label></li>
+							<!--date input(expiration)-->
+							<li><label for="edate">Date:</label><input type="date" id="edate"/>
+						</ul>
+						<!-- **Text area -->
+						<label for="notes">Notes:</label></br><textarea id="notes"></textarea>
+						</br>
+						<!--hidden input-->
+						<input type="hidden" value="true" />
+						<!--submit input-->
+						</br>
+						<input type="submit" value="Save position" />
+			</fieldset>
+			<!-- **a (clear stored data link AND display data link with href attribute set to #, which for now will just reload the page) -->
+			</br>
+			<a href="#">Display my positions</a>
+			</br>
+			</br>
+			<a href="#">Clear all positions</a>
+		</form>
+	</body>
+</html>
+<!-- **Using the Project 1 Screen Example (add item page) as your visual guide and outline, use the HTML tags you have learned so far to apply semantic and meaninful markup to the add item page of our app. Remember you can't use the same content used in the example. Our example is for a grociery list so your's must be different. Yes you can still have a name field. Some of your form fields will be the same or similar but you should have some variations based on the topic you chose. That means you might have more form fields than what is shown in the example. Create a form that collects data which would make sense for the topic you selected.
+HTML Markup Requirements-->
+
