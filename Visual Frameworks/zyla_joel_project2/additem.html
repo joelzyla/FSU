@@ -17,6 +17,7 @@
 		<meta name="robots" content="index, follow" />
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		<title>Add a position | myOptions</title>
+		<link rel="stylesheet" href="css/style.css" >
 	</head>
 	<body>
 		<!-- **h1 tag -->
@@ -46,6 +47,7 @@
 							<li><label for="edate">Date:</label><input type="date" id="edate"/>
 						</ul>
 						<!-- **Text area -->
+						<notes>
 						<label for="notes">Notes:</label></br><textarea id="notes"></textarea>
 						</br>
 						<!--hidden input-->
@@ -53,13 +55,14 @@
 						<!--submit input-->
 						</br>
 						<input type="submit" value="Save position" id="saveposition" />
+						</notes>
 			</fieldset>
 			<!-- **a (clear stored data link AND display data link with href attribute set to #, which for now will just reload the page) -->
 			</br>
-			<a href="#">Display my positions</a>
+			<a href="#" id="displayLink">Display my positions</a>
 			</br>
 			</br>
-			<a href="#">Clear all positions</a>
+			<a href="#" id="clear">Clear all positions</a>
 			<!-- reloads the page-->
 			<a href="additem.html" id="addNew" style="display:none;">Add another position</a>
 		</form>

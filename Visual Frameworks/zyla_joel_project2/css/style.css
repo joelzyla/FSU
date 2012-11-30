@@ -6,9 +6,51 @@ By Joel Zyla
 FSU Visual Frameworks 1212
 */
 
-/* Use at least 12 css properties AND style at least 8 HTML tags. */
 
+body {
+	font-family: Arial;
+	background-color: #666666;
+	margin: 15px;
+}
 
+p {
+	color: #FFFFFF;
+}
 
+h1 {
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+}
 
+a {
+	color: red;
+}
 
+form {
+	border: 1px solid #FFFFFF;
+	padding: 15px;
+}
+
+legend {
+	color: #CCCCCC;
+	font-weight: bold;
+	background-color: #444444;
+	border: 1px solid #FFFFFF;
+}
+
+ul {
+	font-weight: normal;
+	font-family: Arial;
+	text-align: left;
+	color: #CCCCCC;
+}
+
+fieldset {
+	background-color: #444444;
+}
+
+notes {
+	color: #CCCCCC;
+}
