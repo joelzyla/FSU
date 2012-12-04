@@ -9,8 +9,9 @@ FSU Visual Frameworks 1212
 
 body {
 	font-family: Arial;
-	background-color: #666666;
-	margin: 15px;
+	background-color: #496767;
+	margin: auto;
+	width: 480px;
 }
 
 p {
@@ -34,9 +35,9 @@ form {
 }
 
 legend {
-	color: #CCCCCC;
+	color: #FFFFFF;
 	font-weight: bold;
-	background-color: #444444;
+	background-color: #373C36;
 	border: 1px solid #FFFFFF;
 }
 
@@ -44,13 +45,19 @@ ul {
 	font-weight: normal;
 	font-family: Arial;
 	text-align: left;
+	list-style: none;
 	color: #CCCCCC;
 }
 
 fieldset {
-	background-color: #444444;
+	background-color: #373C36;
 }
 
 notes {
 	color: #CCCCCC;
 }
+/*
+bottomnav {
+	margin: 5px;
+}
+*/

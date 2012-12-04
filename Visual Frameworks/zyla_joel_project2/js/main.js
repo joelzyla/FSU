@@ -27,8 +27,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		var formTag = document.getElementsByTagName("form"), //Gets all elements from form tag. form tag is an array because we used getElementsByTagName
 			selectLi = $('callorput'), //variable for list item
 			makeSelect = document.createElement('select'); // variable to create select element
-			makeSelect.setAttribute("id", "callput"); //groups is name. 
-			//new select element now has ID of groups. 
+			makeSelect.setAttribute("id", "callput"); //callput is the name of the ID we will set. is name. 
+			//new select element now has ID of callput. 
 			//Will be dynamically creating a tag.lines above do this.
 			//now populate select tab with options
 		for (var i=0, j=contactGroups.length; i<j; i++) {
@@ -130,15 +130,15 @@ window.addEventListener("DOMContentLoaded", function() {
 			//Object properties will contain an array with the form label and the input values.
 			getCheckbox(); //run function to get checkbox
 			var item = {} //object
-				item.callput = ["Contract type:", $(callput).value]; //groups is id of form element we created.
+				item.callput = ["Contract type:", $("callput").value]; //groups is id of form element we created.
 				//its getting the value. do this for each element
 				//item.x where x is a property on the fly
 				//between quotes is a label.
-				item.ssymbol = ["Stock Symbol:", $(ssymbol).value];
-				item.sprice = ["Strike Price:", $(sprice).value];
+				item.ssymbol = ["Stock Symbol:", $("ssymbol").value];
+				item.sprice = ["Strike Price:", $("sprice").value];
 				item.allornone = ["All or none?", AllorNoneValue];
-				item.edate = ["Date:", $(edate).value];
-				item.notes = ["Notes:", $(notes).value];
+				item.edate = ["Date:", $("edate").value];
+				item.notes = ["Notes:", $("notes").value];
 				//save data to local storeage using Stringify to convert our object to a string.
 				//localstoreage ONLY stores strings. it's currently an array.
 				localStorage.setItem(id, JSON.stringify(item)); //will convert item by string separated so we can get them.
@@ -176,7 +176,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		for (var i=0, len=localStorage.length; i<len; i++){
 			//this finds all entries(key pairs) in local storage
 			//we want to put each into a list item in our list
-			var makli = document.createElement('li');
+			var makeli = document.createElement('li');
 			makeList.appendChild(makeli);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key); //this gets the value of the item with this key.
@@ -191,7 +191,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			for (var n in obj){
 				var makeSubli = document.createElement('li');
 				makeSubList.appendChild(makeSubli);
-				var SubText = obj[n][0]+" "+obj[n][1];
+				var optSubText = obj[n][0]+" "+obj[n][1];
 				makeSubli.innerHTML = optSubText;
 			}
 		}
@@ -201,10 +201,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	function clearLocal() {
 		if(localStorage.length === 0) {
-			alert("There is no data to clear.")
+			alert("There are no positions to clear.")
 		}else{
 			localStorage.clear(); // this will delete everything.
-			alert("All contacts are deleted!");
+			alert("All positions have been removed!");
 			window.location.reload(); //windows destination fo page
 			return false;
 		}
@@ -213,7 +213,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 		//Variable defaults
-		var contactGroups = ["--Select--", "Call", "Put"], 
+		var contactGroups = ["--Select--", "--Options--", "Long Call", "Long Put", "Short Call", "Short Put", "--Stock--", "Long Stock", "Short Stock"], 
 			checkValue, 
 			AllorNoneValue = "No"
 		;
