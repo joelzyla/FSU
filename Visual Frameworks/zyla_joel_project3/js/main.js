@@ -228,7 +228,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		//Run the function to actually edit the item
 		editLink.addEventListener("click", editItem);
 		//Assign text for anchor tag
-		editLink.innerHTML = editText //set to the text we created
+		editLink.innerHTML = editText; //set to the text we created
 		//append the elemnt we created to the empty list item in getData function
 		linksLi.appendChild(editLink);
 		
@@ -277,25 +277,22 @@ window.addEventListener("DOMContentLoaded", function() {
 		//property of group. index of 1
 		//1 grabs the value(for the form items)
 		//do for each form element
-		$("callput").value = item.callput[1];
+		$('callput').value = item.callput[1];
 		$('ssymbol').value = item.ssymbol[1];
 		$('sprice').value = item.sprice[1];
 		$('allornone').value = item.allornone[1];
 		$('edate').value = item.edate[1];
 		$('notes').value = item.notes[1];
 		//set attribute of checkbox again bc value is static. need to change checked attribute of button
-		if (obj.allornone[1] == "Yes"){ //sees if allornone is yes in localstorage
-			$('fav').setAttribute("checked", "checked"); //check teh checkbox
+		if (item.allornone[1] == "Yes"){ //sees if allornone is yes in localstorage
+			$('allornone').setAttribute("checked", "checked"); //check teh checkbox
 		}
-		$('iq').value = obj.iq[1];
-		$('date').value = obj.date[1];
-		$('notes').value = obj.notes[1];
 		// remove initial listener from input 'save contact' button.
 		//initially we call storeData function, but when editing item we dont want to run this.
 		save.removeEventListener("click", storeData);
 		//change submit button value to say Edit Button
-		$('submit').value = "Finished editing";
-		var editSubmit = $('submit');
+		$('saveposition').value = "Finished editing";
+		var editSubmit = $('saveposition');
 		editSubmit.addEventListener("click", validate);
 		//save the key we established in edititem fuction
 		//above we added editLink.key = key
@@ -323,16 +320,16 @@ window.addEventListener("DOMContentLoaded", function() {
 		//check callorput selection
 		if(getCallput.value === "--Select--"){
 			//user did not select a box
-			var callputError = "Select contract type!";
+			var callputError = " ! Please select contract type";
 			getCallput.style.border = "1px solid red";
 			//push into array of error messages
-			messageAry.push(groupError);
+			messageAry.push(callputError);
 		}
 		
 		
 		//check stock symbol 
 		if(getSsymbol.value === ""){
-			var ssymbolError = "Please enter a stock symbol";
+			var ssymbolError = "! Please enter a stock symbol";
 			getSsymbol.style.border = "1px solid red";
 			messageAry.push(ssymbolError);
 		}
