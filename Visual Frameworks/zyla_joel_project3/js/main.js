@@ -269,6 +269,22 @@ window.addEventListener("DOMContentLoaded", function() {
 		$('iq').value = obj.iq[1];
 		$('date').value = obj.date[1];
 		$('notes').value = obj.notes[1];
+		// remove initial listener from input 'save contact' button.
+		//initially we call storeData function, but when editing item we dont want to run this.
+		save.removeEventListener("click", storeData);
+		//change submit button value to say Edit Button
+		$('submit').value = "Finished editing";
+		var editSubmit = $('submit');
+		editSubmit.addEventListener("click", validate);
+		//save the key we established in edititem fuction
+		//above we added editLink.key = key
+		//Save tehy key value established in this function as a property of the editSubmit event 
+		//so we can use that value when we save the data we edited.
+		editSubmit.key = this.key;
+		
+	}
+	function validate (){
+		
 	}
 
 
