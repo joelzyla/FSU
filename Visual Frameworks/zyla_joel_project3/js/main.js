@@ -242,11 +242,23 @@ window.addEventListener("DOMContentLoaded", function() {
 		deleteLink.href = "#";
 		deleteLink.key = key;
 		var deleteText = "Delete position";
-		//deleteLInk.addEventListener("click", deleteItem);
+		deleteLink.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
 		
 		
+	}
+	
+	function deleteItem(){
+		var ask = confirm("Are you sure you want to delete this position?");
+		//confirm has cancel button or okay button
+		if(ask){
+			alert("The position has been deleted.");
+			localStorage.removeItem(this.key);
+			window.location.reload(); //refreshes teh page
+		}else{
+			alert("The position was not deleted.");
+		}
 	}
 
 	function editItem(){
