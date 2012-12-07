@@ -123,9 +123,18 @@ window.addEventListener("DOMContentLoaded", function() {
 
 	//Storage requires 2 things. Key and Data
 
-		function storeData() {
+		function storeData(key) {
+		if(!key){ //if not key
+		//set up new random number
+			var id = Math.floor(Math.random()*1000005);
+		}else{
+		//we want id to be key. maybe exisiting from local storage.
+		//same key passed along from the editsumbit event handler.
+		//to the validate function, and then passed here into the storeData function.
+			id = key;
+		}
 			//We want to create a unique ID
-			var id = Math.floor(Math.random()*1000005); //will generate a random number between 1 and 0 multiplied by number.
+			//var id = Math.floor(Math.random()*1000005); //will generate a random number between 1 and 0 multiplied by number.
 			//Get data from our form fields and store them in an object.
 			//Object properties will contain an array with the form label and the input values.
 			getCheckbox(); //run function to get checkbox
@@ -215,7 +224,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		//the value "key" will come from localStorage.key
 		editLink.key = key;
 		//Give our button text
-		var editText = "Edit Contact";
+		var editText = "Edit position";
 		//Run the function to actually edit the item
 		editLink.addEventListener("click", editItem);
 		//Assign text for anchor tag
@@ -232,7 +241,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		var deleteLink = document.createElement('a');
 		deleteLink.href = "#";
 		deleteLink.key = key;
-		var deleteText = "Delete Contact";
+		var deleteText = "Delete position";
 		//deleteLInk.addEventListener("click", deleteItem);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
@@ -283,8 +292,56 @@ window.addEventListener("DOMContentLoaded", function() {
 		editSubmit.key = this.key;
 		
 	}
-	function validate (){
+	
+	//before saving or editing an entry, lets validate
+	function validate (e){ //gets value of e from the from
+		//Define the elements we wish to check
+		var getCallput = $('callput');
+		var getSsymbol = $('ssymbol');
 		
+		//reset error messages
+		errMsg.innerHTML = "";
+		//reset borders
+		getSsymbol.style.border = "1px solid black";
+		getCallput.style.border = "1px solid black";
+		
+		//Get error messages
+		var messageAry = [];
+		
+		//check callorput selection
+		if(getCallput.value === "--Select--"){
+			//user did not select a box
+			var callputError = "Select contract type!";
+			getCallput.style.border = "1px solid red";
+			//push into array of error messages
+			messageAry.push(groupError);
+		}
+		
+		
+		//check stock symbol 
+		if(getSsymbol.value === ""){
+			var ssymbolError = "Please enter a stock symbol";
+			getSsymbol.style.border = "1px solid red";
+			messageAry.push(ssymbolError);
+		}
+		
+		//display error messages if needed
+		if(messageAry.length >= 1){
+			for(var i=0, j=messageAry.length; i < j; i++){
+				var txt = document.createElement('li');
+				txt.innerHTML = messageAry[i];
+				errMsg.appendChild(txt);
+				//above places error message on the screen.
+			}
+			e.preventDefault();
+		return false;
+		}else{
+			storeData(this.key); //value of key is from getData. localStorage.key(i). which is a random number generated from storeData function.
+			//send key value again from editData function
+			//remember this key value was passed through the editSubmit event listener as a property.
+		
+			//above if all is okay, save the data
+		}
 	}
 
 
@@ -302,9 +359,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 		//Variable defaults
-		var contactGroups = ["--Select--", "--Options--", "Long Call", "Long Put", "Short Call", "Short Put", "--Stock--", "Long Stock", "Short Stock"], 
+		var contactGroups = ["--Select--", "Call", "Put", "Stock"], 
 			checkValue, 
-			AllorNoneValue = "No"
+			AllorNoneValue = "No",
+			errMsg = $('errors')
 		;
 		//Call array function
 		whichTrade();
@@ -319,7 +377,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		clearLink.addEventListener("click", clearLocal);
 
 		var save = $('saveposition'); //id of save input from html page
-		save.addEventListener("click", storeData);
+		save.addEventListener("click", validate);
 
 
 // End of DOM
