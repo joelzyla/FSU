@@ -1,4 +1,4 @@
-//Project 2: myOptions
+//Project 3: myOptions
 //By Joel Zyla
 //FSU Visual Frameworks 1212
 
@@ -177,6 +177,9 @@ window.addEventListener("DOMContentLoaded", function() {
 			//this finds all entries(key pairs) in local storage
 			//we want to put each into a list item in our list
 			var makeli = document.createElement('li');
+			
+			var linksLi = document.createElement('li');
+			
 			makeList.appendChild(makeli);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key); //this gets the value of the item with this key.
@@ -193,10 +196,80 @@ window.addEventListener("DOMContentLoaded", function() {
 				makeSubList.appendChild(makeSubli);
 				var optSubText = obj[n][0]+" "+obj[n][1];
 				makeSubli.innerHTML = optSubText;
+				
+				makeSubList.appendChild(linksLi);
+				
 			}
+			//pass each item's key into this function as it loops through
+			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons for each item in localstorage
 		}
 	}
+	
+	//Make item links function
+	//this will create the edit and delete buttons for each stored item when displayed
+	function makeItemLinks (key, linksLi){
+		//add edit single item link
+		var editLink = document.createElement('a');
+		editLink.href = "#";
+		//we need to know which unique identifier
+		//the value "key" will come from localStorage.key
+		editLink.key = key;
+		//Give our button text
+		var editText = "Edit Contact";
+		//Run the function to actually edit the item
+		editLink.addEventListener("click", editItem);
+		//Assign text for anchor tag
+		editLink.innerHTML = editText //set to the text we created
+		//append the elemnt we created to the empty list item in getData function
+		linksLi.appendChild(editLink);
+		
+		//add linebreak
+		var breakTag = document.createElement('br');
+		//append to page
+		linksLi.appendChild(breakTag);
+		
+		//now delete link
+		var deleteLink = document.createElement('a');
+		deleteLink.href = "#";
+		deleteLink.key = key;
+		var deleteText = "Delete Contact";
+		//deleteLInk.addEventListener("click", deleteItem);
+		deleteLink.innerHTML = deleteText;
+		linksLi.appendChild(deleteLink);
+		
+		
+	}
 
+	function editItem(){
+		//grab the data from our item from local storage
+		//when we click the button, we will go back to the form page and populate them with data from localstorage
+		var value = localStorage.getItem(this.key);
+		//above in editLinnk we created a property called key
+		//because we added event listener to editLink, we can access its key property.
+		//referring back to itself.
+		//the edititemfuction is attached to the var editText above in getdata by addeventlisteener
+		var item = JSON.parse(value);//this does the opposite of stringify(turns back into object)
+		toggleControls("off"); //hides the displayed items and shows our form again so we can edit item
+		//populate the form fields with the current localStorage values
+		
+		//assign this the value of our object
+		//property of group. index of 1
+		//1 grabs the value(for the form items)
+		//do for each form element
+		$("callput").value = item.callput[1];
+		$('ssymbol').value = item.ssymbol[1];
+		$('sprice').value = item.sprice[1];
+		$('allornone').value = item.allornone[1];
+		$('edate').value = item.edate[1];
+		$('notes').value = item.notes[1];
+		//set attribute of checkbox again bc value is static. need to change checked attribute of button
+		if (obj.allornone[1] == "Yes"){ //sees if allornone is yes in localstorage
+			$('fav').setAttribute("checked", "checked"); //check teh checkbox
+		}
+		$('iq').value = obj.iq[1];
+		$('date').value = obj.date[1];
+		$('notes').value = obj.notes[1];
+	}
 
 
 	function clearLocal() {
