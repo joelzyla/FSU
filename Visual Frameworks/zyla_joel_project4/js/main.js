@@ -1,4 +1,4 @@
-//Project 3: myOptions
+//Project 4: myOptions
 //By Joel Zyla
 //FSU Visual Frameworks 1212
 
@@ -169,6 +169,10 @@ window.addEventListener("DOMContentLoaded", function() {
 	function getData(){
 		//Toggle elements
 		toggleControls("on");
+		if(localStorage.length === 0){
+			alert("There are no positions saved in local storage. Default data will be loaded.");
+			autoFillData();
+		}
 		//write data from local storage to the browser
 		var makeDiv = document.createElement('div');
 		//give div an attribute. id of items
@@ -247,6 +251,18 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild(deleteLink);
 		
 		
+	}
+	
+	function autoFillData(){
+		//The actual JSON OBJECT data required for this to work is coming from our
+		//json.js file which is loaded from our html page.
+		//We need to store the JSON OBJECT into local storage.
+		//We will loop through the object putting it into LS.
+		for (var n in json){
+			var id = Math.floor(Math.random()*1000005);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+			 //json is our json object. they can see eachother because both files loaded in same page.
 	}
 	
 	function deleteItem(){
