@@ -177,6 +177,9 @@ window.addEventListener("DOMContentLoaded", function() {
 		var makeDiv = document.createElement('div');
 		//give div an attribute. id of items
 		makeDiv.setAttribute("id", "items");
+
+		
+		
 		//inside div we'll format items in a way to be semantic. We shall use a list. ul
 		var makeList = document.createElement('ul');
 		//put the list into the div.
@@ -204,18 +207,27 @@ window.addEventListener("DOMContentLoaded", function() {
 			//list items need to be in unordered list
 			var makeSubList = document.createElement('ul');
 			makeli.appendChild(makeSubList);
+			getImage(obj.callput[1], makeSubList);
 			for (var n in obj){
 				var makeSubli = document.createElement('li');
 				makeSubList.appendChild(makeSubli);
 				var optSubText = obj[n][0]+" "+obj[n][1];
 				makeSubli.innerHTML = optSubText;
-				
 				makeSubList.appendChild(linksLi);
 				
 			}
 			//pass each item's key into this function as it loops through
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons for each item in localstorage
 		}
+	}
+	
+	function getImage(tradeType, makeSubList){
+		//get the image for the right contract type
+		var imageLi = document.createElement('Li');
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement('img');
+		var setSrc = newImg.setAttribute("src", "img/" + tradeType + ".png")
+		imageLi.appendChild(newImg);
 	}
 	
 	//Make item links function
@@ -326,6 +338,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 		//reset error messages
 		errMsg.innerHTML = "";
+		errMsg.style.color = "1px solid red";
 		//reset borders
 		getSsymbol.style.border = "1px solid black";
 		getCallput.style.border = "1px solid black";
@@ -341,8 +354,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			//push into array of error messages
 			messageAry.push(callputError);
 		}
-		
-		
+				
 		//check stock symbol 
 		if(getSsymbol.value === ""){
 			var ssymbolError = "! Please enter a stock symbol";
@@ -370,7 +382,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		window.location.reload();
 	}
 
-
 	function clearLocal() {
 		if(localStorage.length === 0) {
 			alert("There are no positions to delete.")
@@ -383,14 +394,13 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-
-
 		//Variable defaults
 		var contactGroups = ["--Select--", "Call", "Put", "Stock"], 
 			checkValue, 
 			AllorNoneValue = "No",
 			errMsg = $('errors')
 		;
+		
 		//Call array function
 		whichTrade();
 
