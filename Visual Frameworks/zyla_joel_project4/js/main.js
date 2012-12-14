@@ -393,6 +393,11 @@ window.addEventListener("DOMContentLoaded", function() {
 			return false;
 		}
 	}
+	
+	//Update value of slider
+	function updateTextInput(val) {
+      document.getElementById('textInput').value=val; 
+    }
 
 		//Variable defaults
 		var contactGroups = ["--Select--", "Call", "Put", "Stock"], 
@@ -403,8 +408,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 		//Call array function
 		whichTrade();
-
-
+		
+		
 		//Set link and submit click events
 		var displayLink = $('displayLink');
 		displayLink.addEventListener("click", getData);

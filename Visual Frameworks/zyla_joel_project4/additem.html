@@ -42,7 +42,9 @@
 							<!--text input-->
 							<li><label class="field" for="ssymbol">Symbol:</label><input type="text" id="ssymbol"/></li></br>
 							<!--range input-->
-							<li><label class="field" for="sprice">Strike Price:</label><input type="range" min="1" max="5000" id="sprice" /></li></br>
+							
+							<li><label class="field" for="sprice">Strike Price:</label><input type="range" min="1" max="1000" id="sprice" value="0" onchange="rangevalue.value=value" /><output id="rangevalue">0</output></li></br>
+							
 							<!--date input(expiration)-->
 							<li><label class="field" for="edate">Date:</label><input type="date" id="edate"/></li><br>
 							<!--checkbox or radio(allornone)-->
@@ -71,10 +73,33 @@
 			<a href="additem.html" id="addNew" style="display:none;">Add another position</a>
 			</bottomnav>
 		<!-- Link Javascript File -->
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js"></script>
 		<script src="js/json.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
+
+
+		
 	</body>
 </html>
+
+
+
+<!-- Use jquery to enhance the range input. To use this, change type to text.
+		 <script>
+    $(":range").rangeinput();
+  </script>  -->
+  
+ <!-- Use jquery to enhance the date field -->
+ 
+ 
+ <script>
+
+$("#edate").datepicker({ showOn: 'button', buttonText: "select" });
+
+    </script>
+ 
+  
 <!-- **Using the Project 1 Screen Example (add item page) as your visual guide and outline, use the HTML tags you have learned so far to apply semantic and meaninful markup to the add item page of our app. Remember you can't use the same content used in the example. Our example is for a grociery list so your's must be different. Yes you can still have a name field. Some of your form fields will be the same or similar but you should have some variations based on the topic you chose. That means you might have more form fields than what is shown in the example. Create a form that collects data which would make sense for the topic you selected.
 HTML Markup Requirements-->
 

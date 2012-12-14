@@ -31,5 +31,13 @@ var json = {
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
 		"notes": ["Notes:", "Sell at 6."]
+	},
+	"position4": { 
+		"callput": ["Contract type:", "Stock"],
+		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"sprice": ["Strike Price:", "5"],
+		"allornone": ["All or none?", "yes"],
+		"edate": ["Date:", "2013-03-20"],
+		"notes": ["Notes:", "Sell at 6."]
 	}
 }
