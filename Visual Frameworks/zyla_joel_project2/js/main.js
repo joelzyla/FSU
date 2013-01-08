@@ -221,7 +221,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		whichTrade();
 
 
-
 		//Set link and submit click events
 		var displayLink = $('displayLink');
 		displayLink.addEventListener("click", getData);

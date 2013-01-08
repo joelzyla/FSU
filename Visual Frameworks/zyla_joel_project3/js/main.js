@@ -351,6 +351,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 			//above if all is okay, save the data
 		}
+		window.location.reload();
 	}
 
 
