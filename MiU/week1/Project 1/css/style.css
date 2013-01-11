@@ -17,6 +17,7 @@ body {
 #topheader {
 	background-color: 000000;
 	height: 45px;
+	width: 100%;
 }
 #browsebutton {
 	width: 90%;
@@ -105,6 +106,8 @@ legend {
 	font-weight: bold;
 	background-color: #373C36;
 	border: 1px solid #FFFFFF;
+	width: 100%;
+	text-align: center;
 }
 
 ul {

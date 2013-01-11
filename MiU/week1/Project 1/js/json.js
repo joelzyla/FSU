@@ -10,7 +10,7 @@ var json = {
 	"position1": { //object name
 		//first property group : value of group
 		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "AAPL"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "600"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-06-20"],
@@ -34,7 +34,7 @@ var json = {
 	},
 	"position4": { 
 		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -59,7 +59,7 @@ var json = {
 	},
 	"position7": { 
 		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -75,7 +75,7 @@ var json = {
 	},
 	"position9": { 
 		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "ZNGA"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -100,7 +100,7 @@ var json = {
 	},
 	"position12": { 
 		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -108,7 +108,7 @@ var json = {
 	},
 	"position13": { 
 		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "ZNGA"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -133,7 +133,7 @@ var json = {
 	},
 	"position16": { 
 		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "ZNGA"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -150,7 +150,7 @@ var json = {
 	"position18": { //object name
 		//first property group : value of group
 		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "AAPL"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "600"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-06-20"],
@@ -166,7 +166,7 @@ var json = {
 	},
 	"position20": { 
 		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "ZNGA"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
@@ -183,7 +183,7 @@ var json = {
 	"position22": { //object name
 		//first property group : value of group
 		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "AAPL"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "600"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-06-20"],
@@ -207,7 +207,7 @@ var json = {
 	},
 	"position25": {
 		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
+		"ssymbol": ["Stock Symbol:", "ZNGA"],
 		"sprice": ["Strike Price:", "28"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-01-20"],
@@ -215,7 +215,7 @@ var json = {
 	},
 	"position26": { 
 		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
+		"ssymbol": ["Stock Symbol:", "GOOG"],
 		"sprice": ["Strike Price:", "5"],
 		"allornone": ["All or none?", "yes"],
 		"edate": ["Date:", "2013-03-20"],
