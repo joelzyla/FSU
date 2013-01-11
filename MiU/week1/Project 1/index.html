@@ -24,17 +24,33 @@
 	<body>
 		<!-- **HEADER (App name) -->
 		<!-- **H1 TAG -->
+		<div id="topheader">
 		<header><h1>myOptions</h1></header>
-		<!-- **Description (Short sentence or paragraph or tag line that describes the app) -->
+		</div>
+		<div id="calltoaction"> 
+			<a href=""><img src="img/calltoaction.png" style="width:100%"></a> 
+		</div>
+		<div id="search">
+			<input id="searchbox" type="search" name="googlesearch" value="Search your positions">
+
+		</div>
+		<!-- **Description (Short sentence or paragraph or tag line that describes the app)
 		<p>A mobile application to track your options trades</p>
-		<!-- **CALL TO ACTION
-		A prominent "add an item" button. You can say
-		"ADD AN ITEM" or "ADD A DUNGEON" or "ADD A WORKOUT" or
-		something to that effect if your items will all be of certain thing.
-		This can be a text link OR if you want to get creative you can create
-		a nice image. Link your "ADD AN ITEM" to your additem.html page.
-		Make sure it links correctly. -->
-		<a href="additem.html">ADD A POSITION</a>
+ -->
+
+<!-- 		Make sure it links correctly. 
+		<a href="additem.html">ADD A POSITION</a>  -->
+		<div id="browsebuttons">
+			<h2>Browse by</h2>
+		    <FORM METHOD="LINK" ACTION="additem.html">
+				<INPUT TYPE="submit" id="browsebutton" VALUE="Contract type: Call">
+				<INPUT TYPE="submit" id="browsebutton" VALUE="Contract type: Put">
+				<INPUT TYPE="submit" id="browsebutton" VALUE="Expiring soon">
+				<INPUT TYPE="submit" id="browsebutton" VALUE="Expiration Date">
+				<INPUT TYPE="submit" id="browsebutton" VALUE="Strike price">
+				<INPUT TYPE="submit" id="browsebutton" VALUE="Stock Symbol">
+			</FORM>
+		</div>
 
 	</body>
 </html>
