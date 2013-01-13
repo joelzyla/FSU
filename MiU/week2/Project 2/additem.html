@@ -1,0 +1,107 @@
+<DOCTYPE html>
+	<!--**Any first comments ALWAYS GO BELOW the DOCTYPE so we don't break older browsers -->
+
+<!-- 
+		Project 4: myOptions
+		By Joel Zyla
+		FSU Visual Frameworks 1212
+-->
+
+<html>
+	<!--HTML DOCUMENT HEADER -->
+	<head>
+		<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
+		<meta charset="utf-8" />
+		<meta name="keywords" content="options app, options appliction, Full Sail University, portfolio" />
+		<meta name="description" content="Options trading application for mobile devices." />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<title>Add a position | myOptions</title>
+		<link rel="stylesheet" href="css/style.css" >
+	</head>
+	<body>
+		<!-- **h1 tag -->
+		<div id="topheader">
+		<header><h1>myOptions</h1></header>
+		</div>
+		<!--<header><h1>Add a position</h1></header>-->
+		<!-- **Form tag -->
+		<form id="optionform" action="#" method="post">
+			<!-- **Fieldset and legend -->
+			<fieldset>
+					<legend>Required Information</legend>
+					<ul id="errors"></ul>
+						<ul id="requiredlist">
+							<!-- **Input fields (include at least one of each type of: text, range, checkbox or radio, date, submit, hidden) -->
+							<!--This list item will generate a select box using a js function -->
+							<li id="callorput"><label class="field" for="group">Type:</label></li></br>
+							<!--<li><label for="callorput">Contract Type:</label>
+								<select id="callorput">
+									<option value="Call">Call</option>
+									<option value="Put">Put</option>
+								</select>
+							</li>-->
+							<!--text input-->
+							<li><label class="field" for="ssymbol">Symbol:</label><input type="text" id="ssymbol"/></li></br>
+							<!--range input-->
+							
+							<li><label class="field" for="sprice">Strike Price:</label><input type="range" min="1" max="1000" id="sprice" value="0" onchange="rangevalue.value=value" /><output id="rangevalue">0</output></li></br>
+							
+							<!--date input(expiration)-->
+							<li><label class="field" for="edate">Date:</label><input type="date" id="edate"/></li><br>
+							<!--checkbox or radio(allornone)-->
+							<li><input class="field" type="checkbox" value="yes" checked value="allornone" id="allornone" name="allCheck" /><label for="allornone"> All or none?</label></li></br>
+						</ul>
+						<!-- **Text area -->
+						<notes>
+						<label for="notes">Notes:</label></br><textarea id="notes"></textarea>
+						</br>
+						<!--hidden input-->
+						<input type="hidden" value="true" />
+						<!--submit input-->
+						</br>
+						<input type="button" value="Save position" id="saveposition" class="button white" />
+						</notes>
+			</fieldset>
+			</form>
+			<!-- **a (clear stored data link AND display data link with href attribute set to #, which for now will just reload the page) -->
+			</br>
+			<bottomnav>
+			<a href="#" id="displayLink">Display my positions</a>
+			</br>
+			</br>
+			<a href="#" id="clear">Clear all positions</a>
+			<!-- reloads the page-->
+			<a href="additem.html" id="addNew" style="display:none;">Add another position</a>
+			</bottomnav>
+		<!-- Link Javascript File -->
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js"></script>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+
+
+		
+	</body>
+</html>
+
+
+
+<!-- Use jquery to enhance the range input. To use this, change type to text.
+		 <script>
+    $(":range").rangeinput();
+  </script>  -->
+  
+ <!-- Use jquery to enhance the date field -->
+ <!--
+ 
+ <script>
+
+$("#edate").datepicker({ showOn: 'button', buttonText: "select" });
+
+    </script>
+ -->
+  
+<!-- **Using the Project 1 Screen Example (add item page) as your visual guide and outline, use the HTML tags you have learned so far to apply semantic and meaninful markup to the add item page of our app. Remember you can't use the same content used in the example. Our example is for a grociery list so your's must be different. Yes you can still have a name field. Some of your form fields will be the same or similar but you should have some variations based on the topic you chose. That means you might have more form fields than what is shown in the example. Create a form that collects data which would make sense for the topic you selected.
+HTML Markup Requirements-->
+
