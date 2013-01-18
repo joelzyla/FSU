@@ -33,17 +33,30 @@
 
 <!-- **BODY -->
 	<body>
+		
+
 		<div data-role="page" id="home">
-			<!-- **HEADER (App name) -->
-			<!-- **H1 TAG -->
-				<!--<div id="topheader">-->
 			<div data-role="header" data-theme="e" data-position="fixed">
 					<h1>myOptions</h1>
-				<!--</div>-->
 			</div>
-		
 			<div data-role="content"> 
+				<a href="additem.html"><img src="img/calltoaction.png" style="width:100%"></a> 
 				
+				<div id="search">
+					<input id="searchbox" type="search" name="googlesearch" value="Search your positions">
+				</div>
+				<a href="additem.html">ADD A POSITION</a>  -->
+				<div id="browsebuttons">
+					<h2>Browse by</h2>
+					    <FORM METHOD="LINK" ACTION="additem.html">
+							<INPUT TYPE="submit" id="browsebutton" VALUE="Contract type: Call">
+							<INPUT TYPE="submit" id="browsebutton" VALUE="Contract type: Put">
+							<INPUT TYPE="submit" id="browsebutton" VALUE="Expiring soon">
+							<INPUT TYPE="submit" id="browsebutton" VALUE="Expiration Date">
+							<INPUT TYPE="submit" id="browsebutton" VALUE="Strike price">
+							<INPUT TYPE="submit" id="browsebutton" VALUE="Stock Symbol">
+						</FORM>
+				</div>
 				<div data-role="footer" data-position="fixed">
 					<div data-role="navbar">
 						<ul>
@@ -54,7 +67,77 @@
 						</ul>
 					</div>
 				</div>
+			</div>
 		</div>
+
+
+
+		<div data-role="page" id="positions">
+			<div data-role="header" data-theme="e" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+				<h2>Positions</h2>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#positions" data-icon="start">Positions</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div data-role="page" id="news">
+			<div data-role="header" data-theme="e" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+				<h2>News</h2>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#positions" data-icon="start">Positions</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<div data-role="page" id="info">
+			<div data-role="header" data-theme="e" data-position="fixed">
+					<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+				<h2>Info</h2>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#positions" data-icon="start">Positions</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	</body>
