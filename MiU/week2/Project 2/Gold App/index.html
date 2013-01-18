@@ -1,0 +1,61 @@
+
+<DOCTYPE html>
+	<!--**Any first comments ALWAYS GO BELOW the DOCTYPE so we don't break older browsers -->
+
+<!-- 
+		Project 4: myOptions
+		By Joel Zyla
+		FSU Visual Frameworks 1212
+-->
+
+<html>
+	<!--**Document head-->
+	<head>
+		<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
+		<meta charset="utf-8">
+		<meta name="keywords" content="stock options, options app, options appliction, Full Sail University, portfolio">
+		<meta name="description" content="Options trading application for mobile devices.">
+		<meta name="robots" content="index, follow">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		<!-- StyleSheets under here -->
+		<!--<link rel="stylesheet" href="css/style.css" />-->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+		<!-- **TITLE-->
+		<title>myOptions</title>
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	</head>
+
+<!-- **BODY -->
+	<body>
+		<div data-role="page" id="home">
+			<!-- **HEADER (App name) -->
+			<!-- **H1 TAG -->
+				<!--<div id="topheader">-->
+			<div data-role="header" data-theme="e" data-position="fixed">
+					<h1>myOptions</h1>
+				<!--</div>-->
+			</div>
+		
+			<div data-role="content"> 
+				
+				<div data-role="footer" data-position="fixed">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home" data-icon="start">Home</a></li>
+							<li><a href="#positions" data-icon="start">Positions</a></li>
+							<li><a href="#news" data-icon="start">News</a></li>
+							<li><a href="#about" data-icon="start">About</a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	</body>
+</html>
