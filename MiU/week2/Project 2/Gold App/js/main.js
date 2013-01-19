@@ -1,6 +1,6 @@
-//Project 4: myOptions
+//Project 2: myOptions
 //By Joel Zyla
-//FSU Visual Frameworks 1212
+//MUI
 
 // Wait until the DOM is ready. once page loads
 // All of the javascript will run within this function

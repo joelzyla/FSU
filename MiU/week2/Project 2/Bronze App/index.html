@@ -1,16 +1,15 @@
-
 <DOCTYPE html>
-	<!--**Any first comments ALWAYS GO BELOW the DOCTYPE so we don't break older browsers -->
 
 <!-- 
-		Project 4: myOptions
+		Project 2: myOptions
 		By Joel Zyla
-		FSU Visual Frameworks 1212
+		MUI
 -->
 
 <html>
 	<!--**Document head-->
 	<head>
+
 		<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
 		<meta charset="utf-8">
 		<meta name="keywords" content="stock options, options app, options appliction, Full Sail University, portfolio">
@@ -31,39 +30,35 @@
 		<script src="js/libs/modernizr.custom.min.js"></script>
 	</head>
 
-<!-- **BODY -->
+
+
+<!-- ************************ BODY ************************ -->
 	<body>
 		
 
 		<div data-role="page" id="home">
-			<div data-role="header" data-theme="e" data-position="fixed">
+			<div data-role="header" data-theme="a" data-position="fixed">
 					<h1>myOptions</h1>
 			</div>
 			<div data-role="content"> 
-				<a href="additem.html"><img src="img/calltoaction.png" style="width:100%"></a> 
+				<a href="additem.html" rel="external"><img src="img/calltoaction.png" style="width:100%"></a> 
 				
 				<div id="search">
 					<input id="searchbox" type="search" name="googlesearch" value="Search your positions">
 				</div>
-				<a href="additem.html">ADD A POSITION</a>
 				<div id="browsebuttons">
 					<h2>Browse by</h2>
-					    <FORM METHOD="LINK" ACTION="additem.html">
-							<INPUT TYPE="submit" id="browsebutton" VALUE="Contract type: Call">
-							<INPUT TYPE="submit" id="browsebutton" VALUE="Contract type: Put">
-							<INPUT TYPE="submit" id="browsebutton" VALUE="Expiring soon">
-							<INPUT TYPE="submit" id="browsebutton" VALUE="Expiration Date">
-							<INPUT TYPE="submit" id="browsebutton" VALUE="Strike price">
-							<INPUT TYPE="submit" id="browsebutton" VALUE="Stock Symbol">
-						</FORM>
+					<p><a href="#contractcall" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Call</a></p>
+					<p><a href="#contractput" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Put</a></p>
+					<p><a href="#contractstock" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Stock</a></p>
 				</div>
 				<div data-role="footer" data-position="fixed">
 					<div data-role="navbar">
 						<ul>
 							<li><a href="#home" data-icon="start">Home</a></li>
-							<li><a href="additem.html" data-icon="start">Add</a></li>
+							<li><a href="additem.html" rel="external" data-ajax="false" data-icon="start">Add</a></li>
 							<li><a href="#news" data-icon="start">News</a></li>
-							<li><a href="#about" data-icon="start">About</a></li>
+							<li><a href="#info" data-icon="start">Info</a></li>
 						</ul>
 					</div>
 				</div>
@@ -72,20 +67,91 @@
 
 
 
-		<div data-role="page" id="positions">
-			<div data-role="header" data-theme="e" data-position="fixed">
+<!-- ************************ BROWSE BY BUTTONS FRONTPAGE ************************ -->
+<!-- Browse by Call -->
+
+		<div data-role="page" id="contractcall">
+			<div data-role="header" data-theme="a" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
 			<div data-role="content"> 
-				<h2>Positions</h2>
+				<h2>Contract type: Call</h2>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>FB(3)</h3>
+							<p>31.24  +5%</p>
+							<p>+$200</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>AAPL(10)</h3>
+							<p>600  +30%</p>
+							<p>+$200</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>GOOG(40)</h3>
+							<p>900  +40%</p>
+							<p>+$650</p>
+				</div>
+						
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>ZNGA(10)</h3>
+							<p>5  +100%</p>
+							<p>+$500</p>
+				</div>
+					
+				<div data-role="collapsible">	
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>FB(3)</h3>
+							<p>31.24  +5%</p>
+							<p>+$200</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>AAPL(10)</h3>
+							<p>600  +30%</p>
+							<p>+$200</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>GOOG(40)</h3>
+							<p>900  +40%</p>
+							<p>+$650</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>ZNGA(10)</h3>
+							<p>5  +100%</p>
+							<p>+$500</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>AAPL(10)</h3>
+							<p>600  +30%</p>
+							<p>+$200</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>GOOG(40)</h3>
+							<p>900  +40%</p>
+							<p>+$650</p>
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
+							<h3>ZNGA(10)</h3>
+							<p>5  +100%</p>
+							<p>+$500</p>
+				</div>				
 			</div>
 
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="additem.html" data-icon="start">Add</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
 						<li><a href="#news" data-icon="start">News</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 					</ul>
@@ -94,20 +160,622 @@
 		</div>
 
 
+
+
+
+
+<!-- Browse by put -->
+		<div data-role="page" id="contractput">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+				<h2>Contract type: Put</h2>
+				<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>FB(3)</h3>
+						<p>31.24  -5%</p>
+						<p>+$200</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>AAPL(10)</h3>
+						<p>400  -30%</p>
+						<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>GOOG(40)</h3>
+						<p>300  -40%</p>
+						<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>ZNGA(10)</h3>
+						<p>1  -50%</p>
+						<p>+$444</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>FB(3)</h3>
+						<p>31.24  -5%</p>
+						<p>+$200</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>AAPL(10)</h3>
+						<p>400  -30%</p>
+						<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>GOOG(40)</h3>
+						<p>300  -40%</p>
+						<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>ZNGA(10)</h3>
+						<p>1  -50%</p>
+						<p>+$444</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>AAPL(10)</h3>
+						<p>400  -30%</p>
+						<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>GOOG(40)</h3>
+						<p>300  -40%</p>
+						<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>ZNGA(10)</h3>
+						<p>1  -50%</p>
+						<p>+$444</p>
+				</div>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+<!-- Browse by stock -->
+
+		<div data-role="page" id="contractstock">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+				<h2>Contract type: Stock</h2>
+
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>FB(3)</h3>
+							<p>31.24  +5%</p>
+							<p>+$200</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>AAPL(10)</h3>
+							<p>400  +30%</p>
+							<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>GOOG(40)</h3>
+							<p>300  +40%</p>
+							<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>ZNGA(10)</h3>
+							<p>1  +50%</p>
+							<p>+$444</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>FB(3)</h3>
+							<p>31.24  +5%</p>
+							<p>+$200</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>AAPL(10)</h3>
+							<p>400  +30%</p>
+							<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>GOOG(40)</h3>
+							<p>300  +40%</p>
+							<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>ZNGA(10)</h3>
+							<p>1  +50%</p>
+							<p>+$444</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>AAPL(10)</h3>
+							<p>400  +30%</p>
+							<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>GOOG(40)</h3>
+							<p>300  +40%</p>
+							<p					</div>
+					<div data-role="collapsible">>+$650,000</p>
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
+							<h3>ZNGA(10)</h3>
+							<p>1  +50%</p>
+							<p>+$444</p>
+					</div>
+				</div>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- ************************ SHOW DETAILS DRILLDOWN ************************ -->
+<!-- FACEBOOK CALLS DETAILS -->
+		<div data-role="page" id="facebookcalldrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>FB(3)</h3></center>
+						<img src="img/call.png" />
+						<p>Contract type: Call</p>
+						<p>Stock price: 31.24  +5%</p>
+						<p>P/L: +$200</p>
+						<p>Strike Price: 30</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 35.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- FACEBOOK PUTS DETAILS-->
+		<div data-role="page" id="facebookputdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>FB(3)</h3></center>
+						<img src="img/put.png" />
+						<p>Contract type: Put</p>
+						<p>Stock price: 31.24  -5%</p>
+						<p>P/L: +$200</p>
+						<p>Strike Price: 33</p>
+						<p>Date: 2013-05-20</p>
+						<p>Notes: Sell at 28.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- FACEBOOK STOCKS DETAILS-->
+		<div data-role="page" id="facebookstockdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>FB(3)</h3></center>
+						<img src="img/stock.png" />
+						<p>Contract type: Stock</p>
+						<p>Stock price: 31.24  +5%</p>
+						<p>P/L: +$200</p>
+						<p>Strike Price: N/A</p>
+						<p>Date: 2013-05-20</p>
+						<p>Notes: Sell at 35.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+					<li>
+						<a href="#facebookstockdrilldown">
+							<img src="img/stock.png" />
+							<h3>FB(3)</h3>
+							<p>31.24  -5%</p>
+							<p>+$200</p>
+						</a>
+					</li>
+
+
+
+<!-- Apple CALLS DETAILS -->
+		<div data-role="page" id="applecalldrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>AAPL(10)</h3></center>
+						<img src="img/call.png" />
+						<p>Contract type: Call</p>
+						<p>Stock price: 600  +5%</p>
+						<p>P/L: +$200</p>
+						<p>Strike Price: 550</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 620.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- Apple PUTS DETAILS -->
+		<div data-role="page" id="appleputdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>AAPL(10)</h3></center>
+						<img src="img/put.png" />
+						<p>Contract type: Put</p>
+						<p>Stock price: 400  -5%</p>
+						<p>P/L: +$200</p>
+						<p>Strike Price: 550</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 350.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- Apple STOCKS DETAILS -->
+		<div data-role="page" id="applestockdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>AAPL(10)</h3></center>
+						<img src="img/stock.png" />
+						<p>Contract type: Stock</p>
+						<p>Stock price: 400  +30%</p>
+						<p>P/L: +$200,000</p>
+						<p>Strike Price: N/A</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 700.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- GOOGLE CALLS DETAILS -->
+		<div data-role="page" id="googlecalldrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>GOOG(10)</h3></center>
+						<img src="img/call.png" />
+						<p>Contract type: Call</p>
+						<p>Stock price: 900  +40%</p>
+						<p>P/L: +$650</p>
+						<p>Strike Price: 800</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 900.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- GOOGLE PUTS DETAILS -->
+		<div data-role="page" id="googleputdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>GOOG(10)</h3></center>
+						<img src="img/put.png" />
+						<p>Contract type: Put</p>
+						<p>Stock price: 300  -40%</p>
+						<p>P/L: +$650,000</p>
+						<p>Strike Price: 400</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 299.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- GOOGLE STOCKS DETAILS -->
+		<div data-role="page" id="googlestockdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>GOOG(10)</h3></center>
+						<img src="img/stock.png" />
+						<p>Contract type: Stock</p>
+						<p>Stock price: 300  -40%</p>
+						<p>P/L: +$650,000</p>
+						<p>Strike Price: 400</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 500.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- ZNGA CALLS DETAILS -->
+		<div data-role="page" id="zingacalldrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>GOOG(10)</h3></center>
+						<img src="img/call.png" />
+						<p>Contract type: Call</p>
+						<p>Stock price: 5  +100%</p>
+						<p>P/L: +$500</p>
+						<p>Strike Price: 3</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 6.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- ZNGA PUTS DETAILS -->
+		<div data-role="page" id="zingaputdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>ZNGA(10)</h3></center>
+						<img src="img/put.png" />
+						<p>Contract type: Put</p>
+						<p>Stock price: 1  -50%</p>
+						<p>P/L: +$444</p>
+						<p>Strike Price: 5</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at .50.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- ZNGA STOCKS DETAILS -->
+		<div data-role="page" id="zingastockdrilldown">
+			<div data-role="header" data-theme="a" data-position="fixed">
+				<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+		
+						<center><h3>ZNGA(10)</h3></center>
+						<img src="img/stock.png" />
+						<p>Contract type: Stock</p>
+						<p>Stock price: 1  +50%</p>
+						<p>P/L: +$444</p>
+						<p>Strike Price: N/A</p>
+						<p>Date: 2013-03-20</p>
+						<p>Notes: Sell at 6.</p>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- ************************ NEWS PAGE ************************ -->
+
 		<div data-role="page" id="news">
-			<div data-role="header" data-theme="e" data-position="fixed">
+			<div data-role="header" data-theme="a" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
 			<div data-role="content"> 
 				<h2>News</h2>
+				<h3>Apple stock drops after iphone 5 dissapointments</h3>
+				<p>01-18-2013</p>
+				<p>Investors are losing faith in Apple after several negative reports on the iPhone 5 have emerged. Is AAPL a buy? Keep reading for our exclusive report...</p>
+				<a href="">Read more</a>
+			</br>
+			</br>
+				<h3>Facebook's new "Graph Search" looks useful... For stalkers!</h3>
+				<p>01-15-2013</p>
+				<p>There has been a lot of hype about the FB announcement this morning. Was it something investors should be bullish about? ...</p>
+				<a href="">Read more</a>
+			</br>
+			</br>
+				<h3>Is Zinga stock a buy?</h3>
+				<p>01-14-2013</p>
+				<p>ZNGA has plummeted over the last year, since their IPO. Is now the time to buy? ...</p>
+				<a href="">Read more</a>
+			</br>
+			</br>
+				<h3>Are people going to make the jump from FB to Google Plus?</h3>
+				<p>01-10-2013</p>
+				<p>Many people use Facebook because their friends are on it. It's what they're used to. But, Google+ has some features that you can't overlook ...</p>
+				<a href="">Read more</a>
+			</br>
+			</br>
+				<h3>AAPL stock drops on earnings forcast.</h3>
+				<p>01-02-2013</p>
+				<p>Investers are pulling their money out of AAPL after earnings are expected to be lower in the following year. Can AAPL pull through and impress investors again with the innovation and magic we expect? ...</p>
+				<a href="">Read more</a>
+
+
+
 			</div>
 
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="additem.html" data-icon="start">Add</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
 						<li><a href="#news" data-icon="start">News</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 					</ul>
@@ -115,21 +783,26 @@
 			</div>
 		</div>
 
+<!-- ************************ INFO PAGE ************************ -->
 
 		<div data-role="page" id="info">
-			<div data-role="header" data-theme="e" data-position="fixed">
+			<div data-role="header" data-theme="a" data-position="fixed">
 					<h1>myOptions</h1>
 			</div>
 
 			<div data-role="content"> 
 				<h2>Info</h2>
+				<p>Created by Joel Zyla</p>
+				<p><a href="https://github.com/joelzyla/FSU/tree/master/MiU/week2/Project%202" data-icon="start">Git Repository</a></p>
+				<p><a href="http://pilotincontrol.com/mui/project2/goldapp/index.html" data-icon="start">Gold App</a></p>
+				<p><a href="http://pilotincontrol.com/mui/project2/bronzeapp/index.html" data-icon="start">Bronze App</a></p>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="additem.html" data-icon="start">Add</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
 						<li><a href="#news" data-icon="start">News</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 					</ul>
@@ -138,7 +811,73 @@
 		</div>
 
 
+
+<!-- ************************ UNDER CONSTRUCTION FUTURE JQUERY POSITION PAGE ************************ -->
+
+		<div data-role="page" id="positions" data-ajax="false">
+			<div data-role="header" data-theme="a" data-position="fixed">
+					<h1>myOptions</h1>
+			</div>
+
+			<div data-role="content"> 
+				<h2>Current Positions</h2>
+
+				<form id="optionform" action="#" method="post">
+			<!-- **Fieldset and legend -->
+			<fieldset>
+					<legend>Required Information</legend>
+					<ul id="errors"></ul>
+						<ul id="requiredlist">
+							<!-- **Input fields (include at least one of each type of: text, range, checkbox or radio, date, submit, hidden) -->
+							<!--This list item will generate a select box using a js function -->
+							<li id="callorput"><label class="field" for="group">Type:</label></li></br>
+							<!--<li><label for="callorput">Contract Type:</label>
+								<select id="callorput">
+									<option value="Call">Call</option>
+									<option value="Put">Put</option>
+								</select>
+							</li>-->
+							<!--text input-->
+							<li><label class="field" for="ssymbol">Symbol:</label><input type="text" id="ssymbol"/></li></br>
+							<!--range input-->
+							
+							<li><label class="field" for="sprice">Strike Price:</label><input type="range" min="1" max="1000" id="sprice" value="0" onchange="rangevalue.value=value" /><output id="rangevalue">0</output></li></br>
+							
+							<!--date input(expiration)-->
+							<li><label class="field" for="edate">Date:</label><input type="date" id="edate"/></li><br>
+							<!--checkbox or radio(allornone)-->
+							<li><input class="field" type="checkbox" value="yes" checked value="allornone" id="allornone" name="allCheck" /><label for="allornone"> All or none?</label></li></br>
+						</ul>
+						<!-- **Text area -->
+						<notes>
+						<label for="notes">Notes:</label></br><textarea id="notes"></textarea>
+						</br>
+						<!--hidden input-->
+						<input type="hidden" value="true" />
+						<!--submit input-->
+						</br>
+						<input type="button" value="Save position" id="saveposition" class="button white" />
+						</notes>
+			</fieldset>
+			</form>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="additem.html" rel="external" data-icon="start">Add</a></li>
+						<li><a href="#news" data-icon="start">News</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
 	</body>
 </html>

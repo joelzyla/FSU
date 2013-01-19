@@ -1,7 +1,7 @@
 
-//Project 4: myOptions
+//Project 2: myOptions
 //By Joel Zyla
-//FSU Visual Frameworks 1212
+//MUI
 
 var json = {
 	//object should be consistant with form. 
