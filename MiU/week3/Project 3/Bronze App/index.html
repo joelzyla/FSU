@@ -22,7 +22,7 @@
 		<!-- Mobile IE needs ClearType for smoothing fonts -->
 		<meta http-equiv="cleartype" content="on">
 		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="css/style.css" />
+		<!--<link rel="stylesheet" href="css/style.css"-->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
 		<!-- **TITLE-->
 		<title>myOptions</title>
@@ -41,9 +41,7 @@
 					<h1>myOptions</h1>
 			</div>
 			<div data-role="content"> 
-				<div id=calltoaction>
 				<a href="additem.html" rel="external"><img src="img/calltoaction.png" style="width:100%"></a> 
-				</div>
 				
 				<div id="search">
 					<input id="searchbox" type="search" name="googlesearch" value="Search your positions">
@@ -79,97 +77,74 @@
 
 			<div data-role="content"> 
 				<h2>Contract type: Call</h2>
-				<ul data-role="listview" data-filter="true">
-					<li>
-						<a href="#facebookcalldrilldown">
-							<img src="img/call.png" />
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>FB(3)</h3>
 							<p>31.24  +5%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#applecalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>AAPL(10)</h3>
 							<p>600  +30%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googlecalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>GOOG(40)</h3>
 							<p>900  +40%</p>
 							<p>+$650</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingacalldrilldown">
-							<img src="img/call.png" />
+				</div>
+						
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>ZNGA(10)</h3>
 							<p>5  +100%</p>
 							<p>+$500</p>
-						</a>
-					</li>
-					<li>
-						<a href="#facebookcalldrilldown">
-							<img src="img/call.png" />
+				</div>
+					
+				<div data-role="collapsible">	
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>FB(3)</h3>
 							<p>31.24  +5%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#applecalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>AAPL(10)</h3>
 							<p>600  +30%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googlecalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>GOOG(40)</h3>
 							<p>900  +40%</p>
 							<p>+$650</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingacalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>ZNGA(10)</h3>
 							<p>5  +100%</p>
 							<p>+$500</p>
-						</a>
-					</li>
-					<li>
-						<a href="#applecalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>AAPL(10)</h3>
 							<p>600  +30%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googlecalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>GOOG(40)</h3>
 							<p>900  +40%</p>
 							<p>+$650</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingacalldrilldown">
-							<img src="img/call.png" />
+				</div>
+				<div data-role="collapsible">
+							<img src="img/call.png" HEIGHT="100" WIDTH="100" />
 							<h3>ZNGA(10)</h3>
 							<p>5  +100%</p>
 							<p>+$500</p>
-						</a>
-					</li>
-
-				</ul>
+				</div>				
 			</div>
 
 			<div data-role="footer" data-position="fixed">
@@ -197,96 +172,72 @@
 
 			<div data-role="content"> 
 				<h2>Contract type: Put</h2>
-				<ul data-role="listview" data-filter="true">
-					<li>
-						<a href="#facebookputdrilldown">
-							<img src="img/call.png" />
-							<h3>FB(3)</h3>
-							<p>31.24  -5%</p>
-							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#appleputdrilldown">
-							<img src="img/put.png" />
-							<h3>AAPL(10)</h3>
-							<p>400  -30%</p>
-							<p>+$200,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googleputdrilldown">
-							<img src="img/put.png" />
-							<h3>GOOG(40)</h3>
-							<p>300  -40%</p>
-							<p>+$650,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingaputdrilldown">
-							<img src="img/put.png" />
-							<h3>ZNGA(10)</h3>
-							<p>1  -50%</p>
-							<p>+$444</p>
-						</a>
-					</li>
-					<li>
-						<a href="#facebookputdrilldown">
-							<img src="img/put.png" />
-							<h3>FB(3)</h3>
-							<p>31.24  -5%</p>
-							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#appleputdrilldown">
-							<img src="img/put.png" />
-							<h3>AAPL(10)</h3>
-							<p>400  -30%</p>
-							<p>+$200,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googleputdrilldown">
-							<img src="img/put.png" />
-							<h3>GOOG(40)</h3>
-							<p>300  -40%</p>
-							<p>+$650,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingaputdrilldown">
-							<img src="img/put.png" />
-							<h3>ZNGA(10)</h3>
-							<p>1  -50%</p>
-							<p>+$444</p>
-						</a>
-					</li>
-					<li>
-						<a href="#appleputdrilldown">
-							<img src="img/put.png" />
-							<h3>AAPL(10)</h3>
-							<p>400  -30%</p>
-							<p>+$200,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googleputdrilldown">
-							<img src="img/put.png" />
-							<h3>GOOG(40)</h3>
-							<p>300  -40%</p>
-							<p>+$650,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingaputdrilldown">
-							<img src="img/put.png" />
-							<h3>ZNGA(10)</h3>
-							<p>1  -50%</p>
-							<p>+$444</p>
-						</a>
-					</li>
-				</ul>
+				<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>FB(3)</h3>
+						<p>31.24  -5%</p>
+						<p>+$200</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>AAPL(10)</h3>
+						<p>400  -30%</p>
+						<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>GOOG(40)</h3>
+						<p>300  -40%</p>
+						<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>ZNGA(10)</h3>
+						<p>1  -50%</p>
+						<p>+$444</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>FB(3)</h3>
+						<p>31.24  -5%</p>
+						<p>+$200</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>AAPL(10)</h3>
+						<p>400  -30%</p>
+						<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>GOOG(40)</h3>
+						<p>300  -40%</p>
+						<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>ZNGA(10)</h3>
+						<p>1  -50%</p>
+						<p>+$444</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>AAPL(10)</h3>
+						<p>400  -30%</p>
+						<p>+$200,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>GOOG(40)</h3>
+						<p>300  -40%</p>
+						<p>+$650,000</p>
+					</div>
+					<div data-role="collapsible">
+						<img src="img/put.png" HEIGHT="100" WIDTH="100" />
+						<h3>ZNGA(10)</h3>
+						<p>1  -50%</p>
+						<p>+$444</p>
+				</div>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
@@ -313,96 +264,73 @@
 
 			<div data-role="content"> 
 				<h2>Contract type: Stock</h2>
-				<ul data-role="listview"data-filter="true">
-					<li>
-						<a href="#facebookstockdrilldown">
-							<img src="img/stock.png" />
+
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>FB(3)</h3>
 							<p>31.24  +5%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#applestockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>AAPL(10)</h3>
 							<p>400  +30%</p>
 							<p>+$200,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googlestockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>GOOG(40)</h3>
 							<p>300  +40%</p>
 							<p>+$650,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingastockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>ZNGA(10)</h3>
 							<p>1  +50%</p>
 							<p>+$444</p>
-						</a>
-					</li>
-					<li>
-						<a href="#facebookstockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>FB(3)</h3>
 							<p>31.24  +5%</p>
 							<p>+$200</p>
-						</a>
-					</li>
-					<li>
-						<a href="#applestockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>AAPL(10)</h3>
 							<p>400  +30%</p>
 							<p>+$200,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googlestockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>GOOG(40)</h3>
 							<p>300  +40%</p>
 							<p>+$650,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingastockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>ZNGA(10)</h3>
 							<p>1  +50%</p>
 							<p>+$444</p>
-						</a>
-					</li>
-										<li>
-						<a href="#applestockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>AAPL(10)</h3>
 							<p>400  +30%</p>
 							<p>+$200,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#googlestockdrilldown">
-							<img src="img/stock.png" />
+					</div>
+					<div data-role="collapsible">
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>GOOG(40)</h3>
 							<p>300  +40%</p>
-							<p>+$650,000</p>
-						</a>
-					</li>
-					<li>
-						<a href="#zingastockdrilldown">
-							<img src="img/stock.png" />
+							<p					</div>
+					<div data-role="collapsible">>+$650,000</p>
+							<img src="img/stock.png" HEIGHT="100" WIDTH="100" />
 							<h3>ZNGA(10)</h3>
 							<p>1  +50%</p>
 							<p>+$444</p>
-						</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
@@ -865,9 +793,9 @@
 			<div data-role="content"> 
 				<h2>Info</h2>
 				<p>Created by Joel Zyla</p>
-				<p><a rel="external" href="https://github.com/joelzyla/FSU/tree/master/MiU/week2/Project%202" data-icon="start">Git Repository</a></p>
-				<p><a rel="external" href="http://pilotincontrol.com/mui/project2/goldapp/index.html" data-icon="start">Gold App</a></p>
-				<p><a rel="external" href="http://pilotincontrol.com/mui/project2/bronzeapp/index.html" data-icon="start">Bronze App</a></p>
+				<p><a href="https://github.com/joelzyla/FSU/tree/master/MiU/week2/Project%202" data-icon="start">Git Repository</a></p>
+				<p><a href="http://pilotincontrol.com/mui/project2/goldapp/index.html" data-icon="start">Gold App</a></p>
+				<p><a href="http://pilotincontrol.com/mui/project2/bronzeapp/index.html" data-icon="start">Bronze App</a></p>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
