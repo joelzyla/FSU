@@ -1,31 +1,23 @@
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
-		   	var rbform = $('#addPositionForm');
 
-	   	rbform.validate();
+	
+
 });	
 		
 $('#addItem').on('pageinit', function(){
 
-		var myForm = $('#formId');
+		var myForm = $('#addPositionForm');
 		    myForm.validate({
-			invalidHandler: function(form, validator) {
-			},
+			invalidHandler: function(form, validator) {},
 			submitHandler: function() {
-		var data = myForm.serializeArray();
+		var data = myForm.serializeArray(); //converts to arrays and objects
 			storeData(data);
 		}
 	});
 	
 
-
-
 	//any other code needed for addItem page goes here
-
-	//***VALIDATE***
-
-
-
 
 
 
@@ -34,7 +26,7 @@ $('#addItem').on('pageinit', function(){
 /*
 
 	//Storage requires 2 things. Key and Data
-	function storeData(key) {
+var storeData =	function storeData(key) {
 	if(!key){ //if not key
 	//set up new random number
 		var id = Math.floor(Math.random()*1000005);
@@ -50,15 +42,15 @@ $('#addItem').on('pageinit', function(){
 		//Object properties will contain an array with the form label and the input values.
 		getCheckbox(); //run function to get checkbox
 		var item = {} //object
-			item.callput = ["Contract type:", $("callput").value]; //groups is id of form element we created.
+			item.callput = ["Contract type:", $("#callput").va()]; //groups is id of form element we created.
 			//its getting the value. do this for each element
 			//item.x where x is a property on the fly
 			//between quotes is a label.
-			item.ssymbol = ["Stock Symbol:", $("ssymbol").value];
-			item.sprice = ["Strike Price:", $("sprice").value];
-			item.allornone = ["All or none?", AllorNoneValue];
-			item.edate = ["Date:", $("edate").value];
-			item.notes = ["Notes:", $("notes").value];
+			item.ssymbol = ["Stock Symbol:", $("#ssymbol").val()];
+			item.sprice = ["Strike Price:", $("#sprice").val()];
+			item.allornone = ["All or none?", AllorNoneValue()];
+			item.edate = ["Date:", $("#edate").val()];
+			item.notes = ["Notes:", $("#notes").val()];
 			//save data to local storeage using Stringify to convert our object to a string.
 			//localstoreage ONLY stores strings. it's currently an array.
 			localStorage.setItem(id, JSON.stringify(item)); //will convert item by string separated so we can get them.
@@ -98,7 +90,7 @@ var getData = function(){
 };
 
 var storeData = function(data){
-	
+	console.log(data);
 }; 
 
 var	deleteItem = function (){
