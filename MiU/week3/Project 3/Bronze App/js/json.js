@@ -1,5 +1,5 @@
 
-//Project 2: myOptions
+//Project 3: myOptions
 //By Joel Zyla
 //MUI
 

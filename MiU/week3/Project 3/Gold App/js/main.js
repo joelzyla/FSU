@@ -1,3 +1,7 @@
+//Project 2: myOptions
+//By Joel Zyla
+//MUI
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
