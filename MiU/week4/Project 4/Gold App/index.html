@@ -38,26 +38,29 @@
 
 
 		<div data-role="page" id="home">
-			<div data-role="header" data-theme="a" data-position="fixed">
-					<h1>myOptions</h1>
+			<div data-role="header" data-position="fixed">
+				<img src="img/bullsandbears.jpg" style="width:40;height:40;float:left;margin:10px 10px 10px 10px">
+				<h1>myOptions</h1>
 			</div>
 			<div id="calltoaction">
 				<img src="img/iphone_stats.png"> 
-				<h2>Add a position to get started</h2>
-				
-				<a href="#additem" class="button-addposition">Add Position</a>
+				<div id="positioncontainer"
+					<h2>Add a position to get started now!</h2>
+				</br>
+					<a data-transition="turn" href="#additem" class="button-addposition">Add Position</a>
+				</div>
 			</div>
 			<div data-role="content"> 
 				
 				
 				<div id="search">
-					<input id="searchbox" type="search" name="googlesearch" value="Search your positions">
+					<input id="searchbox" type="search" name="googlesearch" value="Search your positions" data-theme="a">
 				</div>
 				<div id="browsebuttons">
 					<h2>Browse by</h2>
-					<p><a href="#contractcall" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Call</a></p>
-					<p><a href="#contractput" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Put</a></p>
-					<p><a href="#contractstock" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Stock</a></p>
+					<p><a data-theme="a" href="#contractcall" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Call</a></p>
+					<p><a data-theme="a" href="#contractput" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Put</a></p>
+					<p><a data-theme="a" href="#contractstock" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Stock</a></p>
 				</div>
 				<div data-role="footer" data-position="fixed">
 					<div data-role="navbar">
@@ -78,7 +81,7 @@
 <!-- Browse by Call -->
 
 		<div data-role="page" id="contractcall">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -196,7 +199,7 @@
 
 <!-- Browse by put -->
 		<div data-role="page" id="contractput">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -312,7 +315,7 @@
 <!-- Browse by stock -->
 
 		<div data-role="page" id="contractstock">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -427,7 +430,7 @@
 <!-- ************************ SHOW DETAILS DRILLDOWN ************************ -->
 <!-- FACEBOOK CALLS DETAILS -->
 		<div data-role="page" id="facebookcalldrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -458,7 +461,7 @@
 
 <!-- FACEBOOK PUTS DETAILS-->
 		<div data-role="page" id="facebookputdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -489,7 +492,7 @@
 
 <!-- FACEBOOK STOCKS DETAILS-->
 		<div data-role="page" id="facebookstockdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -529,7 +532,7 @@
 
 <!-- Apple CALLS DETAILS -->
 		<div data-role="page" id="applecalldrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -560,7 +563,7 @@
 
 <!-- Apple PUTS DETAILS -->
 		<div data-role="page" id="appleputdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -591,7 +594,7 @@
 
 <!-- Apple STOCKS DETAILS -->
 		<div data-role="page" id="applestockdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -622,7 +625,7 @@
 
 <!-- GOOGLE CALLS DETAILS -->
 		<div data-role="page" id="googlecalldrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -653,7 +656,7 @@
 
 <!-- GOOGLE PUTS DETAILS -->
 		<div data-role="page" id="googleputdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -684,7 +687,7 @@
 
 <!-- GOOGLE STOCKS DETAILS -->
 		<div data-role="page" id="googlestockdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -715,7 +718,7 @@
 
 <!-- ZNGA CALLS DETAILS -->
 		<div data-role="page" id="zingacalldrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -746,7 +749,7 @@
 
 <!-- ZNGA PUTS DETAILS -->
 		<div data-role="page" id="zingaputdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -777,7 +780,7 @@
 
 <!-- ZNGA STOCKS DETAILS -->
 		<div data-role="page" id="zingastockdrilldown">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -809,7 +812,7 @@
 <!-- ************************ NEWS PAGE ************************ -->
 
 		<div data-role="page" id="news">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
@@ -863,7 +866,7 @@
 <!-- ************************ INFO PAGE ************************ -->
 
 		<div data-role="page" id="info">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 					<h1>myOptions</h1>
 			</div>
 
@@ -892,18 +895,18 @@
 <!-- ************************ Add Item Page ************************ -->
 
 		<div data-role="page" id="additem">
-			<div data-role="header" data-theme="a" data-position="fixed">
+			<div data-role="header" data-position="fixed">
 				<h1>myOptions</h1>
 			</div>
 
 			<div data-role="content"> 
 				<h2>Add a New Position</h2>
-				<h3>* Required</h3>
+				<h4>* Required</h4>
 
-				<form action="" id="addPositionForm">
-					<div data-role="fieldcontain">
-						<select name="contractTypeSelect" id="callput" data-native-menu="false">
-							<option value="selectContract">SELECT CONTRACT TYPE</option>
+				<form action="" id="addPositionForm" data-theme="a">
+					<div data-role="fieldcontain" placeholder="Select Contract Type" >
+						<select class="required" data-theme="a" name="contractTypeSelect" id="callput" data-native-menu="false">
+							<option value="">SELECT CONTRACT TYPE</option>
 							<option value="callContract">Call</option>
 							<option value="putContract">Put</option>
 							<option value="stockContract">Stock</option>
@@ -911,24 +914,24 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="date">Date Input:</label>
-						<input type="date" data-role="datebox" data-options='{"mode": "calbox"}' name="date" id="edate" />
+						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="date" id="edate" />
 					</div>	
 					<div data-role="fieldcontain">
 						<label for="strikePrice">Strike Price:</label>
-						<input value="0" min="0" max="5000" type="range" name="strikePriceRange" id="sprice" />
+						<input placeholder="e.g. 225" data-theme="a" class="required" type="number" name="strikePriceRange" id="sprice" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="stockSymbol" class="required">* Symbol:</label>
-						<input class="required" type="text" name="stockSymbolInput" id="ssymbol" value="Ex. AAPL" />
+						<input placeholder="e.g. AAPL" data-theme="a" class="required" type="text" name="stockSymbolInput" id="ssymbol" />
 					</div>
 
 					<div data-role="fieldcontain">
-						<label for="positionNotes">Notes:</label>
-						<textarea id="notes">Enter notes about this position.</textarea>
+						<label placeholder="Enter notes about this position." for="positionNotes">Notes:</label>
+						<textarea data-theme="a" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
-							<input type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" />
+							<input data-theme="a" type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" />
 							<label for="allornonebox-1">* All or none</label>
 						</fieldset>
 					</div>
@@ -941,8 +944,8 @@
 						-->
 						
 						<fieldset class="ui-grid-a">
-						<div class="ui-block-a"><button type="submit" data-theme="b">Submit</button></div>
-						<div class="ui-block-b"><button type="reset" data-theme="c">Reset</button></div>	   
+						<div class="ui-block-b"><button data-theme="b" type="submit">Submit</button></div>
+						<div class="ui-block-b"><button data-theme="a" type="reset">Reset</button></div>	   
 						</fieldset>
 						
 					</div>

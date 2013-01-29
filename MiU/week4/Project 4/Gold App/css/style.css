@@ -6,38 +6,43 @@ By Joel Zyla
 MUI
 */
 
+
 #calltoaction {
 
     background: #EA794B;
 	background: url("../img/noise_bg2.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #EA794B 0%, #E05530 100%) repeat scroll 0 0 transparent;
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
+
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
-    padding: 5px 10px 10px 10px;
+    padding: 20px 10px 15px 10px;
+
 }
 
+#positioncontainer {
+    max-width: 400px;
 
+}
 
 #calltoaction img {
 	float: left;
-	padding-right: 15px;
+	padding-right: 20px;
+    padding-bottom: 10px;
 	width: 120px !important;
 
 }
 
 #calltoaction h2 {
-	font-size: 15px;
+    font-size: 15px;
 	text-shadow: none;
-
+    float: right;
 }
 
-ui-body-c, .ui-overlay-c {
-    background: none repeat scroll 0 0 #666666 !important;
+.ui-grid-a {
+
 }
 
 .ui-header {
-	background: url("../img/noise_bg1.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #515055 0%, #2D2A33 100%) repeat scroll 0 0 transparent;
-	border-top: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    background: rgba(49, 46, 56, 0.8);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
 }
 
 .ui-header .ui-title {
@@ -45,6 +50,7 @@ ui-body-c, .ui-overlay-c {
     padding: 0 0 0 0 !important;
     margin: 10 10 10 15 !important;
     font-size: 25px !important;
+    color: #FFFFFF;
 }
 
 #calltoaction .button-addposition {
@@ -52,13 +58,13 @@ ui-body-c, .ui-overlay-c {
     border: 1px solid rgba(0, 0, 0, 0.18);
     box-shadow: none;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     display: inline-block;
     padding: 8px 20px;
     text-decoration: none;
     font-weight: normal;
     font-size: 15px !important;
-
+    margin-top: 15px;
 
 }
 
@@ -70,11 +76,46 @@ ui-body-c, .ui-overlay-c {
 }
 
 .ui-body-c, .ui-overlay-c {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #AAAAAA;
-    color: #333333;
-    text-shadow: 0 1px 0 #FFFFFF;
+    background: #515055;
+    background: url("../img/noise_bg1.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #515055 0%, #2D2A33 100%) repeat scroll 0 0 transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;
+    text-shadow: none;
 }
+select.error, textarea.error, input.error {
+    color:#FF0000 !important;
+}
+
+.ui-btn-up-c {
+    background: linear-gradient(#515055, #2D2A33) repeat scroll 0 0 #EEEEEE;
+}
+
+.ui-btn-up-c:visited, .ui-btn-up-c a.ui-link-inherit {
+    color: #FFFFFF;
+    text-shadow: none !important;
+    font-weight: normal !important;
+}
+
+.ui-mobile a img, .ui-mobile fieldset {
+    padding-top: 10px;
+}
+
+.ui-body-c .ui-link {
+    color: #EA794B !important;
+    font-weight: normal !important;
+}
+
+.ui-btn-up-c {
+    border: 1px solid #000000 !important;
+    background: none repeat scroll 0 0 rgba(49, 46, 56, 0.8);
+    }
+
+
+
+
+
+
 
 
 
