@@ -7,10 +7,75 @@ MUI
 */
 
 #calltoaction {
-	background-color: #333333 !important;
-	margin-bottom: 25px;
+
+    background: #EA794B;
+	background: url("../img/noise_bg2.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #EA794B 0%, #E05530 100%) repeat scroll 0 0 transparent;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    padding: 5px 10px 10px 10px;
 }
+
+
+
+#calltoaction img {
+	float: left;
+	padding-right: 15px;
+	width: 120px !important;
+
+}
+
+#calltoaction h2 {
+	font-size: 15px;
+	text-shadow: none;
+
+}
+
 ui-body-c, .ui-overlay-c {
-    background: none repeat scroll 0 0 #CCCCCC !important;
-    }
+    background: none repeat scroll 0 0 #666666 !important;
+}
+
+.ui-header {
+	background: url("../img/noise_bg1.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #515055 0%, #2D2A33 100%) repeat scroll 0 0 transparent;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.ui-header .ui-title {
+    text-align: left !important;
+    padding: 0 0 0 0 !important;
+    margin: 10 10 10 15 !important;
+    font-size: 25px !important;
+}
+
+#calltoaction .button-addposition {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.13);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    box-shadow: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 8px 20px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 15px !important;
+
+
+}
+
+#calltoaction .button-addposition:hover {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.ui-body-c, .ui-overlay-c {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AAAAAA;
+    color: #333333;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+
+
 
