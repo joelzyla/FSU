@@ -1,4 +1,4 @@
-//Project 2: myOptions
+//Project 4: myOptions
 //By Joel Zyla
 //MUI
 
@@ -8,6 +8,9 @@ $('#home').on('pageinit', function(){
 		
 $('#additem').on('pageinit', function(){
 
+
+
+
 		var myForm = $('#addPositionForm');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
@@ -15,14 +18,21 @@ $('#additem').on('pageinit', function(){
 			submitHandler: function() {
 		var data = myForm.serializeArray();
 			storeData(data);
+
 		}
+
 	});
 	
 	//any other code needed for addItem page goes here
-	
+
+	var myDate = new Date();
+	var todaysDate =(myDate.getMonth()+1) + '/' + myDate.getDate() + '/' + myDate.getFullYear();
+	$("#mydate").val(todaysDate);
+
 });
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
 
 var autofillData = function (){
 	 

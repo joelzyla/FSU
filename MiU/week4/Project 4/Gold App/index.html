@@ -1,7 +1,7 @@
 <DOCTYPE html>
 
 <!-- 
-		Project 3: myOptions
+		Project 4: myOptions
 		By Joel Zyla
 		MUI
 -->
@@ -33,6 +33,9 @@
 
 
 
+
+
+
 <!-- ************************ BODY ************************ -->
 	<body>
 
@@ -57,7 +60,7 @@
 					<input id="searchbox" type="search" name="googlesearch" value="Search your positions" data-theme="a">
 				</div>
 				<div id="browsebuttons">
-					<h2>Browse by</h2>
+					<h3>Browse by</h3>
 					<p><a data-theme="a" href="#contractcall" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Call</a></p>
 					<p><a data-theme="a" href="#contractput" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Put</a></p>
 					<p><a data-theme="a" href="#contractstock" data-role="button" data-icon="arrow-r" data-iconpos="right">Contract type: Stock</a></p>
@@ -873,9 +876,9 @@
 			<div data-role="content"> 
 				<h2>Info</h2>
 				<p>Created by Joel Zyla</p>
-				<p><a href="https://github.com/joelzyla/FSU/tree/master/MiU/week3/Project%203" data-icon="start">Git Repository</a></p>
-				<p><a href="http://pilotincontrol.com/mui/project3/goldapp/index.html" data-icon="start">Gold App</a></p>
-				<p><a href="http://pilotincontrol.com/mui/project3/bronzeapp/index.html" data-icon="start">Bronze App</a></p>
+				<p><a href="https://github.com/joelzyla/FSU/tree/master/MiU/week4/Project%204" data-icon="start">Git Repository</a></p>
+				<p><a href="http://pilotincontrol.com/mui/project4/goldapp/index.html" data-icon="start">Gold App</a></p>
+				<p><a href="http://pilotincontrol.com/mui/project4/bronzeapp/index.html" data-icon="start">Bronze App</a></p>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
@@ -906,22 +909,22 @@
 				<form action="" id="addPositionForm" data-theme="a">
 					<div data-role="fieldcontain" placeholder="Select Contract Type" >
 						<select class="required" data-theme="a" name="contractTypeSelect" id="callput" data-native-menu="false">
-							<option value="">SELECT CONTRACT TYPE</option>
+							<option value="">* SELECT CONTRACT TYPE</option>
 							<option value="callContract">Call</option>
 							<option value="putContract">Put</option>
 							<option value="stockContract">Stock</option>
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<label for="date">Date Input:</label>
-						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="date" id="edate" />
+						<label for="mydate">* Purchase Date:</label>
+						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="mydate" id="mydate" />
 					</div>	
 					<div data-role="fieldcontain">
-						<label for="strikePrice">Strike Price:</label>
+						<label for="strikePrice">* Strike Price:</label>
 						<input placeholder="e.g. 225" data-theme="a" class="required" type="number" name="strikePriceRange" id="sprice" />
 					</div>
 					<div data-role="fieldcontain">
-						<label for="stockSymbol" class="required">* Symbol:</label>
+						<label for="stockSymbol" class="required">* Stock Symbol:</label>
 						<input placeholder="e.g. AAPL" data-theme="a" class="required" type="text" name="stockSymbolInput" id="ssymbol" />
 					</div>
 
@@ -931,8 +934,8 @@
 					</div>
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
-							<input data-theme="a" type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" />
-							<label for="allornonebox-1">* All or none</label>
+							<input data-theme="a" type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" checked />
+							<label for="allornonebox-1">* Email alerts</label>
 						</fieldset>
 					</div>
 
