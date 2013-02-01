@@ -9,8 +9,6 @@ $('#home').on('pageinit', function(){
 $('#additem').on('pageinit', function(){
 
 
-
-
 		var myForm = $('#addPositionForm');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
@@ -28,6 +26,14 @@ $('#additem').on('pageinit', function(){
 	var myDate = new Date();
 	var todaysDate =(myDate.getMonth()+1) + '/' + myDate.getDate() + '/' + myDate.getFullYear();
 	$("#mydate").val(todaysDate);
+
+	$("#clearPositionsButton").click( function()
+           {
+             clearLocal();
+           }
+      );
+
+
 
 });
 
@@ -64,6 +70,14 @@ var	deleteItem = function (){
 };
 					
 var clearLocal = function(){
-
+		if(localStorage.length === 0) {
+			alert("There are no positions to delete.")
+		}else{
+			var ask = confirm("Are you sure you want to delete all positions?");
+			localStorage.clear(); // this will delete everything.
+		//	alert("All positions have been removed!");
+			window.location.reload(); //windows destination fo page
+			return false;
+		}
 };
 

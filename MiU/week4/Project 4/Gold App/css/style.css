@@ -47,7 +47,7 @@ MUI
 
 .ui-header .ui-title {
     text-align: left !important;
-    padding: 0 0 0 0 !important;
+    padding: 8 0 0 0 !important;
     margin: 10 10 10 15 !important;
     font-size: 25px !important;
     color: #FFFFFF;
@@ -111,7 +111,9 @@ select.error, textarea.error, input.error {
     background: none repeat scroll 0 0 rgba(49, 46, 56, 0.8);
     }
 
-
+#clearPositionsButton {
+    color: #FFFFFF;
+}
 
 
 
