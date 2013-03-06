@@ -1,0 +1,63 @@
+
+
+/*
+Project 3: myOptions
+By Joel Zyla
+FSU Visual Frameworks 1212
+*/
+
+
+body {
+	font-family: Arial;
+	background-color: #496767;
+	margin: auto;
+	width: 480px;
+}
+
+p {
+	color: #FFFFFF;
+}
+
+h1 {
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+a {
+	color: red;
+}
+
+form {
+	border: 1px solid #FFFFFF;
+	padding: 15px;
+}
+
+legend {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #373C36;
+	border: 1px solid #FFFFFF;
+}
+
+ul {
+	font-weight: normal;
+	font-family: Arial;
+	text-align: left;
+	list-style: none;
+	color: #CCCCCC;
+}
+
+fieldset {
+	background-color: #373C36;
+}
+
+notes {
+	color: #CCCCCC;
+}
+/*
+bottomnav {
+	margin: 5px;
+}
+*/

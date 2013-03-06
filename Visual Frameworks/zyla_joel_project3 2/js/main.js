@@ -1,4 +1,4 @@
-//Project 4: myOptions
+//Project 3: myOptions
 //By Joel Zyla
 //FSU Visual Frameworks 1212
 
@@ -169,17 +169,10 @@ window.addEventListener("DOMContentLoaded", function() {
 	function getData(){
 		//Toggle elements
 		toggleControls("on");
-		if(localStorage.length === 0){
-			alert("There are no positions saved in local storage. Default data will be loaded.");
-			autoFillData();
-		}
 		//write data from local storage to the browser
 		var makeDiv = document.createElement('div');
 		//give div an attribute. id of items
 		makeDiv.setAttribute("id", "items");
-
-		
-		
 		//inside div we'll format items in a way to be semantic. We shall use a list. ul
 		var makeList = document.createElement('ul');
 		//put the list into the div.
@@ -207,27 +200,18 @@ window.addEventListener("DOMContentLoaded", function() {
 			//list items need to be in unordered list
 			var makeSubList = document.createElement('ul');
 			makeli.appendChild(makeSubList);
-			getImage(obj.callput[1], makeSubList);
 			for (var n in obj){
 				var makeSubli = document.createElement('li');
 				makeSubList.appendChild(makeSubli);
 				var optSubText = obj[n][0]+" "+obj[n][1];
 				makeSubli.innerHTML = optSubText;
+				
 				makeSubList.appendChild(linksLi);
 				
 			}
 			//pass each item's key into this function as it loops through
 			makeItemLinks(localStorage.key(i), linksLi); //Create edit and delete buttons for each item in localstorage
 		}
-	}
-	
-	function getImage(tradeType, makeSubList){
-		//get the image for the right contract type
-		var imageLi = document.createElement('Li');
-		makeSubList.appendChild(imageLi);
-		var newImg = document.createElement('img');
-		var setSrc = newImg.setAttribute("src", "img/" + tradeType + ".png")
-		imageLi.appendChild(newImg);
 	}
 	
 	//Make item links function
@@ -263,18 +247,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild(deleteLink);
 		
 		
-	}
-	
-	function autoFillData(){
-		//The actual JSON OBJECT data required for this to work is coming from our
-		//json.js file which is loaded from our html page.
-		//We need to store the JSON OBJECT into local storage.
-		//We will loop through the object putting it into LS.
-		for (var n in json){
-			var id = Math.floor(Math.random()*1000005);
-			localStorage.setItem(id, JSON.stringify(json[n]));
-		}
-			 //json is our json object. they can see eachother because both files loaded in same page.
 	}
 	
 	function deleteItem(){
@@ -338,7 +310,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 		//reset error messages
 		errMsg.innerHTML = "";
-		errMsg.style.color = "1px solid red";
 		//reset borders
 		getSsymbol.style.border = "1px solid black";
 		getCallput.style.border = "1px solid black";
@@ -354,7 +325,8 @@ window.addEventListener("DOMContentLoaded", function() {
 			//push into array of error messages
 			messageAry.push(callputError);
 		}
-				
+		
+		
 		//check stock symbol 
 		if(getSsymbol.value === ""){
 			var ssymbolError = "! Please enter a stock symbol";
@@ -379,25 +351,21 @@ window.addEventListener("DOMContentLoaded", function() {
 		
 			//above if all is okay, save the data
 		}
-		window.location.reload();
 	}
+
 
 	function clearLocal() {
 		if(localStorage.length === 0) {
-			alert("There are no positions to delete.")
+			alert("There are no positions to clear.")
 		}else{
-			var ask = confirm("Are you sure you want to delete all positions?");
 			localStorage.clear(); // this will delete everything.
-		//	alert("All positions have been removed!");
+			alert("All positions have been removed!");
 			window.location.reload(); //windows destination fo page
 			return false;
 		}
 	}
-	
-	//Update value of slider
-	function updateTextInput(val) {
-      document.getElementById('textInput').value=val; 
-    }
+
+
 
 		//Variable defaults
 		var contactGroups = ["--Select--", "Call", "Put", "Stock"], 
@@ -405,11 +373,10 @@ window.addEventListener("DOMContentLoaded", function() {
 			AllorNoneValue = "No",
 			errMsg = $('errors')
 		;
-		
 		//Call array function
 		whichTrade();
-		
-		
+
+
 		//Set link and submit click events
 		var displayLink = $('displayLink');
 		displayLink.addEventListener("click", getData);
