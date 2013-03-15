@@ -3,7 +3,8 @@
 
 
 $('#home').on('pageinit', function () {
-//code needed for home page goes here
+	//code needed for home page goes here
+	return false;
 	});
 $('#additem').on('pageinit', function () {
 
@@ -17,9 +18,15 @@ $('#additem').on('pageinit', function () {
 
 		//var data = $( '#test' ).serializeObject()
 		//var data = JSON.stringify(myForm.serializeArray());
-		var data = "test";
-		console.log(data);
-		var data = myForm.serializeArray();
+		//var data = "test";
+
+	    //console.log(data);
+
+		var data = myForm.serialize();
+		//var data = JSON.stringify(myForm.serialize());
+
+
+
 		//var data = $('#myForm').serializeArray();
 		console.log('First Data:' + data);
 		storeData(data);
@@ -38,11 +45,12 @@ $('#additem').on('pageinit', function () {
         return false;
     });
 
-	$("#addPositionButton").on('click'), function () {
+	$("#addPositionButton").on('click', function () {
 		window.location.reload();
 		return false;
-	};
+	});
 
+	return false;
 });
 
 
@@ -50,15 +58,14 @@ $('#additem').on('pageinit', function () {
 var contactGroups = ["--Select--", "Call", "Put", "Stock"], 
 	checkValue, 
 	AllorNoneValue = "No",
-	errMsg = $('errors')
-;
+	errMsg = $('errors');
 
 
-var autoFillData = function (){
+var autoFillData = function(){
 	for (var n in json){
 		var id = Math.floor(Math.random()*1000005);
 		localStorage.setItem(id, JSON.stringify(json[n]));
-	}
+	} 
 };
 
 
@@ -73,8 +80,9 @@ if(!key){
 	}
 	for (var n in data){
 		console.log("for works, probably too many times ;)");
-		var id = Math.floor(Math.random()*1000005);
-		localStorage.setItem(id, JSON.stringify(data));
+
+		localStorage.setItem(id, JSON.stringify(data[n]));
+		//localStorage.setItem(id, JSON.stringify(data));
 
 		console.log(data);
 	}
@@ -96,10 +104,10 @@ var	deleteItem = function (){
 
 var clearLocal = function(){
 	if(localStorage.length === 0) {
-		alert("There are no positions to delete.")
+		alert("There are no positions to delete.");
 	}else{
 		var ask = confirm("Are you sure you want to delete all positions?");
-		if (ask==true) {
+		if (ask===true) {
 			localStorage.clear();
 			window.location.reload(); 
 			return false;
@@ -107,15 +115,10 @@ var clearLocal = function(){
 			return false;
 		}
 	}
+	return false;
 };
 
 
-var autoFillData = function(){
-	for (var n in json){
-		var id = Math.floor(Math.random()*1000005);
-		localStorage.setItem(id, JSON.stringify(json[n]));
-	} 
-};
 
 
 var getData = function(){
@@ -136,12 +139,12 @@ var getData = function(){
 	//console.log('test');
 
 	$('#items').append("<ul>");
+
 	for (var i=0, len=localStorage.length; i<len; i++){
 		var key = localStorage.key(i);
-
 		var value = localStorage.getItem(key);
 		var obj = JSON.parse(value);
-			for(var n in obj){
+			for (var n in obj){
 				var itemValues = obj[n][0] + " " + obj[n][1] + "</br>";
 
 				//$('<li>' + itemValues + '</li>').appendTo('.formObj');
@@ -149,8 +152,8 @@ var getData = function(){
 				$('#items').append("<li>" + itemValues + "</li>");
 			} 
 		}
-}//***END OF GETDATA
 
+};//***END OF GETDATA
 
 var getImage = function(tradeType, makeSubList){
 	var imageLi = $('#items').append($('li'));
@@ -161,15 +164,13 @@ var getImage = function(tradeType, makeSubList){
 
 	//var setSrc = newImg.setAttribute("src", "img/" + tradeType + ".png")
 
-	$('imageLi').append($('newImg'))
+	$('imageLi').append($('newImg'));
 
 	//imageLi.appendChild(newImg);
-
-}
+};
 
 
 var toggleControls = function(n) {
-
 	switch(n){  
 		case "on":
 			$('#addPositionForm').css("display", "none");
@@ -188,7 +189,8 @@ var toggleControls = function(n) {
 		default:
 			return false;
 	}
-}
+	return false;
+};
 
 
 
