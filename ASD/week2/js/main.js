@@ -5,9 +5,9 @@
 $('#home').on('pageinit', function () {
 //code needed for home page goes here
 	});
-
-
 $('#additem').on('pageinit', function () {
+
+
 	var myForm = $('#addPositionForm');
     myForm.validate({
 		invalidHandler: function(form, validator) {
@@ -16,9 +16,14 @@ $('#additem').on('pageinit', function () {
 
 
 		//var data = $( '#test' ).serializeObject()
-		var data = JSON.stringify(myForm.serializeArray());
-		//var data = $('#myForm').serializeObject();
-		storeData(data)
+		//var data = JSON.stringify(myForm.serializeArray());
+		var data = "test";
+		console.log(data);
+		var data = myForm.serializeArray();
+		//var data = $('#myForm').serializeArray();
+		console.log('First Data:' + data);
+		storeData(data);
+
 		}
 	});
 		
@@ -61,13 +66,16 @@ var storeData = function(data, key){
 console.log(data);
 if(!key){ 
 		var id = Math.floor(Math.random()*1000005);
+		console.log("if works");
 	}else{
 			id = key;
+		console.log("else works");
 	}
 	for (var n in data){
-
+		console.log("for works, probably too many times ;)");
 		var id = Math.floor(Math.random()*1000005);
-		localStorage.setItem(id, (data[n]));
+		localStorage.setItem(id, JSON.stringify(data));
+
 		console.log(data);
 	}
 	alert("Position Saved!");
