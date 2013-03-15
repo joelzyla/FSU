@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!doctype html>
 
 <!-- 
 		By Joel Zyla
@@ -18,14 +18,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Mobile IE needs ClearType for smoothing fonts -->
-		<meta http-equiv="cleartype" content="on">
+		<!-- <meta http-equiv="cleartype" content="on">-->
 		<!-- StyleSheets under here -->
 		<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css">
 		<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
  
 		<!-- **TITLE-->
-		<title>myOptions</title>
+		<title>newsTopics</title>
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
 	</head>
@@ -38,27 +38,27 @@
 		<section data-role="page" id="home">
 
 				<header data-role="header" data-position="fixed">
-					<h1>myOptions</h1>
+					<h1>newsTopics</h1>
+				</header>
 				<section id="calltoaction">
 				<!--	<img src="img/iphone_stats.png"> -->
-					<div id="positioncontainer"
+					<div id="positioncontainer">
 						<h2>Submit a new story!</h2>
-					</br>
-						<a data-transition="turn" href="" class="button-addposition">Get started</a>
+						<h3><a data-transition="turn" id="getStartedLink" href="#additem" class="button-addposition">Get started</a></h3>
 					</div>
 				</section>
-			</header>
+			
 			<section data-role="content"> 
 				
 				
 				<nav id="search">
-					<input id="searchbox" type="search" name="googlesearch" value="Search for a topic" data-theme="a">
+					<input id="searchbox" type="search" name="googlesearch" value="Search topics" data-theme="a">
 				</nav>
 				<nav id="browsebuttons">
 					<header>
-						<h3>Browse by</h3>
+						<h3>Browse topics by</h3>
 					</header>
-					<p><a data-theme="a" href="" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Trending stories</a></p>
+					<p><a data-theme="a" href="" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Trending</a></p>
 					<p><a data-theme="a" data-transition="slide" href="" data-role="button" data-icon="arrow-r" data-iconpos="right">Most liked</a></p>
 					<p><a data-theme="a" data-transition="slide" href="" data-role="button" data-icon="arrow-r" data-iconpos="right">Most disliked</a></p>
 					<p><a data-theme="a" data-transition="slide" href="" data-role="button" data-icon="arrow-r" data-iconpos="right">Need review</a></p>
@@ -67,8 +67,8 @@
 					<nav data-role="navbar">
 						<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="#categories" data-icon="start">Categories</a></li>
-						<li><a href="#additem" data-icon="start">Submit Story</a></li>
+						<li><a href="#browse" data-icon="start">Browse</a></li>
+						<li><a href="#additem" data-icon="start">Add</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 						</ul>
 					</nav>
@@ -77,23 +77,22 @@
 		</section>
 
 
-<!-- ************************ STORIES PAGE ************************ -->
+<!-- ************************ BROWSE PAGE ************************ -->
 
-		<section data-role="page" id="stories">
+		<section data-role="page" id="browse">
 			<header data-role="header" data-position="fixed">
-				<h1>myOptions</h1>
+				<h1>newsTopics</h1>
 			</header>
-
-			<section id="items" data-role="content"> 
-				
-			</section>
+			<header>
+				<h2>Browse Topics</h2>
+			</header>
 
 			<footer data-role="footer" data-position="fixed">
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="#categories" data-icon="start">Categories</a></li>
-						<li><a href="#stories" data-icon="start">Submit Story</a></li>
+						<li><a href="#browse" data-icon="start">Browse</a></li>
+						<li><a href="#additem" data-icon="start">Add</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 					</ul>
 				</nav>
@@ -104,7 +103,7 @@
 
 		<section data-role="page" id="info">
 			<header data-role="header" data-position="fixed">
-					<h1>myOptions</h1>
+					<h1>newsTopics</h1>
 			</header>
 
 			<section data-role="content"> 
@@ -117,8 +116,8 @@
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="#categories" data-icon="start">Categories</a></li>
-						<li><a href="#stories" data-icon="start">Submit Story</a></li>
+						<li><a href="#browse" data-icon="start">Browse</a></li>
+						<li><a href="#additem" data-icon="start">Add</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 					</ul>
 				</nav>
@@ -134,38 +133,37 @@
 
 		<section data-role="page" id="additem">
 			<div data-role="header" data-position="fixed">
-				<h1>myOptions</h1>
+				<h1>newsTopics</h1>
 			</div>
 
 			<section data-role="content"> 
+				<form action="#" id="addPositionForm" data-theme="a">
 				<h2>Submit a story</h2>
-				<h4>* Required</h4>
-
-				<form action="" id="addPositionForm" data-theme="a">
-					<div data-role="fieldcontain" placeholder="Select Contract Type" >
-						<select class="required" data-theme="a" name="contractTypeSelect" id="callput" data-native-menu="false">
-							<option value="">* SELECT CONTRACT TYPE</option>
-							<option value="callContract">Call</option>
-							<option value="putContract">Put</option>
-							<option value="stockContract">Stock</option>
+				<h4>Questions marked with a * are required.</h4>
+					<div data-role="fieldcontain">
+						<select class="required" data-theme="a" id="newsCat" data-native-menu="false">
+							<option value="">* Select a category</option>
+							<option value="callContract">Politics</option>
+							<option value="putContract">Science</option>
+							<option value="stockContract">Medical</option>
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<label for="mydate">* Purchase Date:</label>
+						<label for="mydate">* Release date:</label>
 						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="mydate" id="mydate" />
 					</div>	
 					<div data-role="fieldcontain">
-						<label for="strikePrice">* Strike Price:</label>
-						<input placeholder="e.g. 225" data-theme="a" class="required" type="number" name="strikePriceRange" id="sprice" />
+						<label for="sprice">* Tags:</label>
+						<input placeholder="Separate tags with a comma." data-theme="a" class="required" type="text" name="strikePriceRange" id="sprice" />
 					</div>
 					<div data-role="fieldcontain">
-						<label for="stockSymbol" class="required">* Stock Symbol:</label>
-						<input placeholder="e.g. AAPL" data-theme="a" class="required" type="text" name="stockSymbolInput" id="ssymbol" />
+						<label for="ssymbol" class="required">* URL:</label>
+						<input placeholder="Paste the article URL here." data-theme="a" class="required" type="text" name="stockSymbolInput" id="ssymbol" />
 					</div>
 
 					<div data-role="fieldcontain">
-						<label placeholder="Enter notes about this position." for="positionNotes">Notes:</label>
-						<textarea data-theme="a" id="notes"></textarea>
+						<label for="notes">Description:</label>
+						<textarea placeholder="Describe the article in under 200 words" data-theme="a" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
@@ -174,31 +172,37 @@
 						</fieldset>
 					</div>
 
-					<div id="items" data-role="content"> </div>
+						<fieldset class="ui-grid-a">
+						<div class="ui-block-b"><button data-theme="b" type="submit">Submit</button></div>
+						<div class="ui-block-b"><button data-theme="a" type="reset">Reset</button></div>
+						</fieldset>
 
-					<div data-role="fieldcontain">
+					
+				</form>
+
+				<fieldset>
 						
 						<!-- Old buttons
 						<input type="Reset" value="Reset" data-theme="a" />
 						<input type="submit" value="Save Position" data-theme="e" />
 						-->
 						
-						<fieldset class="ui-grid-a">
-						<div class="ui-block-b"><button data-theme="b" type="submit">Submit</button></div>
-						<div class="ui-block-b"><button data-theme="a" type="reset">Reset</button></div>
-						</fieldset>
-						<div id="displayPositionsButton" data-theme="a" data-role="button">Display submissions</div>
-						<div id="addPositionButton" data-theme="a" data-role="button">Submit story</div>
-						<div id="clearPositionsButton" data-theme="a" data-role="button">Clear saved submissions</div>
-					</div>
-				</form>
+						<div class="ui-grid-solo"><button id="displayPositionsButton" data-theme="a" type="submit">Display submissions</button></div>
+
+						<div class="ui-grid-solo"><button id="addPositionButton" data-theme="a" type="submit">Submit a story</button></div>
+
+						<div class="ui-grid-solo"><button id="clearPositionsButton" data-theme="a" type="submit">Clear submissions</button></div>
+						
+					</fieldset>
+				
 			</section>
+			<section id="items" data-role="content"> </section>
 			<footer data-role="footer" data-position="fixed">
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="start">Home</a></li>
-						<li><a href="#categories" data-icon="start">Categories</a></li>
-						<li><a href="#stories" data-icon="start">Submit Story</a></li>
+						<li><a href="#browse" data-icon="start">Browse</a></li>
+						<li><a href="#stories" data-icon="start">Add</a></li>
 						<li><a href="#info" data-icon="start">Info</a></li>
 					</ul>
 				</nav>

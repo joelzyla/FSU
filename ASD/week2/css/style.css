@@ -1,56 +1,45 @@
 
 
 /*
-Project 4: myOptions
+
 By Joel Zyla
-MUI
-*/
 
-#calltoaction {
 
-    background: #EA794B;
-    background: url("../img/noise_bg2.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #EA794B 0%, #E05530 100%) repeat scroll 0 0 transparent;
-
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
-    padding: 20px 10px 15px 10px;
-
-}
 
 #positioncontainer {
     max-width: 400px;
+    padding: 20px 20px 20px 40px;
+}
+*/
+
+#calltoaction {
+    background: #EA794B;
+    background: url("../img/noise_bg2.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #EA794B 0%, #E05530 100%) repeat scroll 0 0 transparent;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+   /* padding: 20px 10px 15px 10px; */
+}
+
+#positioncontainer h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#positioncontainer h2 {
+    font-size: 20px;
+    text-shadow: none;
+    text-align: center;
+    padding-top: 20px;
 
 }
 
-#calltoaction img {
+/*#calltoaction img {
     float: left;
     padding-right: 20px;
+    padding-left: 20px;
     padding-bottom: 10px;
     width: 120px !important;
 
-}
-
-#calltoaction h2 {
-    font-size: 15px;
-    text-shadow: none;
-    float: right;
-}
-
-.ui-grid-a {
-
-}
-
-.ui-header {
-    background: rgba(49, 46, 56, 0.8);
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
-}
-
-.ui-header .ui-title {
-    text-align: left !important;
-    padding: 8 0 0 0 !important;
-    margin: 10 10 10 15 !important;
-    font-size: 25px !important;
-    color: #FFFFFF;
-}
+}*/
 
 #calltoaction .button-addposition {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.13);
@@ -72,6 +61,17 @@ MUI
     border-color: rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.ui-header {
+    background: rgba(49, 46, 56, 0.8);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+}
+
+.ui-header .ui-title {
+    text-align: center !important;
+    font-size: 20px !important;
+    color: #FFFFFF;
 }
 
 .ui-body-c, .ui-overlay-c {
