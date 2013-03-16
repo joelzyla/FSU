@@ -1,5 +1,3 @@
-
-
 //By Joel Zyla
 
 
@@ -7,219 +5,88 @@ var json = {
 	//object should be consistant with form. 
 	//use the same properties as the storedata object
 	//so data in local storage is consistant with json data
-	"position1": { //object name
-		//first property group : value of group
-		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "600"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-06-20"],
-		"notes": ["Notes:", "Sell at 610."]
+	"submission1": { 
+		"myNewsCat": ["Category:", "Politics"], 
+		"myDate": ["Date:", "2013-03-13"],
+		"myTags": ["myTags:", "GOOG,google,glass"],
+		"myURL": ["URL:", "http://www.forbes.com/sites/kashmirhill/2013/03/15/google-glass-will-be-incredible-for-the-courtroom/"],
+		"myDescription": ["Description:", "Article about google glass being useful in court."],
 	},
-	"position2": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
+	"submission2": { 
+		"myNewsCat": ["Category:", "Science"], 
+		"myDate": ["Date:", "2013-03-12"],
+		"myTags": ["myTags:", "AAPL,apple,iphone"],
+		"myURL": ["URL:", "http://blogs.computerworld.com/smartphones/21920/apple-reels-samsung-launches-galaxy-s4"],
+		"myDescription": ["Description:", "The new samsung galaxy s4 will be big competition for the iPhone."],
 	},
-	"position3": { 
-		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
+	"submission3": { 
+		"myNewsCat": ["Category:", "Medical"], 
+		"myDate": ["Date:", "2013-03-10"],
+		"myTags": ["myTags:", "vegan,medicine"],
+		"myURL": ["URL:", "http://www.npr.org/blogs/health/2013/03/15/174205188/is-your-medicine-vegan-probably-not"],
+		"myDescription": ["Description:", "This article discusses how most medicines are not vegan."],
 	},
-	"position4": { 
-		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
+	"submission4": { 
+		"myNewsCat": ["Category:", "Politics"], 
+		"myDate": ["Date:", "2013-03-13"],
+		"myTags": ["myTags:", "GOOG,google,glass"],
+		"myURL": ["URL:", "http://www.forbes.com/sites/kashmirhill/2013/03/15/google-glass-will-be-incredible-for-the-courtroom/"],
+		"myDescription": ["Description:", "Article about google glass being useful in court."],
 	},
-	"position5": { //object name
-		//first property group : value of group
-		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "AAPL"],
-		"sprice": ["Strike Price:", "600"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-06-20"],
-		"notes": ["Notes:", "Sell at 610."]
+	"submission5": { 
+		"myNewsCat": ["Category:", "Science"], 
+		"myDate": ["Date:", "2013-03-12"],
+		"myTags": ["myTags:", "AAPL,apple,iphone"],
+		"myURL": ["URL:", "http://blogs.computerworld.com/smartphones/21920/apple-reels-samsung-launches-galaxy-s4"],
+		"myDescription": ["Description:", "The new samsung galaxy s4 will be big competition for the iPhone."],
 	},
-	"position6": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
+	"submission6": { 
+		"myNewsCat": ["Category:", "Medical"], 
+		"myDate": ["Date:", "2013-03-10"],
+		"myTags": ["myTags:", "vegan,medicine"],
+		"myURL": ["URL:", "http://www.npr.org/blogs/health/2013/03/15/174205188/is-your-medicine-vegan-probably-not"],
+		"myDescription": ["Description:", "This article discusses how most medicines are not vegan."],
 	},
-	"position7": { 
-		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
+	"submission7": { 
+		"myNewsCat": ["Category:", "Politics"], 
+		"myDate": ["Date:", "2013-03-13"],
+		"myTags": ["myTags:", "GOOG,google,glass"],
+		"myURL": ["URL:", "http://www.forbes.com/sites/kashmirhill/2013/03/15/google-glass-will-be-incredible-for-the-courtroom/"],
+		"myDescription": ["Description:", "Article about google glass being useful in court."],
 	},
-	"position8": { 
-		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
+	"submission8": { 
+		"myNewsCat": ["Category:", "Science"], 
+		"myDate": ["Date:", "2013-03-12"],
+		"myTags": ["myTags:", "AAPL,apple,iphone"],
+		"myURL": ["URL:", "http://blogs.computerworld.com/smartphones/21920/apple-reels-samsung-launches-galaxy-s4"],
+		"myDescription": ["Description:", "The new samsung galaxy s4 will be big competition for the iPhone."],
 	},
-	"position9": { 
-		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "ZNGA"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
+	"submission9": { 
+		"myNewsCat": ["Category:", "Medical"], 
+		"myDate": ["Date:", "2013-03-10"],
+		"myTags": ["myTags:", "vegan,medicine"],
+		"myURL": ["URL:", "http://www.npr.org/blogs/health/2013/03/15/174205188/is-your-medicine-vegan-probably-not"],
+		"myDescription": ["Description:", "This article discusses how most medicines are not vegan."],
 	},
-	"position10": { //object name
-		//first property group : value of group
-		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "AAPL"],
-		"sprice": ["Strike Price:", "600"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-06-20"],
-		"notes": ["Notes:", "Sell at 610."]
+	"submission10": { 
+		"myNewsCat": ["Category:", "Politics"], 
+		"myDate": ["Date:", "2013-03-13"],
+		"myTags": ["myTags:", "GOOG,google,glass"],
+		"myURL": ["URL:", "http://www.forbes.com/sites/kashmirhill/2013/03/15/google-glass-will-be-incredible-for-the-courtroom/"],
+		"myDescription": ["Description:", "Article about google glass being useful in court."],
 	},
-	"position11": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
+	"submission11": { 
+		"myNewsCat": ["Category:", "Science"], 
+		"myDate": ["Date:", "2013-03-12"],
+		"myTags": ["myTags:", "AAPL,apple,iphone"],
+		"myURL": ["URL:", "http://blogs.computerworld.com/smartphones/21920/apple-reels-samsung-launches-galaxy-s4"],
+		"myDescription": ["Description:", "The new samsung galaxy s4 will be big competition for the iPhone."],
 	},
-	"position12": { 
-		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
+	"submission12": { 
+		"myNewsCat": ["Category:", "Medical"], 
+		"myDate": ["Date:", "2013-03-10"],
+		"myTags": ["myTags:", "vegan,medicine"],
+		"myURL": ["URL:", "http://www.npr.org/blogs/health/2013/03/15/174205188/is-your-medicine-vegan-probably-not"],
+		"myDescription": ["Description:", "This article discusses how most medicines are not vegan."],
 	},
-	"position13": { 
-		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "ZNGA"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
-	},
-	"position14": { //object name
-		//first property group : value of group
-		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "AAPL"],
-		"sprice": ["Strike Price:", "600"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-06-20"],
-		"notes": ["Notes:", "Sell at 610."]
-	},
-	"position15": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
-	},
-	"position16": { 
-		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "ZNGA"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
-	},
-	"position17": { 
-		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
-	},
-	"position18": { //object name
-		//first property group : value of group
-		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "600"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-06-20"],
-		"notes": ["Notes:", "Sell at 610."]
-	},
-	"position19": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
-	},
-	"position20": { 
-		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "ZNGA"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
-	},
-	"position21": { 
-		"callput": ["Contract type:", "Stock"],
-		"ssymbol": ["Stock Symbol:", "GRPN"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
-	},
-	"position22": { //object name
-		//first property group : value of group
-		"callput": ["Contract type:", "Call"], //property value pair
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "600"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-06-20"],
-		"notes": ["Notes:", "Sell at 610."]
-	},
-	"position23": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
-	},
-	"position24": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "DDD"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
-	},
-	"position25": {
-		"callput": ["Contract type:", "Put"],
-		"ssymbol": ["Stock Symbol:", "ZNGA"],
-		"sprice": ["Strike Price:", "28"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-01-20"],
-		"notes": ["Notes:", "Sell at 25."]
-	},
-	"position26": { 
-		"callput": ["Contract type:", "Call"],
-		"ssymbol": ["Stock Symbol:", "GOOG"],
-		"sprice": ["Strike Price:", "5"],
-		"allornone": ["All or none?", "yes"],
-		"edate": ["Date:", "2013-03-20"],
-		"notes": ["Notes:", "Sell at 6."]
-	}
-
 }

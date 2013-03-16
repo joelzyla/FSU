@@ -8,25 +8,26 @@ $('#home').on('pageinit', function () {
 	});
 $('#additem').on('pageinit', function () {
 
+
 	var myForm = $('#addPositionForm');
     myForm.validate({
 		invalidHandler: function(form, validator) {
 		},
 		submitHandler: function() {
 
+
 		//var data = $( '#test' ).serializeObject()
-		var data = myForm.serialize();
-
-
+		//var data = JSON.stringify(myForm.serializeArray());
 		//var data = "test";
 
 	    //console.log(data);
 
-		//var data = myForm.serialize();
+		var data = myForm.serialize();
+		//var data = JSON.stringify(myForm.serialize());
 
-		//var data = myForm.serializeArray();
 
-		//var data = myForm.serialize();
+
+		//var data = $('#myForm').serializeArray();
 		console.log('First Data:' + data);
 		storeData(data);
 
@@ -69,24 +70,23 @@ var autoFillData = function(){
 
 
 var storeData = function(data, key){
-		console.log('Second Data:' + data);
+console.log(data);
 if(!key){ 
 		var id = Math.floor(Math.random()*1000005);
-		console.log('Third Data:' + data);
+		console.log("if works");
 	}else{
-		id = key;
-		console.log('Fourth Data:' + data);
+			id = key;
+		console.log("else works");
 	}
-
 	for (var n in data){
-		var stData = JSON.stringify(data);
-		console.log('Fifth Data:' + id + stData);
+		console.log("for works, probably too many times ;)");
 
-		//localStorage.setItem(id, data);
-		localStorage.setItem(id, JSON.stringify(data));
+		localStorage.setItem(id, JSON.stringify(data[n]));
+		//localStorage.setItem(id, JSON.stringify(data));
+
+		console.log(data);
 	}
 	alert("Position Saved!");
-
 }; 
 
 
@@ -139,23 +139,16 @@ var getData = function(){
 	//console.log('test');
 
 	$('#items').append("<ul>");
-	//$('#items').append("<img>");
+
 	for (var i=0, len=localStorage.length; i<len; i++){
 		var key = localStorage.key(i);
 		var value = localStorage.getItem(key);
 		var obj = JSON.parse(value);
-		var myId = Math.floor(Math.random()*1000005);
-		$('#items').append("<ul>");
-		//console.log(obj.myNewsCat[1]);
-		//var myImgSource = "<img src=\"./img/" + obj.myNewsCat[1] + ".png\"</img>";
-		//console.log(myImgSource);
-		//$('#items').append(myImgSource);
-		//$('#items').append('<img id="myId">')
-		//$('#items').append($('img')).attr("src", mySource);
 			for (var n in obj){
 				var itemValues = obj[n][0] + " " + obj[n][1] + "</br>";
+
 				//$('<li>' + itemValues + '</li>').appendTo('.formObj');
-				//console.log("the image name is" + obj.newscat[1]);
+
 				$('#items').append("<li>" + itemValues + "</li>");
 			} 
 		}
@@ -198,5 +191,10 @@ var toggleControls = function(n) {
 	}
 	return false;
 };
+
+
+
+
+
 
 

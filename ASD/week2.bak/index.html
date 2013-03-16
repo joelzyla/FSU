@@ -58,10 +58,10 @@
 					<header>
 						<h3>Browse topics by</h3>
 					</header>
-					<p><a data-theme="a" href="#browse" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Trending</a></p>
-					<p><a data-theme="a" data-transition="slide" href="#browse" data-role="button" data-icon="arrow-r" data-iconpos="right">Most liked</a></p>
-					<p><a data-theme="a" data-transition="slide" href="#browse" data-role="button" data-icon="arrow-r" data-iconpos="right">Most disliked</a></p>
-					<p><a data-theme="a" data-transition="slide" href="#browse" data-role="button" data-icon="arrow-r" data-iconpos="right">Need review</a></p>
+					<p><a data-theme="a" href="" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Trending</a></p>
+					<p><a data-theme="a" data-transition="slide" href="" data-role="button" data-icon="arrow-r" data-iconpos="right">Most liked</a></p>
+					<p><a data-theme="a" data-transition="slide" href="" data-role="button" data-icon="arrow-r" data-iconpos="right">Most disliked</a></p>
+					<p><a data-theme="a" data-transition="slide" href="" data-role="button" data-icon="arrow-r" data-iconpos="right">Need review</a></p>
 				</nav>
 				<footer data-role="footer" data-position="fixed">
 					<nav data-role="navbar">
@@ -107,9 +107,9 @@
 			</header>
 
 			<section data-role="content"> 
-				<header><h2>About newsTopics</h2></header>
-				<p>newsTopics was created by Joel Zyla</p>
-				<p><a href="http://github.com/joelzyla/FSU/tree/master/ASD/week2" data-icon="start" rel="external">Git Repository</a></p>
+				<header><h2>Info</h2></header>
+				<p>Created by Joel Zyla</p>
+				<p><a href="" data-icon="start" rel="external">Git Repository</a></p>
 			</section>
 
 			<footer data-role="footer" data-position="fixed">
@@ -141,30 +141,29 @@
 				<h2>Submit a story</h2>
 				<h4>Questions marked with a * are required.</h4>
 					<div data-role="fieldcontain">
-						<label for="myNewsCat">* Category:</label>
-						<select class="required" name="myNewsCat" data-theme="a" id="myNewsCat" data-native-menu="false">
+						<select class="required" data-theme="a" id="newsCat" data-native-menu="false">
 							<option value="">* Select a category</option>
-							<option value="Politics">Politics</option>
-							<option value="Science">Science</option>
-							<option value="Medical">Medical</option>
+							<option value="callContract">Politics</option>
+							<option value="putContract">Science</option>
+							<option value="stockContract">Medical</option>
 						</select>
 					</div>
 					<div data-role="fieldcontain">
-						<label for="myDate">* Release date:</label>
-						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="myDate" id="myDate" />
+						<label for="mydate">* Release date:</label>
+						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="mydate" id="mydate" />
 					</div>	
 					<div data-role="fieldcontain">
-						<label for="myTags">* Tags:</label>
-						<input placeholder="Separate tags with a comma." data-theme="a" class="required" type="text" name="myTags" id="myTags" />
+						<label for="sprice">* Tags:</label>
+						<input placeholder="Separate tags with a comma." data-theme="a" class="required" type="text" name="strikePriceRange" id="sprice" />
 					</div>
 					<div data-role="fieldcontain">
-						<label for="myURL" class="required">* URL:</label>
-						<input placeholder="Paste the article URL here." data-theme="a" class="required" type="text" name="myURL" id="myURL" />
+						<label for="ssymbol" class="required">* URL:</label>
+						<input placeholder="Paste the article URL here." data-theme="a" class="required" type="text" name="stockSymbolInput" id="ssymbol" />
 					</div>
 
 					<div data-role="fieldcontain">
-						<label for="myDescription">Description:</label>
-						<textarea placeholder="Describe the article in under 200 words" data-theme="a" id="myDescription" name="mydescription"></textarea>
+						<label for="notes">Description:</label>
+						<textarea placeholder="Describe the article in under 200 words" data-theme="a" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
