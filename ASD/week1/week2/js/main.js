@@ -153,7 +153,10 @@ var getData = function(){
 		//$('#items').append('<img id="myId">')
 		//$('#items').append($('img')).attr("src", mySource);
 			for (var n in obj){
-				var itemValues = $(obj[n][0] + " " + obj[n][1] + "</br>").html();
+				//var itemValues = (obj[n][0] + " " + obj[n][1] + "</br>").html();
+				var itemValues = obj[n][0] + " " + obj[n][1];
+
+
 				//$('<li>' + itemValues + '</li>').appendTo('.formObj');
 				//console.log("the image name is" + obj.newscat[1]);
 				$('#items').append("<li>" + itemValues + "</li>");
