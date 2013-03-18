@@ -107,7 +107,7 @@ if(!key){
 			item.myDescription	= ["Running Comments: ", $("#myDescription").val()];
 
 	// Saves the Data into Local Storage with JSON.stringify
-	console.log(this.key)
+	console.log(this.key);
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Position Saved!");
 	//location.reload();
@@ -191,7 +191,7 @@ var getData = function(id){
 				//var paraLinks = $('<p></p>').appendTo(makeLi);
 				
 			} 
-			//console.log(this.key)
+			console.log("getData", key);
 			editDeleteButtons(key);
 		}
 
@@ -235,22 +235,41 @@ var toggleControls = function(n) {
 };
 
 var editDeleteButtons = function(key) {
-
+	console.log("editDeleteButtons", key);
 	var editButton = $('<a></a>').attr({
 		"href": "#additem",
-		"key": "key",
+		"class": "editButton",
+		"data-key" : key,
 		"data-role": "button",
 		"data-inline": "true"
-	}).html('Edit Submission').appendTo($('#items').on("click", editItem));
+	}).html('Edit Submission').appendTo($('#items'));
 	
 	var deleteButton = $('<a></a>').attr({
 		"href": "#",
-		"key": "key",
+		"class": "deleteButton",
+		"data-key" : key,
 		"data-role": "button",
 		"data-theme": "a",
 		"data-inline": "true"
-	}).html('Delete Submission').appendTo($('#items').on("click", deleteItem));
+	}).html('Delete Submission').appendTo($('#items'));
 
+
+//$(".myClass").css("border","3px solid red")
+
+	
+	$(".deleteButton").on('click', function () {
+
+		key = $(this).data('key'); 
+        deleteItem(key);
+        return false;
+    });
+
+    $(".editButton").on('click', function () {
+    	key = $(this).data('key');
+        editItem(key);
+        return false;
+    });
+    return false;
 };
 
 
@@ -258,24 +277,51 @@ var	deleteItem = function (key){
 	var ask = confirm("Are you sure you want to delete this position?");
 	if(ask){
 		alert("The position has been deleted.");
-		localStorage.removeItem(this.key);
-		window.location.reload(); //refreshes teh page
+		localStorage.removeItem(key);
+		//window.location.reload(); //refreshes teh page
 	}else{
 		alert("The position was not deleted.");
 	}
+	return false;
 }; 
 
+
 var editItem = function(key) {
-	console.log(this.key)
+	console.log("editItem", key);
 	// Grabs data from our item from Local Storage
-	var value = localStorage.getItem(this.key);
+	var value = localStorage.getItem(key);
+	console.log("editItem key", key);
 	var item = JSON.parse(value);
+	console.log("item", item);
+	console.log("item newscat 1", item.myNewsCat[1]);
+
+	$('#newSubmissionForm').css("display", "inline");
+
 	// Populates the Form Fields with current LocalStorage Values
 	$('#myNewsCat').val(item.myNewsCat[1]);
+	$('#myDate').val(item.myDate[1]);
 	$('submit').value = "Save Changes";
 	var editSubmit = $('submit');
-	editSubmit.key = this.key;
+	editSubmit.key = key;
+	return false;
 };
+
+
+
+
+		//	item.myNewsCat 		= ["Category: ", $("#myNewsCat").val()];
+		//	item.myDate 		= ["Submission Date: ", $("#myDate").val()];
+		//	item.myTags			= ["Running Date: ", $("#myTags").val()];
+		//	item.myURL			= ["Properly Hydrated?: ", $("#myURL").val()];
+		//	item.myDescription	= ["Running Comments: ", $("#myDescription").val()];
+
+
+
+
+
+
+
+
 
 
 
