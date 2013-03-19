@@ -21,9 +21,10 @@ $('#additem').on('pageinit', function () {
 				//var data = $('#newSubmissionForm').serialize();
 				
 
-		    	var data = myForm.serializeArray();
-				console.log('First Data:' + data);	
-    			storeData(data);	
+		    //	var data = myForm.serializeArray();
+				//console.log('First Data:' + data);	
+			key = "";
+    			storeData();	
 			}
 	});
 
@@ -87,14 +88,16 @@ var storeData = function(key){
 	//	console.log('Second Data:' + key);
 
 if(!key){ 
+
 		var id = Math.floor(Math.random()*1000005);
 		//console.log('Third Data:' + key);
 	}else{
 		id = key;
 		//console.log('Fourth Data:' + key);
 	}
+console.log(key);
 
-	//for (var n in data){
+
 		//var stData = JSON.stringify(data);
 		//console.log('Fifth Data:' + id + stData);
 
@@ -116,7 +119,7 @@ if(!key){
 	//location.reload();
 
 	//localStorage.setItem(id, stData[n]);
-	//}
+	
 }; 
 
 
@@ -174,6 +177,7 @@ var getData = function(id){
 		//var myId = Math.floor(Math.random()*1000005);
 		//$('#items').append("<ul>");
 		//console.log(obj.myNewsCat[1]);
+
 		var myImgSource = "<img src=\"./img/" + obj.myNewsCat[1] + ".png\"</img>";
 		//console.log(myImgSource);
 		$('#items').append(myImgSource);
@@ -278,9 +282,6 @@ var	deleteItem = function (key){
 }; 
 
 
-
-
-
 var editItem = function(key) {
 	console.log("editItem", key);
 	// Grabs data from our item from Local Storage
@@ -303,52 +304,6 @@ var editItem = function(key) {
 	editSubmit.key = key;
 	return false;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$.ajaxSetup({
-	timeout: 10000,
-	error: function(err) {
-		console.log("error ", err);
-	}
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
