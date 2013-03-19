@@ -332,31 +332,6 @@ $.ajaxSetup({
 
 
 
-$(function(){
-
-	$("#browseSciTech").on('click', function () {
-
-		//$('#languages').empty();
-		$.ajax({
-			url: 'http://api.bing.net/json.aspx?Appid=iE8jByEWBpwij2mBe4JwzwCkRfgzEz8KrvAKdKS9YXg=&query=sushi&sources=news',
-			type: 'GET',
-			dataType: 'json',
-			success: function(response){
-				consol.log(response)
-				// for(var i=0, j=response.languages.length; i<j; i++){
-				// 	var lang = response.languages[i];
-				// 	$('' +
-				// 		'<div class="language">' +
-				// 		'<h2>' + lang.name +'</h2>' +
-				// 		'<p>' + lang.description + '</p>' +
-				// 		'<p>' + lang.version + '</p>' +
-				// 		'</div>'
-				// 	).appendTo('languages');
-				};
-			}
-		});
-	});
-});
 
 
 
