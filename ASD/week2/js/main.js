@@ -1,4 +1,3 @@
-
 //By Joel Zyla
 
 $('#home').on('pageinit', function () {
@@ -286,11 +285,14 @@ var editItem = function(key) {
 	var item = JSON.parse(value);
 	console.log("item", item);
 	console.log("item.myNewsCat[1] : ", item.myNewsCat[1]);
-
+	
 	$('#newSubmissionForm').css("display", "inline");
+		$(function() {
+		$('#myNewsCat').val(item.myNewsCat[1]);
+	})
 
 	// Populates the Form Fields with current LocalStorage Values
-	$('#myNewsCat').val(item.myNewsCat[1]);
+//	$('#myNewsCat').val(item.myNewsCat[1]);
 	$('#myDate').val(item.myDate[1]);
 	$('#myTags').val(item.myTags[1]);
 	$('#myURL').val(item.myURL[1]);
