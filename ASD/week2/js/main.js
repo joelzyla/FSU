@@ -8,7 +8,8 @@ $('#home').on('pageinit', function () {
 
 $('#additem').on('pageinit', function () {
 
-
+		//$('#newSubmissionForm').css("display", "inline");
+		//$('#items').css("display", "none");
 
 		//var myForm = $('#addPositionForm');
 		var myForm = $('form');
@@ -84,6 +85,7 @@ var autoFillData = function(){
 
 var storeData = function(key){
 	//	console.log('Second Data:' + key);
+
 if(!key){ 
 		var id = Math.floor(Math.random()*1000005);
 		//console.log('Third Data:' + key);
@@ -110,6 +112,7 @@ if(!key){
 	console.log(this.key);
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Position Saved!");
+	getData();
 	//location.reload();
 
 	//localStorage.setItem(id, stData[n]);
@@ -135,22 +138,19 @@ var clearLocal = function(){
 };
 
 
-
-				
-
-
-
-
-
-
-
 var getData = function(id){
+	//hide();
 	$('#newSubmissionForm').css("display", "none");
-	$('#displaySubmissionsButton').css("display", "none");
-	$('#clearSubmissionsButton').css("display", "inline");
-	$('#newSubmissionButton').css("display", "inline");
+	//$("#newSubmissionForm").parent().hide();
+	//$("#displaySubmissionsButton").hide();
+ 	$('#clearSubmissionsButton').css("display", "inline");
+	$("#newSubmissionButton").show();
+	//$('#newSubmissionButton').css("display", "inline");
 	$('#items').css("display", "inline");
-
+	$("#displaySubmissionsButton").parent().hide();
+// function hide() {
+// 	$('#displaySubmissionsButton').css("display", "none");
+// }
 	//toggleControls("on");
 
 	if(localStorage.length === 0){
@@ -161,7 +161,7 @@ var getData = function(id){
 	//$('#items').html("<p>hello there</p>");
 	//console.log('test');
 
-	$('#items').append("<ul>");
+	//$('#items').append("<ul>");
 	//$('#items').append("<img>");
 	for (var i=0, len=localStorage.length; i<len; i++){
 		var key = localStorage.key(i);
@@ -172,11 +172,11 @@ var getData = function(id){
 		//$('#items').append(obj);
 
 		//var myId = Math.floor(Math.random()*1000005);
-		$('#items').append("<ul>");
+		//$('#items').append("<ul>");
 		//console.log(obj.myNewsCat[1]);
-		//var myImgSource = "<img src=\"./img/" + obj.myNewsCat[1] + ".png\"</img>";
+		var myImgSource = "<img src=\"./img/" + obj.myNewsCat[1] + ".png\"</img>";
 		//console.log(myImgSource);
-		//$('#items').append(myImgSource);
+		$('#items').append(myImgSource);
 		//$('#items').append('<img id="myId">')
 		//$('#items').append($('img')).attr("src", mySource);
 			for (var n in obj){
@@ -192,7 +192,8 @@ var getData = function(id){
 				
 			} 
 			console.log("getData", key);
-			editDeleteButtons(key);
+			//editDeleteButtons(key);
+			$('#items').append(editDeleteButtons(key), "</br>");
 		}
 
 };//***END OF GETDATA
@@ -212,32 +213,11 @@ var getImage = function(tradeType, makeSubList){
 };
 
 
-var toggleControls = function(n) {
-	switch(n){  
-		case "on":
-			$('#addPositionForm').css("display", "none");
-			$('#clearPositionsButton').css("display", "inline");
-			$('#displayPositionsButton').css("display", "none");
-			$('#addPositionButton').css("display", "inline");
-			$('#items').css("display", "inline");
-			break;
-		case "off":
-			$('#addPositionForm').css("display", "block");
-			$('#clearPositionsButton').css("display", "inline");
-			$('#displayPositionsButton').css("display", "inline");
-			$('#addPositionButton').css("display", "none");
-			$('#items').css("display", "none");
-			break;
-		default:
-			return false;
-	}
-	return false;
-};
 
 var editDeleteButtons = function(key) {
 	console.log("editDeleteButtons", key);
 	var editButton = $('<a></a>').attr({
-		"href": "#additem",
+		"href": "#",
 		"class": "editButton",
 		"data-key" : key,
 		"data-role": "button",
@@ -253,21 +233,33 @@ var editDeleteButtons = function(key) {
 		"data-inline": "true"
 	}).html('Delete Submission').appendTo($('#items'));
 
-
 //$(".myClass").css("border","3px solid red")
 
 	
-	$(".deleteButton").on('click', function () {
+	//$(".deleteButton").on('click', function () {
 
-		key = $(this).data('key'); 
-        deleteItem(key);
-        return false;
-    });
+	//	key = $(this).data('key'); 
+  //      deleteItem(key);
+  //      return false;
+  //  });
+
+
+$(".deleteButton").on('click', function(e){
+	e.preventDefault();
+	key = $(this).data('key'); 
+	localStorage.removeItem($(this).data('key'));
+	console.log($(this).data('key') + " deleted!");
+	window.location.reload();
+
+	//$("item").html("");
+	})
+//});
 
     $(".editButton").on('click', function () {
     	key = $(this).data('key');
         editItem(key);
         return false;
+        window.location.reload();
     });
     return false;
 };
@@ -293,13 +285,16 @@ var editItem = function(key) {
 	console.log("editItem key", key);
 	var item = JSON.parse(value);
 	console.log("item", item);
-	console.log("item newscat 1", item.myNewsCat[1]);
+	console.log("item.myNewsCat[1] : ", item.myNewsCat[1]);
 
 	$('#newSubmissionForm').css("display", "inline");
 
 	// Populates the Form Fields with current LocalStorage Values
 	$('#myNewsCat').val(item.myNewsCat[1]);
 	$('#myDate').val(item.myDate[1]);
+	$('#myTags').val(item.myTags[1]);
+	$('#myURL').val(item.myURL[1]);
+	$('#myDescription').val(item.myDescription[1]);
 	$('submit').value = "Save Changes";
 	var editSubmit = $('submit');
 	editSubmit.key = key;

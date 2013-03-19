@@ -12,6 +12,12 @@ By Joel Zyla
 }
 */
 
+#displaySubmissionButton {
+    display: none !important;
+}
+
+
+
 #calltoaction {
     background: #EA794B;
     background: url("../img/noise_bg2.png") repeat scroll 0 0px, radial-gradient(ellipse farthest-corner at center center , #EA794B 0%, #E05530 100%) repeat scroll 0 0 transparent;
@@ -110,8 +116,6 @@ select.error, textarea.error, input.error {
     background: none repeat scroll 0 0 rgba(49, 46, 56, 0.8);
     }
 
-#clearPositionsButton {
-    color: #FFFFFF;
-}
+
 
 
