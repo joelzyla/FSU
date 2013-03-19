@@ -281,22 +281,6 @@ var	deleteItem = function (key){
 
 
 
-
-$.ajaxSetup({
-	timeout: 10000,
-	error: function(err) {
-		console.log("error ", err);
-	}
-})
-
-
-
-
-
-
-
-
-
 var editItem = function(key) {
 	console.log("editItem", key);
 	// Grabs data from our item from Local Storage
@@ -323,11 +307,68 @@ var editItem = function(key) {
 
 
 
-		//	item.myNewsCat 		= ["Category: ", $("#myNewsCat").val()];
-		//	item.myDate 		= ["Submission Date: ", $("#myDate").val()];
-		//	item.myTags			= ["Running Date: ", $("#myTags").val()];
-		//	item.myURL			= ["Properly Hydrated?: ", $("#myURL").val()];
-		//	item.myDescription	= ["Running Comments: ", $("#myDescription").val()];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$.ajaxSetup({
+	timeout: 10000,
+	error: function(err) {
+		console.log("error ", err);
+	}
+})
+
+
+
+
+
+$(function(){
+
+	$("#browseSciTech").on('click', function () {
+
+		//$('#languages').empty();
+		$.ajax({
+			url: 'http://api.bing.net/json.aspx?Appid=iE8jByEWBpwij2mBe4JwzwCkRfgzEz8KrvAKdKS9YXg=&query=sushi&sources=news',
+			type: 'GET',
+			dataType: 'json',
+			success: function(response){
+				consol.log(response)
+				// for(var i=0, j=response.languages.length; i<j; i++){
+				// 	var lang = response.languages[i];
+				// 	$('' +
+				// 		'<div class="language">' +
+				// 		'<h2>' + lang.name +'</h2>' +
+				// 		'<p>' + lang.description + '</p>' +
+				// 		'<p>' + lang.version + '</p>' +
+				// 		'</div>'
+				// 	).appendTo('languages');
+				};
+			}
+		});
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
