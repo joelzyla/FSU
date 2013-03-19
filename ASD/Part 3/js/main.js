@@ -278,6 +278,25 @@ var	deleteItem = function (key){
 }; 
 
 
+
+
+
+
+$.ajaxSetup({
+	timeout: 10000,
+	error: function(err) {
+		console.log("error ", err);
+	}
+})
+
+
+
+
+
+
+
+
+
 var editItem = function(key) {
 	console.log("editItem", key);
 	// Grabs data from our item from Local Storage
