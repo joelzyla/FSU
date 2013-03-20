@@ -1,4 +1,5 @@
 
+
 //By Joel Zyla
 
 $('#home').on('pageinit', function () {
@@ -6,8 +7,8 @@ $('#home').on('pageinit', function () {
 
 	$("#browseSciTech").on('click', function () {
 
-		$(function(){
-			console.log("browse button click event success");
+		$(function() {
+			console.log("browseSciTech click event success");
 			$.ajax({    
 				url      : "jsonp.php",    
 				type     : "GET",    
@@ -16,21 +17,22 @@ $('#home').on('pageinit', function () {
 				success  : function(data, status) {        
 					console.log(status, data);  
 					alert("JSONP GET SUCCESS"); 
-					displayJSONP(data); 
+					//displayJSONP(data); 
 				},
-				error: function(req, err){ 
+				error: function(req, err) { 
 					console.log('Errors: ' + err); 
 				}
 			});
-			return false;
+			//return false;
 		});
+    
 	});
-});
+
 
 	$("#browsePolitics").on('click', function () {
 
-		$(function(){
-			console.log("browse button click event success");
+		$(function() {
+			console.log("browsePolitics click event success");
 			$.ajax({    
 				url      : "xml.php",    
 				type     : "GET",    
@@ -116,7 +118,8 @@ var autoFillData = function(){
 	for (var n in json){
 		var id = Math.floor(Math.random()*1000005);
 		localStorage.setItem(id, JSON.stringify(json[n]));
-	} 
+	}
+};
 
 
 
@@ -217,10 +220,10 @@ var getData = function(id){
 				var makeLi = $('#items').append("<li>" + itemValues + "</li>");
 				//var paraLinks = $('<p></p>').appendTo(makeLi);
 				
-			} 
-			console.log("getData", key);
-			//editDeleteButtons(key);
-			$('#items').append(editDeleteButtons(key), "</br>");
+				} 
+				console.log("getData", key);
+				//editDeleteButtons(key);
+				$('#items').append(editDeleteButtons(key), "</br>");
 		}
 
 };//***END OF GETDATA
@@ -306,4 +309,3 @@ var editItem = function(key) {
 	editSubmit.key = key;
 	return false;
 };
-
