@@ -15,15 +15,39 @@ $('#home').on('pageinit', function () {
 				dataType : "jsonp",    
 				success  : function(data, status) {        
 					console.log(status, data);  
-					alert("yay");  
+					alert("JSONP GET SUCCESS");  
 				},
 				error: function(req, err){ 
-					console.log('my message' + err); 
+					console.log('Errors: ' + err); 
 				}
 			});
 			return false;
 		});
 	});
+
+	$("#browsePolitics").on('click', function () {
+
+		$(function(){
+			console.log("browse button click event success");
+			$.ajax({    
+				url      : "xml.php",    
+				type     : "GET",    
+				//async    : false,
+				dataType : "xml",    
+				success  : function(data, status) {        
+					console.log(status, data);  
+					alert("XML GET SUCCESS");  
+				},
+				error: function(req, err){ 
+					console.log('Errors: ' + err); 
+				}
+			});
+			return false;
+		});
+	});
+
+
+
 });
 		// var jsonpfn = function(response){};
 
