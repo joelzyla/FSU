@@ -17,7 +17,7 @@ $('#home').on('pageinit', function () {
 				success  : function(data, status) {        
 					console.log(status, data);  
 					alert("JSONP GET SUCCESS"); 
-					//displayJSONP(data); 
+					displayJSONP(data); 
 				},
 				error: function(req, err) { 
 					console.log('Errors: ' + err); 
@@ -103,15 +103,54 @@ var contactGroups = ["--Select--", "Call", "Put", "Stock"],
 	errMsg = $('errors');
 
 var displayJSONP = function(myJSONP) {
-	//remoteDataFrontpage
-	//$("#remoteDataFrontpage").html("test");
+	//$("#remoteDataFrontpage").html("<p>TEST</p>");
+	// for (var i=0, len=myJSONP.length; i<len; i++){
+			$("#remoteDataFrontpage").html("");
+		for (var n in myJSONP){
+			console.log(myJSONP);
+			var jsonItems = n + " " + myJSONP[n];
+			$("#remoteDataFrontpage").append("<li>" + jsonItems + "</li>");
+			console.log(jsonItems);
+		}
+	// }
 
 };
 
 var displayXML = function(myXML) {
+		$("#remoteDataFrontpage").html("");
+		$("#remoteDataFrontpage").append("<ul></ul>");
+
+		$(myXML).find('item').each(function(){
+        var xmlCategory = $(this).find('Category').text();
+        var xmlDate= $(this).find('Date').text();
+        var xmlTags= $(this).find('Tags').text();
+        var xmlURL= $(this).find('URL').text();
+        var xmlDescription= $(this).find('Description').text();
 
 
-};
+        $("#remoteDataFrontpage").html(
+        	"<li>" + xmlCategory + "</li>" +
+        	"<li>" + xmlDate + "</li>" +
+        	"<li>" + xmlTags + "</li>" +
+        	"<li>" + xmlURL + "</li>" +
+        	"<li>" + xmlDescription
+        	).appendTo("#remoteDataFrontpage ul");
+    });
+
+
+
+
+
+		// assume that the XML above is in a string named "xml"    
+		//var data = $.parseXML(myXML); 
+		//var data = myXML;   
+		// wrap the XML in a jQuery object to make it easier to work with    
+		//var items = $( data );    
+		//items.find("item").each(function(){        
+			//var item = $(this);        
+			//console.log("Category: ", item.find("Category"));    
+		//});
+	};
 
 
 var autoFillData = function(){
