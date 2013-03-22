@@ -1,11 +1,11 @@
 function(doc) {
     if (doc._id.substr(0,10) === "submission") {
 		emit(doc._id, {
-			"Date: ": doc.myDate,
-			"Description: ": doc.myDescription,
-			"Category: ": doc.myNewsCat,
-			"Tags: ": doc.myTags,
-			"URL: ": doc.myURL
+			"date": doc.myDate,
+			"description": doc.myDescription,
+			"category": doc.myNewsCat,
+			"tags": doc.myTags,
+			"url": doc.myURL
 		});
 		
   }

@@ -5,7 +5,54 @@
 $('#home').on('pageinit', function () {
 	//code needed for home page goes here
 
-	$("#browseSciTech").on('click', function () {
+
+
+
+	$("#browseStories").on('pageinit', function () {
+
+		$(function() {
+			console.log("Stories page loaded");
+			$.ajax({    
+				url      : "_view/myItems",    
+				//type     : "GET",    
+				//async    : false,
+				dataType : "json",    
+				success  : function(data, status) {        
+					console.log(status, data);  
+					$.each(data.rows, function(index, submission){
+						console.log("submission.value: ", submission.value.category);
+						//console.log("submission.value category: ", submission.value.0);
+						var couchNewsCat = submission.value.category;
+						var couchURL = submission.value.url;
+						var couchTags = submission.value.tags;
+						var couchDate = submission.value.date;
+					    var couchDescription = submission.value.description;
+					    $('#myStories').append(
+					    "<ul>" +
+				  		"<li>" + couchNewsCat[0] + ":" + couchNewsCat[1] + "</li>" +
+				  		"<li>" + couchURL[0] + ":" + couchURL[1] + "</li>" +
+				  		"<li>" + couchTags[0] + ":" + couchTags[1] + "</li>" +
+				  		"<li>" + couchDate[0] + ":" + couchDate[1] + "</li>" +
+				  		"<li>" + couchDescription[0] + ":" + couchDescription[1] +
+				  		"</ul>"
+				  		);
+					});
+					//$('#myStories').listview('refresh');
+				},
+				error: function(req, err) { 
+					console.log('Errors: ' + err); 
+				}
+			});
+			//return false;
+		});
+    
+	});
+
+
+
+
+
+$("#browseSciTech").on('click', function () {
 
 		$(function() {
 			console.log("browseSciTech click event success");
@@ -27,6 +74,11 @@ $('#home').on('pageinit', function () {
 		});
     
 	});
+
+
+
+
+
 
 
 	$("#browsePolitics").on('click', function () {
