@@ -3,5 +3,8 @@
     "local": {
       "db": "http://127.0.0.1:5984/newstopics"
     }
+    "cloudant": {
+      "db": "https://botheatighteryfortherath:rKO7o2PLwp3DfRRTdAcfiOOo@joelzyla.cloudant.com/asdproject"
+    }
   }
 }
