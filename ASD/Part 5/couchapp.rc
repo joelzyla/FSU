@@ -1,0 +1,10 @@
+{
+  "env": {
+    "local": {
+      "db": "http://127.0.0.1:5984/project5"
+    }
+    "cloudant": {
+      "db": "https://theyelencionedstisencoul:PC7xxs58JYsyhqWfsYp6LPYe@joelzyla.cloudant.com/project5"
+    }
+  }
+}
