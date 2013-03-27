@@ -459,40 +459,51 @@ var editItem = function(key) {
 
 			$(function() {
 				console.log("Stories page loaded");
-				$.ajax({    
-					url      : "_view/myItems",    
-					//type     : "GET",    
-					//async    : false,
-					dataType : "json",    
-					success  : function(data, status) {        
-						console.log(status, data);  
-						$.each(data.rows, function(index, submission){
-							console.log("submission.value: ", submission.value.category);
-							//console.log("submission.value category: ", submission.value.0);
-							var couchNewsCat = submission.value.category;
-							var couchURL = submission.value.url;
-							var couchTags = submission.value.tags;
-							var couchDate = submission.value.date;
-						    var couchDescription = submission.value.description;
-						    $('#myStories').append(
-						    "<ul>" +
-					  		"<li>" + couchNewsCat[0] + ":" + couchNewsCat[1] + "</li>" +
-					  		"<li>" + couchURL[0] + ":" + couchURL[1] + "</li>" +
-					  		"<li>" + couchTags[0] + ":" + couchTags[1] + "</li>" +
-					  		"<li>" + couchDate[0] + ":" + couchDate[1] + "</li>" +
-					  		"<li>" + couchDescription[0] + ":" + couchDescription[1] +
-					  		"</ul>"
-					  		);
-						});
-						//$('#myStories').listview('refresh');
-					},
-					error: function(req, err) { 
-						console.log('Errors: ' + err); 
+//https://cloudant.com/db/joelzyla/project5/_design/app/_view/myItems
+				$.couch.db("project5").view("app/myItems", {
+					success: function(data) {
+						console.log(data);
 					}
 				});
+
+				return false;
+			});
 			return false;
-		});
-		return false;
+
+
+
+				// $.ajax({    
+				// 	url      : "_view/myItems",    
+				// 	//type     : "GET",    
+				// 	//async    : false,
+				// 	dataType : "json",    
+				// 	success  : function(data, status) {        
+				// 		console.log(status, data);  
+				// 		$.each(data.rows, function(index, submission){
+				// 			console.log("submission.value: ", submission.value.category);
+				// 			//console.log("submission.value category: ", submission.value.0);
+				// 			var couchNewsCat = submission.value.category;
+				// 			var couchURL = submission.value.url;
+				// 			var couchTags = submission.value.tags;
+				// 			var couchDate = submission.value.date;
+				// 		    var couchDescription = submission.value.description;
+				// 		    $('#myStories').append(
+				// 		    "<ul>" +
+				// 	  		"<li>" + couchNewsCat[0] + ":" + couchNewsCat[1] + "</li>" +
+				// 	  		"<li>" + couchURL[0] + ":" + couchURL[1] + "</li>" +
+				// 	  		"<li>" + couchTags[0] + ":" + couchTags[1] + "</li>" +
+				// 	  		"<li>" + couchDate[0] + ":" + couchDate[1] + "</li>" +
+				// 	  		"<li>" + couchDescription[0] + ":" + couchDescription[1] +
+				// 	  		"</ul>"
+				// 	  		);
+				// 	  		$('#myStories').append(editDeleteButtons(key), "</br>");
+				// 		});
+				// 		//$('#myStories').listview('refresh');
+				// 	},
+				// 	error: function(req, err) { 
+				// 		console.log('Errors: ' + err); 
+				// 	}
+				// });
 
 	});
 
