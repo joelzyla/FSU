@@ -86,6 +86,79 @@
 			<header>
 				<h2>Browse Stories</h2>
 			</header>
+			<fieldset>
+			
+			<div class="ui-grid-solo"><button id="myAddStoryButton" data-theme="a" type="submit">Add a Story</button>
+			</div>
+			<div class="ui-grid-solo"><button id="myDisplayStoriesButton" data-theme="a" type="submit">Display Submissions</button>
+			</div>
+			</fieldset>
+
+
+
+
+
+
+
+
+
+<form action="#" id="mySubmissionForm" data-theme="a">
+				<h2>Submit a story</h2>
+				<h4>Questions marked with a * are required.</h4>
+					<div data-role="fieldcontain">
+						<label for="myNewsCat">* Category:</label>
+						<select class="required" name="myNewsCat" data-theme="a" id="myNewsCat" data-native-menu="false">
+							<option value="">* Select a category</option>
+							<option value="Politics">Politics</option>
+							<option value="Science">Science</option>
+							<option value="Medical">Medical</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="myDate">* Release date:</label>
+						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="myDate" id="myDate" />
+					</div>	
+					<div data-role="fieldcontain">
+						<label for="myTags">* Tags:</label>
+						<input placeholder="Separate tags with a comma." data-theme="a" class="required" type="text" name="myTags" id="myTags" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="myURL" class="required">* URL:</label>
+						<input placeholder="Paste the article URL here." data-theme="a" class="required" type="text" name="myURL" id="myURL" />
+					</div>
+
+					<div data-role="fieldcontain">
+						<label for="myDescription">Description:</label>
+						<textarea placeholder="Describe the article in under 200 words" data-theme="a" id="myDescription" name="mydescription"></textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<input data-theme="a" type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" checked />
+							<label for="allornonebox-1">* Email alerts</label>
+						</fieldset>
+					</div>
+
+						<fieldset class="ui-grid-a">
+						<div class="ui-block-b"><button data-theme="b" type="submit">Submit</button></div>
+						<div class="ui-block-b"><button data-theme="a" type="reset">Reset</button></div>
+						</fieldset>
+
+					
+				</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			<section>
 				<section id="myStories" data-role="content"> </section>
 			</section>

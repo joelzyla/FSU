@@ -8,49 +8,7 @@ $('#home').on('pageinit', function () {
 
 
 
-	$("#browseStories").on('pageinit', function () {
-
-		$(function() {
-			console.log("Stories page loaded");
-			$.ajax({    
-				url      : "_view/myItems",    
-				//type     : "GET",    
-				//async    : false,
-				dataType : "json",    
-				success  : function(data, status) {        
-					console.log(status, data);  
-					$.each(data.rows, function(index, submission){
-						console.log("submission.value: ", submission.value.category);
-						//console.log("submission.value category: ", submission.value.0);
-						var couchNewsCat = submission.value.category;
-						var couchURL = submission.value.url;
-						var couchTags = submission.value.tags;
-						var couchDate = submission.value.date;
-					    var couchDescription = submission.value.description;
-					    $('#myStories').append(
-					    "<ul>" +
-				  		"<li>" + couchNewsCat[0] + ":" + couchNewsCat[1] + "</li>" +
-				  		"<li>" + couchURL[0] + ":" + couchURL[1] + "</li>" +
-				  		"<li>" + couchTags[0] + ":" + couchTags[1] + "</li>" +
-				  		"<li>" + couchDate[0] + ":" + couchDate[1] + "</li>" +
-				  		"<li>" + couchDescription[0] + ":" + couchDescription[1] +
-				  		"</ul>"
-				  		);
-					});
-					//$('#myStories').listview('refresh');
-				},
-				error: function(req, err) { 
-					console.log('Errors: ' + err); 
-				}
-			});
-			//return false;
-		});
-    
-	});
-
-
-
-
+	
 
 $("#browseSciTech").on('click', function () {
 
@@ -104,6 +62,8 @@ $("#browseSciTech").on('click', function () {
 	});
 
 });
+
+
 
 $('#additem').on('pageinit', function () {
 
@@ -400,3 +360,140 @@ var editItem = function(key) {
 	editSubmit.key = key;
 	return false;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	$("#browseStories").on('pageinit', function () {
+
+
+			var myForm = $('form');
+    		myForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+			key = "";
+    		saveStories();	
+			}
+			});
+			$('#mySubmissionForm').hide(); 
+			$('#myDisplayStoriesButton').hide();
+			$('#myStories').show();
+
+			// $('#mySubmissionForm').css("display", "none");
+			// $('#myStories').css("display", "inline");
+
+
+
+		 	$("#myAddStoryButton").on('click', function () {
+		 		$('#mySubmissionForm').show();
+		 		$('#myStories').hide();
+		 		$('#myDisplayStoriesButton').show();
+		 		return false;
+
+		 		// $('#mySubmissionForm').css("display", "inline");
+		 		// $('#myStories').css("display", "none");
+			});
+
+
+
+			$("#myDisplayStoriesButton").on('click', function () {
+		 		$('#mySubmissionForm').hide();
+		 		$('#myStories').show();
+		 		$('#myDisplayStoriesButton').hide();
+
+		 		// $('#mySubmissionForm').css("display", "inline");
+		 		// $('#myStories').css("display", "none");
+		 		return false;
+			});
+
+
+
+			var saveStories = function(key){
+			//	console.log('Second Data:' + key);
+
+				if(!key){ 
+
+				var id = Math.floor(Math.random()*1000005);
+				//console.log('Third Data:' + key);
+				}else{
+				id = key;
+				//console.log('Fourth Data:' + key);
+				}
+				console.log(key);
+
+				var item 				= {};
+					item.myNewsCat 		= ["Category: ", $("#myNewsCat").val()];
+					item.myDate 		= ["Submission Date: ", $("#myDate").val()];
+					item.myTags			= ["Running Date: ", $("#myTags").val()];
+					item.myURL			= ["Properly Hydrated?: ", $("#myURL").val()];
+					item.myDescription	= ["Running Comments: ", $("#myDescription").val()];
+
+				// Saves the Data into Local Storage with JSON.stringify
+				console.log(this.key);
+				localStorage.setItem(id, JSON.stringify(item));
+				alert("Position Saved!");
+				getData();
+	
+			}; 
+
+
+
+
+
+
+
+
+			$(function() {
+				console.log("Stories page loaded");
+				$.ajax({    
+					url      : "_view/myItems",    
+					//type     : "GET",    
+					//async    : false,
+					dataType : "json",    
+					success  : function(data, status) {        
+						console.log(status, data);  
+						$.each(data.rows, function(index, submission){
+							console.log("submission.value: ", submission.value.category);
+							//console.log("submission.value category: ", submission.value.0);
+							var couchNewsCat = submission.value.category;
+							var couchURL = submission.value.url;
+							var couchTags = submission.value.tags;
+							var couchDate = submission.value.date;
+						    var couchDescription = submission.value.description;
+						    $('#myStories').append(
+						    "<ul>" +
+					  		"<li>" + couchNewsCat[0] + ":" + couchNewsCat[1] + "</li>" +
+					  		"<li>" + couchURL[0] + ":" + couchURL[1] + "</li>" +
+					  		"<li>" + couchTags[0] + ":" + couchTags[1] + "</li>" +
+					  		"<li>" + couchDate[0] + ":" + couchDate[1] + "</li>" +
+					  		"<li>" + couchDescription[0] + ":" + couchDescription[1] +
+					  		"</ul>"
+					  		);
+						});
+						//$('#myStories').listview('refresh');
+					},
+					error: function(req, err) { 
+						console.log('Errors: ' + err); 
+					}
+				});
+			return false;
+		});
+		return false;
+
+	});
+
+
