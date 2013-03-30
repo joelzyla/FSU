@@ -11,9 +11,8 @@ $("#browseStories").on('pageinit', function () {
 	$('#mySubmissionForm').hide(); 
 	$('#myDisplayStoriesButton').hide();
 	$('#myStories').show();
-
-
-	//*****************DISPLAY STORIES FUNCTION******************
+	$("#mySubmissionForm").validate();
+	//*****************DISPLAY STORIES ANONOMOUS FUNCTION******************
 	$(function() {
 		$.couch.urlPrefix = "https://joelzyla.cloudant.com";
 		console.log("Stories page loaded");
@@ -35,7 +34,6 @@ $("#browseStories").on('pageinit', function () {
 					var couchTags = submission.value.tags;
 					var couchDate = submission.value.date;
 				    var couchDescription = submission.value.description;
-
 					$('#myStories').append(
 					    "<ul>" + 
 					    "<li>" + "Submission ID: " + myID + "</li>" +
@@ -89,24 +87,14 @@ $("#browseStories").on('pageinit', function () {
 			console.log("Keep the current revision: ", rev);
 		}
 
-		var item 			= {};
-		item._rev           = rev;
-		item._id 			= id;
-		item.myCategory 	= $("#myNewsCat").val();
-		item.myDate			= $("#myDate").val();
-		item.myDescription	= $("#myDescription").val();
-		item.myTags			= $("#myTags").val();
-		item.myURL			= $("#myURL").val();
-
-		// var item = {
-		// 	'_rev' : rev,
-		// 	'_id' : id,
-		// 	'myNewsCat' : ["Category" , $("#myNewsCat").val()],
-		// 	'myDate' : ["Date" , $("#myDate").val()],
-		// 	'myDescription' : ["Description" , $("#myDescription").val()],
-		// 	'myTags' : ["Tags" , $("#myTags").val()],
-		// 	'myURL' : ["URL" , $("#myURL").val()]
-		// };
+		// var item 			= {};
+		// item._rev           = rev;
+		// item._id 			= id;
+		// item.myCategory 	= $("#myNewsCat").val();
+		// item.myDate			= $("#myDate").val();
+		// item.myDescription	= $("#myDescription").val();
+		// item.myTags			= $("#myTags").val();
+		// item.myURL			= $("#myURL").val();
 
 		// var couchNewsCat = submission.value.category;
 		// var couchURL = submission.value.url;
@@ -116,21 +104,38 @@ $("#browseStories").on('pageinit', function () {
 
 		//console.log("FINAL ITEM", item);
 
-	$("#submitStoryButton").on('click', function () {
-		$.couch.db('project5').saveDoc(item, {
-		 	success: function(data){
-		 		console.log("success", data);
-		 		alert("Submission Saved");
+		$("#submitStoryButton").on('click', function () {
+					var item = {
+			'_rev' : rev,
+			'_id' : id,
+			'myNewsCat' : ["Category" , $("#myNewsCat").val()],
+			'myDate' : ["Date" , $("#myDate").val()],
+			'myDescription' : ["Description" , $("#myDescription").val()],
+			'myTags' : ["Tags" , $("#myTags").val()],
+			'myURL' : ["URL" , $("#myURL").val()]
+			};
+			console.log(item);
 
-		 	},
-		 	error: function(data) {
-		 		console.log("error", data);
-		 	}
+			$.couch.db('project5').saveDoc(item);
+			// $.couch.db('project5').saveDoc(item, {
+			//  	success: function(data){
+			//  		console.log("success", data);
+			alert("Submission Saved");
+
+			//  	},
+			//  	error: function(data) {
+			//  		console.log("error", data);
+			//  	}
+			// });
+	 		$('#mySubmissionForm').hide();
+ 			$('#myStories').show();
+ 			$('#myDisplayStoriesButton').hide();
+ 			//$("#myStories").listview("refresh");
+ 			return false;
 		});
-	});
 
 
-		
+		return false;
 		//alert("Position Saved!");
 		//window.location.reload();
 	}; 
@@ -188,6 +193,7 @@ $("#browseStories").on('pageinit', function () {
 	        //window.location.reload();
 	        return false;
 	    });
+    return false;
 	};
 
 
