@@ -1,0 +1,293 @@
+<!doctype html>
+
+<!-- 
+		By Joel Zyla
+-->
+
+<html>
+	<!--**Document head-->
+	<head>
+
+		<!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
+		<meta charset="utf-8">
+		<meta name="keywords" content="stock options, options app, options appliction, Full Sail University, portfolio">
+		<meta name="description" content="Options trading application for mobile devices.">
+		<meta name="robots" content="index, follow">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<!-- <meta http-equiv="cleartype" content="on">-->
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="jquery.mobile-1.3.0.min.css">
+		
+		<link rel="stylesheet" href="style.css" />
+ 
+		<!-- **TITLE-->
+		<title>newsTopics</title>
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="modernizr.custom.min.js"></script>
+	</head>
+
+
+
+	<body>
+
+<!-- ************************ HOME ************************ -->
+		<section data-role="page" id="home">
+
+				<header data-role="header" data-position="fixed">
+					<h1>newsTopics</h1>
+				</header>
+				<section id="calltoaction">
+				<!--	<img src="img/iphone_stats.png"> -->
+					<div id="positioncontainer">
+						<h2>Submit a new story!</h2>
+						<h3><a data-transition="turn" id="getStartedLink" href="#browseStories" class="button-addposition">Get started</a></h3>
+					</div>
+				</section>
+			
+			<section data-role="content"> 
+				
+				
+				<nav id="search">
+					<input id="searchbox" type="search" name="googlesearch" value="Search topics" data-theme="a">
+				</nav>
+				<nav id="browsebuttons">
+					<header>
+						<h3>Browse topics by</h3>
+					</header>
+				<!--	<p><a id="browseSciTech" data-transition="slide" data-theme="a" href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Sci Tech (json)</a></p>
+					<p><a id="browsePolitics" data-theme="a" data-transition="slide" href="#" data-role="button" data-icon="arrow-r" data-iconpos="right">Politics (xml)</a></p>
+					<section id="remoteDataFrontpage" data-role="content"> </section>
+					-->
+				</nav>
+				<footer data-role="footer" data-position="fixed">
+					<nav data-role="navbar">
+						<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#browseStories" data-icon="start">Browse</a></li>
+						<li><a href="#browseStories" data-icon="start">Add</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+						</ul>
+					</nav>
+				</footer>
+			</section>
+		</section>
+
+
+<!-- ************************ BROWSE Stories PAGE ************************ -->
+
+		<section data-role="page" id="browseStories">
+			<header data-role="header" data-position="fixed">
+				<h1>newsTopics</h1>
+			</header>
+			<header>
+				<h2>Browse Stories</h2>
+			</header>
+			<fieldset>
+
+			<div class="ui-grid-solo"><button id="myAddStoryButton" data-theme="a" type="submit">Add a Story</button>
+			</div>
+			<div class="ui-grid-solo"><button id="myDisplayStoriesButton" data-theme="a" type="submit">Display Submissions</button>
+			</div>
+			</fieldset>
+
+
+<form action="#" id="mySubmissionForm" data-theme="a">
+				<h2>Submit a story</h2>
+				<h4>Questions marked with a * are required.</h4>
+					<div data-role="fieldcontain">
+						<label for="myNewsCat">* Category:</label>
+						<select class="required" name="myNewsCat" data-theme="a" id="myNewsCat" data-native-menu="false">
+							<option value="">* Select a category</option>
+							<option value="Politics">Politics</option>
+							<option value="Science">Science</option>
+							<option value="Medical">Medical</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="myDate">* Release date:</label>
+						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="myDate" id="myDate" />
+					</div>	
+					<div data-role="fieldcontain">
+						<label for="myTags">* Tags:</label>
+						<input placeholder="Separate tags with a comma." data-theme="a" class="required" type="text" name="myTags" id="myTags" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="myURL" class="required">* URL:</label>
+						<input placeholder="Paste the article URL here." data-theme="a" class="required" type="text" name="myURL" id="myURL" />
+					</div>
+
+					<div data-role="fieldcontain">
+						<label for="myDescription">Description:</label>
+						<textarea placeholder="Describe the article in under 200 words" data-theme="a" id="myDescription" name="mydescription"></textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<input data-theme="a" type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" checked />
+							<label for="allornonebox-1">* Email alerts</label>
+						</fieldset>
+					</div>
+
+						<fieldset class="ui-grid-a">
+						<div class="ui-block-b"><button id="submitStoryButton" data-theme="b" type="submit">Submit</button></div>
+						<div class="ui-block-b"><button data-theme="a" type="reset">Reset</button></div>
+						</fieldset>
+
+					
+				</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section>
+				<section id="myStories" data-role="content"> </section>
+			</section>
+
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#browseStories" data-icon="start">Browse</a></li>
+						<li><a href="#browseStories" data-icon="start">Add</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+
+<!-- ************************ INFO PAGE ************************ -->
+
+		<section data-role="page" id="info">
+			<header data-role="header" data-position="fixed">
+					<h1>newsTopics</h1>
+			</header>
+
+			<section data-role="content"> 
+				<header><h2>About newsTopics</h2></header>
+				<p>newsTopics was created by Joel Zyla</p>
+				<p><a href="https://github.com/joelzyla/FSU/tree/master/ASD/Part%205" data-icon="start" rel="external">Git Repository</a></p>
+				<p><a href="https://joelzyla.cloudant.com/project5/_design/app/index.html" data-icon="start" rel="external">Live Site</a></p>
+			</section>
+
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#browseStories" data-icon="start">Browse</a></li>
+						<li><a href="#browseStories" data-icon="start">Add</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+
+
+
+
+
+
+		<!-- ************************ Add Item Page ************************ -->
+
+		<section data-role="page" id="additem">
+			<div data-role="header" data-position="fixed">
+				<h1>newsTopics</h1>
+			</div>
+
+			<section data-role="content"> 
+				<form action="#" id="newSubmissionForm" data-theme="a">
+				<h2>Submit a story</h2>
+				<h4>Questions marked with a * are required.</h4>
+					<div data-role="fieldcontain">
+						<label for="myNewsCat">* Category:</label>
+						<select class="required" name="myNewsCat" data-theme="a" id="myNewsCat" data-native-menu="false">
+							<option value="">* Select a category</option>
+							<option value="Politics">Politics</option>
+							<option value="Science">Science</option>
+							<option value="Medical">Medical</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="myDate">* Release date:</label>
+						<input data-theme="a" class="required" type="date" data-role="datebox" data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}' name="myDate" id="myDate" />
+					</div>	
+					<div data-role="fieldcontain">
+						<label for="myTags">* Tags:</label>
+						<input placeholder="Separate tags with a comma." data-theme="a" class="required" type="text" name="myTags" id="myTags" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="myURL" class="required">* URL:</label>
+						<input placeholder="Paste the article URL here." data-theme="a" class="required" type="text" name="myURL" id="myURL" />
+					</div>
+
+					<div data-role="fieldcontain">
+						<label for="myDescription">Description:</label>
+						<textarea placeholder="Describe the article in under 200 words" data-theme="a" id="myDescription" name="mydescription"></textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<input data-theme="a" type="checkbox" class="required" value="allornone" name="allornonebox" id="allornonebox-1" checked />
+							<label for="allornonebox-1">* Email alerts</label>
+						</fieldset>
+					</div>
+
+						<fieldset class="ui-grid-a">
+						<div class="ui-block-b"><button data-theme="b" type="submit">Submit</button></div>
+						<div class="ui-block-b"><button data-theme="a" type="reset">Reset</button></div>
+						</fieldset>
+
+					
+				</form>
+
+					<fieldset>
+						<!-- Old buttons
+						<input type="Reset" value="Reset" data-theme="a" />
+						<input type="submit" value="Save Position" data-theme="e" />
+						-->
+						
+						<div class="ui-grid-solo"><button id="displaySubmissionsButton" data-theme="a" type="submit">Display submissions</button></div>
+
+<!-- 						<div class="ui-grid-solo"><button id="newSubmissionButton" data-theme="a" type="submit">Submit a story</button></div> -->
+
+						<div class="ui-grid-solo"><button id="clearSubmissionsButton" data-theme="a" type="submit">Clear submissions</button></div>
+						
+					</fieldset>
+				
+			</section>
+			<section id="items" data-role="content"> </section>
+			<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="start">Home</a></li>
+						<li><a href="#browseStories" data-icon="start">Browse</a></li>
+						<li><a href="#stories" data-icon="start">Add</a></li>
+						<li><a href="#info" data-icon="start">Info</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+
+
+
+		<script src="jquery-1.8.2.min.js"></script>
+		<script src="jquery.mobile-1.3.0.min.js"></script>
+		<script type="text/javascript" src="jquery.validate.min.js"></script>
+		<script src="main.js" type="text/javascript"></script>
+		<script src="json.js" type="text/javascript"></script>
+				<script src="jquery.couch.js"></script>
+
+
+	</body>
+</html>
