@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+    By: Joel Zyla
+    IOS Phonegap Application
+    AVF 1306
+-->
+<html>
+    <!--**Document head-->
+    <head>
+
+        <!-- **5 meta tags (charset, keyword, description, robots, viewport), title, body -->
+        <meta charset="utf-8">
+        <meta name="keywords" content="stock options, options app, options appliction, Full Sail University, portfolio">
+        <meta name="description" content="Options trading application for mobile devices.">
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- StyleSheets under here -->
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <!--<link rel="stylesheet" href="css/jquery.mobile.theme-1.3.1.min.css" /> -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- **TITLE-->
+        <title>AVF iPhone App</title>
+        <script src="js/libs/modernizr.custom.min.js"></script> 
+
+    </head>
+
+    <body>
+        <div data-role="page" id="demopage"> 
+            <div data-role="header" data-position="fixed">
+                <h1>AFV 1306 Demo App</h1>
+            </div>
+
+            <div id="demoContent" data-role="content">
+                <section>
+                    <h3>Native Feature Demos</h3>
+                    <ul>
+                        <li>
+                            <p>Camera</p>
+                        </li>
+                        <li>
+                            <p>Contacts</p>
+                        </li>
+                        <li>
+                            <p>Geolocation</p>
+                        </li>
+                        <li>
+                            <p>InAppBrowser</p>
+                        </li>
+                  </ul>
+                </section>
+
+                <section>
+                    <h3>JSON-P Data API's</h3>
+                    <ul>
+                        <li>
+                            <a href="#instagrampage">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#weatherpage">Weather</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Research</h3>
+                    <ul>
+                        <li>
+                            <a href="#research1">Week 1 - Data Research, Project Intent</a>
+                        </li>
+                        <li>
+                            <p>Week 2 - Accessibility</p>
+                        </li>
+                        <li>
+                            <p>Week 3 - Industry Research</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla, AVF 1306, 2013</h1>
+            </div>
+        </div>
+
+        <div data-role="page" id="instagrampage"> 
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Popular Instagram Images</h1>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+
+            <div id="instaDiv" class="ui-grid-b responsive">
+            </div>
+        </div>
+
+        <div data-role="page" id="weatherpage"> 
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Weather Demo</h1>
+            </div>
+
+            <div class="weatherDiv">
+                
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="research1"> 
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Week 1 Research</h1>
+            </div>
+            <section data-role="content">
+                <h1>Data Research and Project Intent</h1>
+                <p>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</p>
+            
+                <p>Using twitter data could be helpful on our mobile applications for logins and payments.</p>
+
+                <p>By using "log in with twitter", our users don't have to go through a long signup process when making an account. Another benefit is the user won't have to remember another password. We can also pull information like a profile picture, which will make our user information more complete.</p>
+
+                <p>The twitter API can also be used when making a payment. By automatically pulling a users name and address, we have sped up the checkout process, which makes it easier for the user and will probably decrease the amount of abandanded carts.</p>
+
+                <p>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</p>
+
+                <p>By choosing JSON-P, we get padding, which makes our life easier. JSON is already used in javascript, and by using JSON-P we won't need to worry about cross domain issues.</p>
+
+                <p>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</p>
+
+                <p>There are several data resources that would pair well with native device features. Weather data API's could be paired with location to get your local weather. Twitter data could be paired with notifications to be alerted about new posts. Photography data from Flikr could be paired with the camera to add new pictures, or with local storage to save pictures from Flikr to your device.</p>
+
+                <p>Please describe any design and functionality intentions you may have for your Demo app components this month.</p>
+
+                <p>Because we are using the iPad, I am considering trying to implement a split-view layout(using a jqm plugin). I also like the idea of having only a top header(no footer), and having menu items drop down when you click a button in the header. This allows maximum use of the screen for other purposes(similarly to how the facebook app works).</p>
+
+                <p>I would also like to try some left/right swiping, similarly to how the facebook app allows you to swipe to bring up the menu or chat.</p>
+
+                <p>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</p>
+
+                <p>I have learned many things regarding workflow while desiging apps. One very important thing I've learned is to not put too much time into the design of your app until you have a complete mockup that your happy with. If you spend a lot of time designing before you are finished with a mockup, you might end up having to re-design things as you create more app pages. Or realize you need something that you didn't think of, which could lead to having to redo your layout. It is much more effecient to use minimal time on design until you have all the features you want, and then worry about making it pretty.</p>
+            </content>
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+        </div>
+
+        <script src="js/libs/jquery-1.10.1.min.js"></script> 
+        <script src="js/libs/jquery.mobile-1.3.1.min.js"></script>
+        <!--  <script src="js/libs/jquery-ui-1.10.3.custom.min.js"></script> -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
