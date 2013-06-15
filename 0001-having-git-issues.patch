@@ -1,0 +1,15 @@
+From 8e2f55bb64415a7112bb295ac901153e446d8429 Mon Sep 17 00:00:00 2001
+From: Joel Zyla <joelzyla@gmail.com>
+Date: Thu, 6 Jun 2013 23:16:05 -0400
+Subject: [PATCH 1/4] having git issues
+
+---
+ 0 files changed
+ delete mode 100644 AVF/week1/android/gitignore
+
+diff --git a/AVF/week1/android/gitignore b/AVF/week1/android/gitignore
+deleted file mode 100644
+index e69de29..0000000
+-- 
+1.8.0
+

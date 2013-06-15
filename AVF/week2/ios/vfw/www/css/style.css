@@ -1,0 +1,69 @@
+
+
+
+/*****************************
+ *
+ * By: Joel Zyla
+ * IOS Phonegap Application
+ * AVF 1306
+ *
+ *****************************/
+
+
+body {
+	background: #cccccc;
+}
+
+#weatherpage {
+	background: #222a42;
+}
+
+.instaImage {
+	max-width: 100%;
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.weatherImage {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.weatherDiv {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#currentWeatherItem {
+
+	color: #FFFFFF;
+	text-align: center;
+	list-style-type: none;
+}
+
+#weatherpage .ui-body-c, .ui-overlay-c {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+}
+
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (min-width: 600px) {
+	#demoContent{
+		text-align: center;
+	}	
+
+	#demoContent li {
+		list-style-type: none;
+	}
+}
+
+
+
+
