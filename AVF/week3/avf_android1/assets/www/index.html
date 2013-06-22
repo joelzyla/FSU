@@ -1,0 +1,246 @@
+<!DOCTYPE HTML5>
+<!--
+    By: Joel Zyla
+    IOS Phonegap Application
+    AVF 1306
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="stock options, options app, options appliction, Full Sail University, portfolio">
+        <meta name="description" content="Options trading application for mobile devices.">
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <!--<link rel="stylesheet" href="css/jquery.mobile.theme-1.3.1.min.css" /> -->
+        <link rel="stylesheet" href="css/style.css" />
+        <title>AVF iPhone App</title>
+        <script src="js/libs/modernizr.custom.min.js"></script> 
+    </head>
+
+    <body>
+
+<!-- ************* Demo Homepage ***************** -->
+
+        <div data-role="page" id="demopage"> 
+            <div data-role="header" data-position="fixed">
+                <h1>AFV 1306 Demo App</h1>
+            </div>
+
+            <div id="demoContent" data-role="content">
+                <section>
+                    <h3>Android and IOS native features demos:</h3>
+                    <ul>
+                        <li>
+                            <p><h3>Geolocation</h1> - The weather demo uses geolocation to get your local weather.</p>
+                        </li>
+                        <li>
+                            <p><h3>InAppBrowser</h3> - The instagram demo uses the InAppBrowser to display the original instagram page for each image when clicked.</p>
+                        </li>
+                        <li>
+                            <p><h3>Camera</h3><a href="#" id="takePicture">Take a picture</a>
+                        </li>
+                        <li>
+                            <img id="myImage" src="">
+                        </li>
+                        <li>
+                            <p><h3>Device Properties</h3></p>
+                        </li>
+                        <li>
+                            <div id="deviceProperties"></div>
+                        </li>
+                  </ul>
+                </section>
+
+                <section>
+                    <h3>JSON-P Data API's</h3>
+                    <ul>
+                        <li>
+                            <a data-role="button" href="#instagrampage">Instagram</a><a data-role="button" href="#weatherpage">Weather</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Research</h3>
+                    <ul>
+                        <li>
+                            <a href="#research1">Week 1 - Data Research, Project Intent</a>
+                        </li>
+                        <li>
+                            <a href="#research2">Week 2 - Accessibility</a>
+                        </li>
+                        <li>
+                            <a href="#research3">Week 3 - Industry Research</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla, AVF 1306, 2013</h1>
+            </div>
+
+        </div>
+
+
+<!-- ************* Instagram Page ***************** -->
+
+        <div data-role="page" id="instagrampage"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="back" data-rel="back">Back</a>
+                <h1>Instagram API Demo</h1>
+            </div>
+
+            <!-- Panels -->
+            <div data-role="content">
+
+            <!--<p><a href="#left-panel" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-iconpos="left">left panel</a>
+            <a href="#right-panel" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-r" data-iconpos="right">right panel</a></p> -->
+
+            <!-- Begin Left Panel -->
+            <div data-role="panel" data-position="left" id="left-panel" data-theme="a" data-content-theme="a">
+                <ul data-role="listview" class="nav-search" data-theme="a">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                    <li><a id="instaPopular" href="#">Popular</a></li>
+                    <li><a href="#" id="instaNearMe" >Near me</a></li>
+                </ul>
+            </div><!-- /panel -->
+
+            <!-- Begin Right Panel -->
+            <!-- <div data-role="panel" data-position="right" id="right-panel">
+                <ul data-role="listview" class="nav-search">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Near me</a></li>
+                    
+                </ul>
+            </div> --><!-- /panel -->
+
+                <!-- Instagram data display -->
+                <ul id="instaDiv" class="ui-grid-b responsive">
+                </ul>
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+        </div>
+
+
+<!-- ************* Weather Page ***************** -->
+
+        <div data-role="page" id="weatherpage"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Weather Demo</h1>
+            </div>
+            <div data-role="content">
+                <!-- Weather Data Display -->
+                <div class="weatherDiv">
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Created by Joel Zyla - 2013</h1>
+                </div>
+            </div>
+
+        </div>
+
+
+<!-- ************* Research Page 1 ***************** -->
+
+        <div data-role="page" id="research1"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Week 1 Research</h1>
+            </div>
+
+            <section data-role="content">
+                <h1>Data Research and Project Intent</h1>
+                <p>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</p>
+            
+                <p>Using twitter data could be helpful on our mobile applications for logins and payments.</p>
+
+                <p>By using "log in with twitter", our users don't have to go through a long signup process when making an account. Another benefit is the user won't have to remember another password. We can also pull information like a profile picture, which will make our user information more complete.</p>
+
+                <p>The twitter API can also be used when making a payment. By automatically pulling a users name and address, we have sped up the checkout process, which makes it easier for the user and will probably decrease the amount of abandanded carts.</p>
+
+                <p>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</p>
+
+                <p>By choosing JSON-P, we get padding, which makes our life easier. JSON is already used in javascript, and by using JSON-P we won't need to worry about cross domain issues.</p>
+
+                <p>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</p>
+
+                <p>There are several data resources that would pair well with native device features. Weather data API's could be paired with location to get your local weather. Twitter data could be paired with notifications to be alerted about new posts. Photography data from Flikr could be paired with the camera to add new pictures, or with local storage to save pictures from Flikr to your device.</p>
+
+                <p>Please describe any design and functionality intentions you may have for your Demo app components this month.</p>
+
+                <p>Because we are using the iPad, I am considering trying to implement a split-view layout(using a jqm plugin). I also like the idea of having only a top header(no footer), and having menu items drop down when you click a button in the header. This allows maximum use of the screen for other purposes(similarly to how the facebook app works).</p>
+
+                <p>I would also like to try some left/right swiping, similarly to how the facebook app allows you to swipe to bring up the menu or chat.</p>
+
+                <p>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</p>
+
+                <p>I have learned many things regarding workflow while desiging apps. One very important thing I've learned is to not put too much time into the design of your app until you have a complete mockup that your happy with. If you spend a lot of time designing before you are finished with a mockup, you might end up having to re-design things as you create more app pages. Or realize you need something that you didn't think of, which could lead to having to redo your layout. It is much more effecient to use minimal time on design until you have all the features you want, and then worry about making it pretty.</p>
+            </section>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+
+        </div>
+        
+<!-- ************* Research Page 2 ***************** -->
+
+        <div data-role="page" id="research2"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Week 2 Research</h1>
+            </div>
+
+            <section data-role="content">
+                <h1>Accessibility</h1>
+                <p>1. What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</p>
+				
+				<p>There are several ways we can make our apps more accessible. We can add semantic tabs to our code, and support screen readers. We can also add alt tags to images, so that users who can't view the image can still know what it is about. Another good way of making a site accessible is to stick to common layouts, such as top or side menus and the "home" button being in the top right, where someone knows to find it.</p>
+
+				<p>2. Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</p>
+
+				<p>Common frustrations include no alt tabs for images, poorly designed forms, and poor layout. If more websites would keep accessibility in mind, and build their sites to support screen readers, people with special accessibility needs would be much better off.</p>
+
+				<p>3. Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</p>
+
+				<p>iPhone - voiceover, siri, zoom, inverted colors, hands free calling.</p>
+
+				<p>Android Phones - physical button to end calls, talkback(speak events that happen), reverse colors.</p>
+
+				<p>4. Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</p>
+
+				<p>Looktel money reader - recognizes US currency in standard denominations ($1, $2, $5, $10, $20, $50, and $100 bills) enabling blind and visually impaired people to quickly identify and count bills.</p>
+
+				<p>SayText - scans text within any image, such as a medical form or restaurant menu, and reads it aloud.</p>
+            </section>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+
+        </div>
+
+        <script src="js/libs/jquery-1.10.1.min.js"></script> 
+        <script src="js/libs/jquery.mobile-1.3.1.min.js"></script>
+        <script src="js/libs/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="cordova-2.7.0.js"></script>
+
+    </body>
+</html>
