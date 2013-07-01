@@ -1,0 +1,377 @@
+<!DOCTYPE HTML5>
+<!--
+    By: Joel Zyla
+    IOS Phonegap Application
+    AVF 1306
+-->
+<html5>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="stock options, options app, options appliction, Full Sail University, portfolio">
+        <meta name="description" content="Options trading application for mobile devices.">
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <!--<link rel="stylesheet" href="css/jquery.mobile.theme-1.3.1.min.css" /> -->
+        <link rel="stylesheet" href="css/style.css" />
+        <title>AVF iPhone App</title>
+        <script src="js/libs/modernizr.custom.min.js"></script> 
+    </head>
+
+    <body>
+
+<!-- ************* Homepage ***************** -->
+
+        <div data-role="page" id="homepage"> 
+            <div data-role="header" data-position="fixed">
+
+                <h1>AFV 1306 Demo App</h1>
+            </div>
+
+            <div id="demoContent" data-role="content">
+
+                <section>
+<!--                     <h3>Select a Demo</h3> -->
+                    <ul>
+                        <li>
+                            <a data-role="button" data-theme="a" href="#instagrampage">Instagram</a>
+                        </li>   
+                        <li>
+                            <a data-role="button" data-theme="a" href="#weatherpage">Weather</a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="a" href="#camerapage">Camera</a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="a" href="#deviceinfopage" id="deviceInfoPage"></a>
+                        </li>
+                        <li>
+                            <a data-role="button" data-theme="a" href="#infopage">Info</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla, AVF 1306, 2013</h1>
+            </div>
+
+        </div>
+
+<!-- ************* Info Page ***************** -->
+
+        <div data-role="page" id="infopage"> 
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="back" data-rel="back">Back</a>
+                <h1>Info</h1>
+            </div>
+
+            <div id="demoContent" data-role="content">
+                <section>
+                    <h3>Android and IOS native features demos:</h3>
+                    <ul>
+                        <li>
+                            <p><h3>Weather</h3> - The weather app uses your phone's geolocation to get your local weather. The weather image changes based on what today's weather is.</p>
+                        </li>
+                        <li>
+                            <p><h3>Instagram</h3> - The instagram app uses your phone's InAppBrowser to open the original instagram page for each image when clicked. A jquery panel menu is revealed when swiping right.</p>
+                        </li>                       
+                        <li>
+                            <p><h3>Camera</h3> - The camera app uses uses your phone's camera to take and display a picture. The size of the image changes based on device screen size.</p>
+                        </li>
+
+                        <li>
+                            <p><h3>Device Info</h3> - The Device Info app displays information about your phone. The "Device Info" button on the home page changes to "iPad info", "iPhone info" or "Android info" etc. based on the device.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Research</h3>
+                    <ul>
+                        <li>
+                            <a data-role="button" href="#research1">Week 1 - Data Research, Project Intent</a>
+                        </li>
+                        <li>
+                            <a data-role="button" href="#research2">Week 2 - Accessibility</a>
+                        </li>
+                        <li>
+                            <a data-role="button" href="#research3">Week 3 - Industry Research</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla, AVF 1306, 2013</h1>
+            </div>
+        </div>
+
+
+
+<!-- ************* Device Page ***************** -->
+
+        <div data-role="page" id="deviceinfopage"> 
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="back" data-rel="back">Back</a>
+                <h1>Device Info</h1>
+            </div>
+
+            <div id="demoContent" data-role="content">
+                <div id="deviceProperties"></div>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla, AVF 1306, 2013</h1>
+            </div>
+
+        </div>
+
+
+<!-- ************* Weather Page ***************** -->
+
+        <div data-role="page" id="weatherpage"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Weather></h1>
+            </div>
+            <div data-role="content">
+                <!-- Weather Data Display -->
+                <div class="weatherDiv">
+                </div>
+
+                <div data-role="footer" data-position="fixed">
+                    <h1>Created by Joel Zyla - 2013</h1>
+                </div>
+            </div>
+
+        </div>
+
+
+
+<!-- ************* Camera Page ***************** -->
+
+        <div data-role="page" id="camerapage"> 
+            <div data-role="header" data-theme="a" data-position="fixed">
+                <a href="#" data-icon="back" data-rel="back">Back</a>
+                <h1>Camera</h1>
+            </div>
+
+            <div id="demoContent" data-role="content">
+                    <a href="#" data-role="button" data-theme="a" id="takePicture">Take a picture</a>
+                    <div id="myImageDiv" style="text-align:center; padding-top: 10px; margin-left: auto; margin-right: auto;">
+                        <img id="myImage" src="">
+                    </div>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla, AVF 1306, 2013</h1>
+            </div>
+
+        </div>
+
+
+<!-- ************* Instagram Page ***************** -->
+
+        <div data-role="page" id="instagrampage"> 
+
+            <div data-role="header" data-position="fixed">
+
+                <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal">
+                <a href="#left-panel" data-iconpos="left" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-r">Menu</a>
+                <a href="#" data-icon="back" data-role="button" data-iconpos="left" data-rel="back">Back</a>
+                </div>
+                <h1>Instagram Browser</h1>
+            </div>
+
+            <!-- Panels -->
+            <div data-role="content">
+
+                <!--<p><a href="#left-panel" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-l" data-iconpos="left">left panel</a>
+                <a href="#right-panel" data-role="button" data-inline="true" data-mini="true" data-icon="arrow-r" data-iconpos="right">right panel</a></p> -->
+
+                <!-- Begin Left Panel -->
+                <div data-role="panel" data-position="left" id="left-panel" data-theme="a" data-content-theme="a">
+                    <ul data-role="listview" class="nav-search" data-theme="a">
+                        <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                        <li><a id="instaPopular" href="#">Popular</a></li>
+                        <li><a href="#" id="instaNearMe" >Near me</a></li>
+                    </ul>
+                </div><!-- /panel -->
+
+                <!-- Begin Right Panel -->
+                <!-- <div data-role="panel" data-position="right" id="right-panel">
+                    <ul data-role="listview" class="nav-search">
+                        <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">Near me</a></li>
+                        
+                    </ul>
+                </div> --><!-- /panel -->
+
+                <!-- Instagram data display -->
+                <ul id="instaDiv" class="ui-grid-b responsive">
+                </ul>
+
+            </div>
+
+            <!-- Footer -->
+            <div data-role="footer" data-position="fixed" data-type="horizontal">
+                <!-- Javascript hides and shows the prev/next buttons based on page scroll-->
+                <div class="ui-grid-b" style="">
+                    <div class="ui-block-a">
+                        <h3><a href="#" class="ui-btn-left prevnextButtons instaPrev" style="vertical-align:center; width: 75px;" data-iconpos="left" data-role="button" data-mini="true" data-icon="arrow-l">Prev</a></h3>
+                    </div>
+                    <div class="ui-block-b" style="">
+                        <h4 style="text-align:center; vertical-align:middle;">Created by Joel Zyla - 2013</h4>
+                    </div>
+                    <div class="ui-block-c">
+                        <h3><a href="#" class="ui-btn-right prevnextButtons instaNext" style="align:right; width: 75px;" data-iconpos="right" data-role="button" data-mini="true" data-icon="arrow-r">Next</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<!-- ************* Research Page 1 ***************** -->
+
+        <div data-role="page" id="research1"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Week 1 Research</h1>
+            </div>
+
+            <section data-role="content">
+                <h1>Data Research and Project Intent</h1>
+                <p>Less obvious perks of using 'live' data resources include logins and payments. How could Twitter be used in these two scenarios?</p>
+            
+                <p>Using twitter data could be helpful on our mobile applications for logins and payments.</p>
+
+                <p>By using "log in with twitter", our users don't have to go through a long signup process when making an account. Another benefit is the user won't have to remember another password. We can also pull information like a profile picture, which will make our user information more complete.</p>
+
+                <p>The twitter API can also be used when making a payment. By automatically pulling a users name and address, we have sped up the checkout process, which makes it easier for the user and will probably decrease the amount of abandanded carts.</p>
+
+                <p>Visit Programmableweb.com and search for JSON-P data sources. Why would we need JSON-P, specifically?</p>
+
+                <p>By choosing JSON-P, we get padding, which makes our life easier. JSON is already used in javascript, and by using JSON-P we won't need to worry about cross domain issues.</p>
+
+                <p>Based on the JSON-P search results: what data resource(s) do you think might pair well with which types of Native device features?</p>
+
+                <p>There are several data resources that would pair well with native device features. Weather data API's could be paired with location to get your local weather. Twitter data could be paired with notifications to be alerted about new posts. Photography data from Flikr could be paired with the camera to add new pictures, or with local storage to save pictures from Flikr to your device.</p>
+
+                <p>Please describe any design and functionality intentions you may have for your Demo app components this month.</p>
+
+                <p>Because we are using the iPad, I am considering trying to implement a split-view layout(using a jqm plugin). I also like the idea of having only a top header(no footer), and having menu items drop down when you click a button in the header. This allows maximum use of the screen for other purposes(similarly to how the facebook app works).</p>
+
+                <p>I would also like to try some left/right swiping, similarly to how the facebook app allows you to swipe to bring up the menu or chat.</p>
+
+                <p>Briefly describe some past 'lessons learned' regarding workflow as it relates to research, design, development, etc.</p>
+
+                <p>I have learned many things regarding workflow while desiging apps. One very important thing I've learned is to not put too much time into the design of your app until you have a complete mockup that your happy with. If you spend a lot of time designing before you are finished with a mockup, you might end up having to re-design things as you create more app pages. Or realize you need something that you didn't think of, which could lead to having to redo your layout. It is much more effecient to use minimal time on design until you have all the features you want, and then worry about making it pretty.</p>
+            </section>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+
+        </div>
+        
+<!-- ************* Research Page 2 ***************** -->
+
+        <div data-role="page" id="research2"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Week 2 Research</h1>
+            </div>
+
+            <section data-role="content">
+                <h1>Accessibility</h1>
+                <p>1. What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</p>
+				
+				<p>There are several ways we can make our apps more accessible. We can add semantic tabs to our code, and support screen readers. We can also add alt tags to images, so that users who can't view the image can still know what it is about. Another good way of making a site accessible is to stick to common layouts, such as top or side menus and the "home" button being in the top right, where someone knows to find it.</p>
+
+				<p>2. Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</p>
+
+				<p>Common frustrations include no alt tabs for images, poorly designed forms, and poor layout. If more websites would keep accessibility in mind, and build their sites to support screen readers, people with special accessibility needs would be much better off.</p>
+
+				<p>3. Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</p>
+
+				<p>iPhone - voiceover, siri, zoom, inverted colors, hands free calling.</p>
+
+				<p>Android Phones - physical button to end calls, talkback(speak events that happen), reverse colors.</p>
+
+				<p>4. Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.</p>
+
+				<p>Looktel money reader - recognizes US currency in standard denominations ($1, $2, $5, $10, $20, $50, and $100 bills) enabling blind and visually impaired people to quickly identify and count bills.</p>
+
+				<p>SayText - scans text within any image, such as a medical form or restaurant menu, and reads it aloud.</p>
+            </section>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+
+        </div>
+
+        <!-- ************* Research Page 3 ***************** -->
+
+        <div data-role="page" id="research3"> 
+
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+                <h1>Week 3 Research</h1>
+            </div>
+
+            <section data-role="content">
+                <h1>Industry Research</h1>
+                What are the 'top selling' app categories in the U.S.? Japan? Great Britain?
+
+                <p>Top selling app categories are similar in the U.S., Japan and Great Britain. The top selling app categories in the US in 2012 were games(33%), widgets(8%), and entertainment(7%). In Japan, the top categories were games(77%), entertainment(5%) and books(5%). In Great Britain, the top categories were games(11.1m), followed by maps and social networking.</p>
+
+                <p>Based on your three answers above, what might you infer about each of the markets listed?</p>
+
+                <p>Although similar in top app categories, I would infer that one should still study the statistics of the top app purchasing countries. Since, for example, social networking is in the top three in Great Britain, you would have missed that if concentrating on only US statistics.</p>
+
+                <p>What is the average cost and bandwidth limits per user (in general) in each of the three markets? How may this impact development?</p>
+
+                <p>In the US, data costs are $15 for 200mb. In Japan, data costs are $4.70 for .5mb. In the UK, data costs are $7.70 for 5120mb. The UK clearly wins when it comes to bandwith for the money. By keeping data costs for each country in mind, we can develop more targeted apps. For example, in the US, where prices are high, we could do data-usage saving techniques. But, in the UK, we may use the extra data to get a higher quality app. By loading data in the background before it's needed, the user would have a better experience, but in higher data cost countries this could cause them to go over their budget.</p>
+
+                <p>And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.</p>
+
+                <p>I would suggest keeping statistics in mind when devleoping your applications. By balancing data-usage by country, we can create a target app that will prosper better in each country. When choosing an application category, there are several strategies available. By putting your app in a top-selling category you may get more sales. But, being in a top-selling categorie also means more competition when a user is browsing by category. By conducting industry research, we can make better decisions to try and maximize profits.</p>
+
+
+                Sources
+
+                <p>An International Comparison of Cell Phone Plans and Prices | NewAmerica.net. (n.d.). Retrieved from http://newamerica.net/publications/policy/an_international_comparison_of_cell_phone_plans_and_prices</p>
+
+                <p>Global mobile statistics 2013 Section E: Mobile apps, app stores, pricing and failure rates | mobiThinking. (n.d.). Retrieved from http://mobithinking.com/mobile-marketing-tools/latest-mobile-stats/e#popularappcatagories</p>
+
+                <p>Bandwidth and usage/cost
+                http://newamerica.net/publications/policy/an_international_comparison_of_cell_phone_plans_and_prices</p>
+
+                <p>World Series of Apps: Japan - App Annie Blog. (n.d.). Retrieved from http://blog.appannie.com/world-series-of-apps-japan/</p>
+            </section>
+
+            <div data-role="footer" data-position="fixed">
+                <h1>Created by Joel Zyla - 2013</h1>
+            </div>
+
+        </div>
+
+        <script src="js/libs/jquery-1.10.1.min.js"></script> 
+        <script src="js/libs/jquery.mobile-1.3.1.min.js"></script>
+        <script src="js/libs/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="cordova-2.7.0.js"></script>
+
+    </body>
+</html5>

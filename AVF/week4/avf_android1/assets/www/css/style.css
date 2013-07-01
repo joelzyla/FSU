@@ -1,0 +1,112 @@
+
+
+
+/*****************************
+ *
+ * By: Joel Zyla
+ * IOS Phonegap Application
+ * AVF 1306
+ *
+ *****************************/
+
+
+body {
+	background: #cccccc;
+}
+
+#weatherpage {
+	background: #222a42;
+}
+
+.weatherImage {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.weatherDiv {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#currentWeatherItem {
+
+	color: #FFFFFF;
+	text-align: center;
+	list-style-type: none;
+}
+
+#instaDiv {
+		margin-left: auto !important;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+		list-style-type: none !important;
+		padding: 0px !important;
+}
+
+/*#instaDiv {
+	margin-left: -40px !important;
+}*/
+
+#weatherpage .ui-body-c, .ui-overlay-c {
+    color: #FFFFFF !important;
+    text-shadow: none !important;
+}
+
+@media screen and (max-width: 600px) {
+	#myImage {
+		width: 96%;
+	}
+	#deviceProperties {
+		text-align: center;
+	}
+
+}
+
+@media screen and (min-width: 600px) {
+	#myImage {
+		width: 60%;
+	}
+	#deviceProperties {
+		font-size: 18;
+	}
+}
+
+	#deviceProperties {
+		text-align: center;
+	}
+.ui-panel-position-left {
+    left: -17em !important;
+}
+
+.ui-panel-position-right {
+    right: -17em !important;
+}
+
+* {
+    -webkit-backface-visibility: hidden;
+}
+
+.instaImage {
+	max-width: 100%;
+	/*max-height: 100%*/
+	display: block; 
+	margin: auto;
+	/*margin-left: auto; 
+	margin-right: auto;*/
+}
+
+#instagrampage .ui-content
+{
+	 background: none repeat scroll 0 0 #D0D0D0;
+	 padding: 5px
+}
+
+/*#myImage {
+	width: 70%;
+}*/
+	#demoContent li {
+		list-style-type: none;
+	}
+
